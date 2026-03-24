@@ -1,6 +1,26 @@
 import { Injectable } from '@nestjs/common';
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const packageJson = require('./../../../package.json');
+import * as fs from 'fs';
+import * as path from 'path';
+
+// Resolve nearest package.json at runtime by walking up parent directories.
+const packageJson = (() => {
+  try {
+    let cur = __dirname;
+    while (true) {
+      const candidate = path.join(cur, 'package.json');
+      if (fs.existsSync(candidate)) {
+        const raw = fs.readFileSync(candidate, 'utf8');
+        return JSON.parse(raw);
+      }
+      const parent = path.dirname(cur);
+      if (parent === cur) break;
+      cur = parent;
+    }
+  } catch (err) {
+    /* empty */
+  }
+  return {} as Record<string, any>;
+})();
 
 @Injectable()
 export class VersionService {

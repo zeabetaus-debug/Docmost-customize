@@ -19,15 +19,10 @@ import {
 } from "@/features/auth/types/auth.types";
 import { notifications } from "@mantine/notifications";
 import { IAcceptInvite } from "@/features/workspace/types/workspace.types.ts";
-import {
-  acceptInvitation,
-  createWorkspace,
-} from "@/features/workspace/services/workspace-service.ts";
+import { acceptInvitation } from "@/features/workspace/services/workspace-service.ts";
 import APP_ROUTE, { getPostLoginRedirect } from "@/lib/app-route.ts";
 import { RESET } from "jotai/utils";
 import { useTranslation } from "react-i18next";
-import { isCloud } from "@/lib/config.ts";
-import { exchangeTokenRedirectUrl, getHostnameUrl } from "@/ee/utils.ts";
 
 export default function useAuth() {
   const { t } = useTranslation();
@@ -42,7 +37,6 @@ export default function useAuth() {
       const response = await login(data);
       setIsLoading(false);
 
-      // Check if MFA is required
       if (response?.userHasMfa) {
         navigate(APP_ROUTE.AUTH.MFA_CHALLENGE + window.location.search);
       } else if (response?.requiresMfaSetup) {
@@ -50,20 +44,11 @@ export default function useAuth() {
       } else {
         navigate(getPostLoginRedirect());
       }
-    } catch (err) {
+    } catch (err: any) {
       setIsLoading(false);
 
-      const message = err.response?.data?.message;
-      if (isCloud() && message?.includes("verify your email")) {
-        const sig = err.response?.data?.emailSignature;
-        navigate(
-          `${APP_ROUTE.AUTH.VERIFY_EMAIL}?email=${encodeURIComponent(data.email)}${sig ? `&sig=${sig}` : ""}`,
-        );
-        return;
-      }
-
       notifications.show({
-        message,
+        message: err.response?.data?.message || "Login failed",
         color: "red",
       });
     }
@@ -79,17 +64,17 @@ export default function useAuth() {
       if (response?.requiresLogin) {
         notifications.show({
           message: t(
-            "Account created successfully. Please log in to set up two-factor authentication.",
+            "Account created successfully. Please log in to continue.",
           ),
         });
         navigate(APP_ROUTE.AUTH.LOGIN);
       } else {
         navigate(APP_ROUTE.HOME);
       }
-    } catch (err) {
+    } catch (err: any) {
       setIsLoading(false);
       notifications.show({
-        message: err.response?.data.message,
+        message: err.response?.data?.message || "Error",
         color: "red",
       });
     }
@@ -99,36 +84,13 @@ export default function useAuth() {
     setIsLoading(true);
 
     try {
-      if (isCloud()) {
-        const res = await createWorkspace(data);
-
-        if (res?.requiresEmailVerification) {
-          const hostname = res?.workspace?.hostname;
-          if (hostname) {
-            window.location.href =
-              getHostnameUrl(hostname) +
-              `/verify-email?email=${encodeURIComponent(data.email)}&sig=${res.emailSignature}`;
-          }
-          return;
-        }
-
-        const hostname = res?.workspace?.hostname;
-        const exchangeToken = res?.exchangeToken;
-        if (hostname && exchangeToken) {
-          window.location.href = exchangeTokenRedirectUrl(
-            hostname,
-            exchangeToken,
-          );
-        }
-      } else {
-        const res = await setupWorkspace(data);
-        setIsLoading(false);
-        navigate(APP_ROUTE.HOME);
-      }
-    } catch (err) {
+      await setupWorkspace(data);
+      setIsLoading(false);
+      navigate(APP_ROUTE.HOME);
+    } catch (err: any) {
       setIsLoading(false);
       notifications.show({
-        message: err.response?.data.message,
+        message: err.response?.data?.message || "Setup failed",
         color: "red",
       });
     }
@@ -154,10 +116,10 @@ export default function useAuth() {
           message: t("Password reset was successful"),
         });
       }
-    } catch (err) {
+    } catch (err: any) {
       setIsLoading(false);
       notifications.show({
-        message: err.response?.data.message,
+        message: err.response?.data?.message || "Error",
         color: "red",
       });
     }
@@ -175,16 +137,13 @@ export default function useAuth() {
     try {
       await forgotPassword(data);
       setIsLoading(false);
-
       return true;
-    } catch (err) {
-      console.log(err);
+    } catch (err: any) {
       setIsLoading(false);
       notifications.show({
-        message: err.response?.data.message,
+        message: err.response?.data?.message || "Error",
         color: "red",
       });
-
       return false;
     }
   };
@@ -195,11 +154,10 @@ export default function useAuth() {
     try {
       await verifyUserToken(data);
       setIsLoading(false);
-    } catch (err) {
-      console.log(err);
+    } catch (err: any) {
       setIsLoading(false);
       notifications.show({
-        message: err.response?.data.message,
+        message: err.response?.data?.message || "Error",
         color: "red",
       });
     }

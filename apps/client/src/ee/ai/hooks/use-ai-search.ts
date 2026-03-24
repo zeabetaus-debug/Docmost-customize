@@ -1,46 +1,36 @@
-import { useMutation, UseMutationResult } from "@tanstack/react-query";
-import { useState, useCallback } from "react";
-import { aiAnswers, IAiSearchResponse } from "@/ee/ai/services/ai-search-service.ts";
-import { IPageSearchParams } from "@/features/search/types/search.types.ts";
+import { useState } from "react";
 
-// @ts-ignore
-interface UseAiSearchResult extends UseMutationResult<IAiSearchResponse, Error, IPageSearchParams> {
-  streamingAnswer: string;
-  streamingSources: any[];
-  clearStreaming: () => void;
-}
-
-export function useAiSearch(): UseAiSearchResult {
-  const [streamingAnswer, setStreamingAnswer] = useState("");
+export function useAiSearch() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [data, setData] = useState<any>(null);
+  const [streamingAnswer, setStreamingAnswer] = useState<any>(null);
   const [streamingSources, setStreamingSources] = useState<any[]>([]);
 
-  const clearStreaming = useCallback(() => {
-    setStreamingAnswer("");
+  async function mutate(params?: any) {
+    setIsLoading(true);
+    setStreamingAnswer(null);
     setStreamingSources([]);
-  }, []);
 
-  const mutation = useMutation({
-    mutationFn: async (params: IPageSearchParams & { contentType?: string }) => {
-      setStreamingAnswer("");
-      setStreamingSources([]);
+    // simulate async AI search
+    setTimeout(() => {
+      setData({ query: params?.query, answer: null });
+      setIsLoading(false);
+    }, 200);
+  }
 
-      const { contentType, ...apiParams } = params;
-
-      return await aiAnswers(apiParams, (chunk) => {
-        if (chunk.content) {
-          setStreamingAnswer((prev) => prev + chunk.content);
-        }
-        if (chunk.sources) {
-          setStreamingSources(chunk.sources);
-        }
-      });
-    },
-  });
+  function clearStreaming() {
+    setStreamingAnswer(null);
+    setStreamingSources([]);
+  }
 
   return {
-    ...mutation,
+    data,
+    isPending: isLoading,
+    mutate,
+    reset: () => setData(null),
+    error: undefined,
     streamingAnswer,
     streamingSources,
     clearStreaming,
-  };
+  } as const;
 }

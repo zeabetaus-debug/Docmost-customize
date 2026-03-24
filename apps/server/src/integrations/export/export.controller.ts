@@ -15,6 +15,7 @@ import { ExportPageDto, ExportSpaceDto } from './dto/export-dto';
 import { AuthUser } from '../../common/decorators/auth-user.decorator';
 import { User } from '@docmost/db/types/entity.types';
 import SpaceAbilityFactory from '../../core/casl/abilities/space-ability.factory';
+import { UserRole } from '../../common/helpers/types/permission';
 import { JwtAuthGuard } from '../../common/guards/jwt-auth.guard';
 import { PageRepo } from '@docmost/db/repos/page/page.repo';
 import { PageAccessService } from '../../core/page/page-access/page-access.service';
@@ -61,6 +62,11 @@ export class ExportController {
 
     await this.pageAccessService.validateCanView(page, user);
 
+    // Clients are not allowed to export pages
+    if ((user as any)?.role === UserRole.CLIENT) {
+      throw new ForbiddenException('Export is not allowed for client users');
+    }
+
     const zipFileStream = await this.exportService.exportPages(
       dto.pageId,
       dto.format,
@@ -102,6 +108,11 @@ export class ExportController {
     @AuthUser() user: User,
     @Res() res: FastifyReply,
   ) {
+    // Clients may never export an entire space
+    if ((user as any)?.role === UserRole.CLIENT) {
+      throw new ForbiddenException('Export is not allowed for client users');
+    }
+
     const ability = await this.spaceAbility.createForUser(user, dto.spaceId);
     if (ability.cannot(SpaceCaslAction.Manage, SpaceCaslSubject.Settings)) {
       throw new ForbiddenException();

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSpaceQuery } from "@/features/space/queries/space-query.ts";
 import { EditSpaceForm } from "@/features/space/components/edit-space-form.tsx";
+import SpacePublicSharingToggle from "@/features/space/components/space-public-sharing-toggle";
 import { Button, Divider, Text } from "@mantine/core";
 import DeleteSpaceModal from "./delete-space-modal";
 import { useDisclosure } from "@mantine/hooks";
@@ -18,7 +19,7 @@ import {
   ResponsiveSettingsControl,
   ResponsiveSettingsRow,
 } from "@/components/ui/responsive-settings-row.tsx";
-import SpacePublicSharingToggle from "@/ee/security/components/space-public-sharing-toggle.tsx";
+
 
 interface SpaceDetailsProps {
   spaceId: string;

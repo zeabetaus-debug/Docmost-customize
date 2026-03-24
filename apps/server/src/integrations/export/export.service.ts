@@ -10,6 +10,8 @@ import { Page } from '@docmost/db/types/entity.types';
 import { InjectKysely } from 'nestjs-kysely';
 import { KyselyDB } from '@docmost/db/types/kysely.types';
 import * as JSZip from 'jszip';
+import * as fs from 'fs';
+import * as path from 'path';
 import { StorageService } from '../storage/storage.service';
 import {
   buildTree,
@@ -30,8 +32,25 @@ import { Node } from '@tiptap/pm/model';
 import { EditorState } from '@tiptap/pm/state';
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 import slugify = require('@sindresorhus/slugify');
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const packageJson = require('../../../package.json');
+// Resolve nearest package.json at runtime by walking up parent directories.
+const packageJson = (() => {
+  try {
+    let cur = __dirname;
+    while (true) {
+      const candidate = path.join(cur, 'package.json');
+      if (fs.existsSync(candidate)) {
+        const raw = fs.readFileSync(candidate, 'utf8');
+        return JSON.parse(raw);
+      }
+      const parent = path.dirname(cur);
+      if (parent === cur) break;
+      cur = parent;
+    }
+  } catch (err) {
+    /* empty */
+  }
+  return {} as Record<string, any>;
+})();
 import { EnvironmentService } from '../environment/environment.service';
 import { DomainService } from '../environment/domain.service';
 import {

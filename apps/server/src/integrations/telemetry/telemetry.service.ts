@@ -2,11 +2,30 @@ import { Injectable } from '@nestjs/common';
 import { Interval, SchedulerRegistry } from '@nestjs/schedule';
 import { EnvironmentService } from '../environment/environment.service';
 import { InjectKysely } from 'nestjs-kysely';
+import * as fs from 'fs';
+import * as path from 'path';
 import { KyselyDB } from '@docmost/db/types/kysely.types';
 import { createHmac } from 'node:crypto';
 import { WorkspaceRepo } from '@docmost/db/repos/workspace/workspace.repo';
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const packageJson = require('./../../../package.json');
+// Resolve nearest package.json at runtime by walking up parent directories.
+const packageJson = (() => {
+  try {
+    let cur = __dirname;
+    while (true) {
+      const candidate = path.join(cur, 'package.json');
+      if (fs.existsSync(candidate)) {
+        const raw = fs.readFileSync(candidate, 'utf8');
+        return JSON.parse(raw);
+      }
+      const parent = path.dirname(cur);
+      if (parent === cur) break;
+      cur = parent;
+    }
+  } catch (err) {
+    /* empty */
+  }
+  return {} as Record<string, any>;
+})();
 
 @Injectable()
 export class TelemetryService {

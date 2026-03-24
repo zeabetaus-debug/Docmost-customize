@@ -17,7 +17,6 @@ import { useRedirectIfAuthenticated } from "@/features/auth/hooks/use-redirect-i
 import { Link } from "react-router-dom";
 import APP_ROUTE from "@/lib/app-route.ts";
 import { useTranslation } from "react-i18next";
-import SsoLogin from "@/ee/components/sso-login.tsx";
 import { useWorkspacePublicDataQuery } from "@/features/workspace/queries/workspace-query.ts";
 import { Error404 } from "@/components/ui/error-404.tsx";
 import React from "react";
@@ -29,14 +28,15 @@ const formSchema = z.object({
     .min(1, { message: "email is required" }),
   password: z.string().min(1, { message: "Password is required" }),
 });
+
 type FormValues = z.infer<typeof formSchema>;
 
 export function LoginForm() {
   const { t } = useTranslation();
   const { signIn, isLoading } = useAuth();
   useRedirectIfAuthenticated();
+
   const {
-    data,
     isLoading: isDataLoading,
     isError,
     error,
@@ -55,7 +55,7 @@ export function LoginForm() {
   }
 
   if (isDataLoading) {
-   return null;
+    return null;
   }
 
   if (isError && error?.["response"]?.status === 404) {
@@ -70,45 +70,41 @@ export function LoginForm() {
             {t("Login")}
           </Title>
 
-          <SsoLogin />
+          {/* ❌ Removed SSO Login */}
 
-          {!data?.enforceSso && (
-            <>
-              <form onSubmit={form.onSubmit(onSubmit)}>
-                <TextInput
-                  id="email"
-                  type="email"
-                  label={t("Email")}
-                  placeholder="email@example.com"
-                  variant="filled"
-                  {...form.getInputProps("email")}
-                />
+          <form onSubmit={form.onSubmit(onSubmit)}>
+            <TextInput
+              id="email"
+              type="email"
+              label={t("Email")}
+              placeholder="email@example.com"
+              variant="filled"
+              {...form.getInputProps("email")}
+            />
 
-                <PasswordInput
-                  label={t("Password")}
-                  placeholder={t("Your password")}
-                  variant="filled"
-                  mt="md"
-                  {...form.getInputProps("password")}
-                />
+            <PasswordInput
+              label={t("Password")}
+              placeholder={t("Your password")}
+              variant="filled"
+              mt="md"
+              {...form.getInputProps("password")}
+            />
 
-                <Group justify="flex-end" mt="sm">
-                  <Anchor
-                    to={APP_ROUTE.AUTH.FORGOT_PASSWORD}
-                    component={Link}
-                    underline="never"
-                    size="sm"
-                  >
-                    {t("Forgot your password?")}
-                  </Anchor>
-                </Group>
+            <Group justify="flex-end" mt="sm">
+              <Anchor
+                to={APP_ROUTE.AUTH.FORGOT_PASSWORD}
+                component={Link}
+                underline="never"
+                size="sm"
+              >
+                {t("Forgot your password?")}
+              </Anchor>
+            </Group>
 
-                <Button type="submit" fullWidth mt="md" loading={isLoading}>
-                  {t("Sign In")}
-                </Button>
-              </form>
-            </>
-          )}
+            <Button type="submit" fullWidth mt="md" loading={isLoading}>
+              {t("Sign In")}
+            </Button>
+          </form>
         </Box>
       </Container>
     </AuthLayout>

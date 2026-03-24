@@ -9,10 +9,12 @@ import {
   deleteComment,
   getPageComments,
   updateComment,
+  resolveComment,
 } from "@/features/comment/services/comment-service";
 import {
   ICommentParams,
   IComment,
+  IResolveComment,
 } from "@/features/comment/types/comment.types";
 import { notifications } from "@mantine/notifications";
 import { IPagination } from "@/lib/types.ts";
@@ -153,4 +155,35 @@ export function useDeleteCommentMutation(pageId?: string) {
   });
 }
 
-// EE: useResolveCommentMutation has been moved to @/ee/comment/queries/comment-query
+export function useResolveCommentMutation() {
+  const queryClient = useQueryClient();
+  const { t } = useTranslation();
+
+  return useMutation<IComment, Error, IResolveComment>({
+    mutationFn: (data) => resolveComment(data),
+    onSuccess: (updatedComment) => {
+      const cache = queryClient.getQueryData(
+        RQ_KEY(updatedComment.pageId),
+      ) as InfiniteData<IPagination<IComment>> | undefined;
+
+      if (cache) {
+        queryClient.setQueryData(RQ_KEY(updatedComment.pageId), {
+          ...cache,
+          pages: cache.pages.map((page) => ({
+            ...page,
+            items: page.items.map((c) =>
+              c.id === updatedComment.id ? updatedComment : c,
+            ),
+          })),
+        });
+      }
+
+      notifications.show({ message: t("Comment updated successfully") });
+    },
+    onError: () => {
+      notifications.show({ message: t("Failed to toggle resolved state"), color: "red" });
+    },
+  });
+}
+
+

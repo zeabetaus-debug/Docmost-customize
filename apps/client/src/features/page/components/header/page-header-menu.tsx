@@ -28,6 +28,7 @@ import { extractPageSlugId } from "@/lib";
 import { treeApiAtom } from "@/features/page/tree/atoms/tree-api-atom.ts";
 import { useDeletePageModal } from "@/features/page/hooks/use-delete-page-modal.tsx";
 import { PageWidthToggle } from "@/features/user/components/page-width-pref.tsx";
+import PageShareModal from "@/features/page/components/page-share-modal";
 import { Trans, useTranslation } from "react-i18next";
 import ExportModal from "@/components/common/export-modal";
 import { htmlToMarkdown } from "@docmost/editor-ext";
@@ -39,7 +40,7 @@ import { formattedDate } from "@/lib/time.ts";
 import { PageStateSegmentedControl } from "@/features/user/components/page-state-pref.tsx";
 import MovePageModal from "@/features/page/components/move-page-modal.tsx";
 import { useTimeAgo } from "@/hooks/use-time-ago.tsx";
-import { PageShareModal } from "@/ee/page-permission";
+
 
 interface PageHeaderMenuProps {
   readOnly?: boolean;

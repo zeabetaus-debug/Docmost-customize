@@ -30,13 +30,32 @@ import { queryClient } from "@/main.tsx";
 import { getRecentChanges } from "@/features/page/services/page-service.ts";
 import { useEffect } from "react";
 import { validate as isValidUuid } from "uuid";
+import { useAtom } from "jotai";
+import { clientAtom } from "@/store/client-store";
 
 export function useGetSpacesQuery(
   params?: QueryParams,
 ): UseQueryResult<IPagination<ISpace>, Error> {
+
+  const [clientId] = useAtom(clientAtom); // 🔥 reactive
+
   return useQuery({
-    queryKey: ["spaces", params],
-    queryFn: () => getSpaces(params),
+    queryKey: ["spaces", params, clientId],
+
+    queryFn: async () => {
+      const data = await getSpaces(params);
+
+      // 🔥 UI CHANGE LOGIC
+      if (clientId === "client-b") {
+        return {
+          ...data,
+          items: [], // 👈 EMPTY UI
+        };
+      }
+
+      return data;
+    },
+
     placeholderData: keepPreviousData,
     refetchOnMount: true,
   });

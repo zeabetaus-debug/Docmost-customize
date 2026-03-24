@@ -8,8 +8,7 @@ import {
   IPageSearch,
   IPageSearchParams,
 } from "@/features/search/types/search.types";
-import { useHasFeature } from "@/ee/hooks/use-feature";
-import { Feature } from "@/ee/features";
+
 
 export type UnifiedSearchResult = IPageSearch | IAttachmentSearch;
 
