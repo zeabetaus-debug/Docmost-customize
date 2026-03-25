@@ -18,6 +18,7 @@ export interface IPage {
   deletedAt: Date;
   position: string;
   hasChildren: boolean;
+  status?: "draft" | "review" | "approved" | "archived";
   canEdit?: boolean;
   creator: ICreator;
   lastUpdatedBy: ILastUpdatedBy;
@@ -69,15 +70,17 @@ export interface SidebarPagesParams {
   pageId?: string;
   cursor?: string;
 }
-
+export type StatusType = "draft" | "review" | "approved" | "archived";
 export interface IPageInput {
   pageId: string;
-  title: string;
-  parentPageId: string;
-  icon: string;
-  coverPhoto: string;
-  position: string;
-  isLocked: boolean;
+  title?: string;
+  parentPageId?: string;
+  icon?: string;
+  coverPhoto?: string;
+  position?: string;
+  isLocked?: boolean;
+
+  status?: StatusType; // ✅ ADD THIS (MAIN FIX)
 }
 
 export interface IExportPageParams {

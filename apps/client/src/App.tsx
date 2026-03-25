@@ -18,6 +18,10 @@ import InviteSignup from "@/pages/auth/invite-signup.tsx";
 import ForgotPassword from "@/pages/auth/forgot-password.tsx";
 import PasswordReset from "./pages/auth/password-reset";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
+import { useAtom } from "jotai";
+import { currentUserAtom } from "@/features/user/atoms/current-user-atom";
+import "@/styles/client-mode.css";
 import SharedPage from "@/pages/share/shared-page.tsx";
 import Shares from "@/pages/settings/shares/shares.tsx";
 import ShareLayout from "@/features/share/components/share-layout.tsx";
@@ -29,6 +33,19 @@ import SpaceTrash from "@/pages/space/space-trash.tsx";
 export default function App() {
   const { t } = useTranslation();
   useTrackOrigin();
+  const [currentUser] = useAtom(currentUserAtom);
+
+  useEffect(() => {
+    const isClient = currentUser?.user?.role === "client";
+    if (isClient) {
+      document.body.classList.add("client-readonly");
+    } else {
+      document.body.classList.remove("client-readonly");
+    }
+    return () => {
+      document.body.classList.remove("client-readonly");
+    };
+  }, [currentUser]);
 
   return (
     <Routes>

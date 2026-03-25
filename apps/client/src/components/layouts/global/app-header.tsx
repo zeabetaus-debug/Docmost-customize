@@ -20,12 +20,16 @@ import {
 
 import { searchSpotlight } from "@/features/search/constants.ts";
 import { NotificationPopover } from "@/features/notification/components/notification-popover.tsx";
+import usePermission from "@/hooks/use-permission";
 
 const links = [{ link: APP_ROUTE.HOME, label: "Home" }];
 
 export function AppHeader() {
   const { t } = useTranslation();
   const location = useLocation();
+
+  // permissions (must be called at top-level of component)
+  const permission = usePermission();
 
   const [mobileOpened] = useAtom(mobileSidebarAtom);
   const toggleMobile = useToggleSidebar(mobileSidebarAtom);
@@ -95,6 +99,14 @@ export function AppHeader() {
       {/* RIGHT SIDE */}
       <Group gap="md" wrap="nowrap">
         <NotificationPopover />
+        {/* Read only badge for client users */}
+        {permission.isClient && (
+          <div className={`${classes.clientBadge} client-mode-global-badge`}>
+            <Text size="xs" color="dimmed" fw={700}>
+              Read Only Access
+            </Text>
+          </div>
+        )}
         <TopMenu />
       </Group>
     </Group>

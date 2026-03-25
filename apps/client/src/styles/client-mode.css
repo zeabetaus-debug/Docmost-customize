@@ -1,0 +1,19 @@
+/* Styles applied when a client (read-only) user is active */
+body.client-readonly input,
+body.client-readonly textarea,
+body.client-readonly select,
+body.client-readonly button {
+  pointer-events: none;
+  opacity: 0.72;
+}
+
+/* contenteditable regions should look disabled */
+body.client-readonly [contenteditable="true"] {
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+/* keep header badge readable */
+.client-mode-global-badge {
+  margin-left: 8px;
+}

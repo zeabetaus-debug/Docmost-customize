@@ -105,6 +105,13 @@ export async function getRecentChanges(
   const req = await api.post("/pages/recent", { spaceId });
   return req.data;
 }
+export async function updatePageStatus(pageId: string, status: string) {
+  const req = await api.post("/pages/update", {
+    pageId,
+    status,
+  });
+  return req.data;
+}
 
 export async function exportPage(data: IExportPageParams): Promise<void> {
   const req = await api.post("/pages/export", data, {

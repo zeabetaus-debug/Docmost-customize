@@ -10,12 +10,15 @@ import { useTranslation } from "react-i18next";
 import React from "react";
 import { EmptyState } from "@/components/ui/empty-state.tsx";
 import { IconAlertTriangle, IconFileOff } from "@tabler/icons-react";
-import { Button } from "@mantine/core";
+import { Button, Text } from "@mantine/core";
 import { Link } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
+
 const MemoizedFullEditor = React.memo(FullEditor);
 const MemoizedPageHeader = React.memo(PageHeader);
 const MemoizedHistoryModal = React.memo(HistoryModal);
+
+type StatusType = "draft" | "review" | "approved" | "archived";
 
 export default function Page() {
   const { t } = useTranslation();
@@ -50,13 +53,25 @@ function PageContent({ pageSlug }: { pageSlug: string | undefined }) {
     isError,
     error,
   } = usePageQuery({ pageId: extractPageSlugId(pageSlug) });
+
   const { data: space } = useGetSpaceBySlugQuery(page?.space?.slug);
 
   const canEdit = page?.permissions?.canEdit ?? false;
 
-  if (isLoading) {
-    return <></>;
-  }
+  // ✅ Approval Workflow State
+  const [status, setStatus] = React.useState<StatusType>("draft");
+
+  // ✅ Change Requests State (CORRECT PLACE)
+  const [changeRequests, setChangeRequests] = React.useState<string[]>([]);
+
+  // 🔁 Sync with backend
+  React.useEffect(() => {
+    if (page?.status) {
+      setStatus(page.status as StatusType);
+    }
+  }, [page?.status]);
+
+  if (isLoading) return null;
 
   if (isError || !page) {
     if ([401, 403, 404].includes(error?.["status"])) {
@@ -65,7 +80,7 @@ function PageContent({ pageSlug }: { pageSlug: string | undefined }) {
           icon={IconFileOff}
           title={t("Page not found")}
           description={t(
-            "This page may have been deleted, moved, or you may not have access.",
+            "This page may have been deleted, moved, or you may not have access."
           )}
           action={
             <Button component={Link} to="/home" variant="default" size="sm" mt="xs">
@@ -75,38 +90,51 @@ function PageContent({ pageSlug }: { pageSlug: string | undefined }) {
         />
       );
     }
-    return (
-      <EmptyState
-        icon={IconFileOff}
-        title={t("Error fetching page data.")}
-      />
-    );
+
+    return <EmptyState icon={IconFileOff} title={t("Error fetching page data.")} />;
   }
 
-  if (!space) {
-    return <></>;
-  }
+  if (!space) return null;
 
   return (
-    page && (
-      <div>
-        <Helmet>
-          <title>{`${page?.icon || ""}  ${page?.title || t("untitled")}`}</title>
-        </Helmet>
+    <div>
+      <Helmet>
+        <title>{`${page.icon || ""} ${page.title || t("untitled")}`}</title>
+      </Helmet>
 
-        <MemoizedPageHeader readOnly={!canEdit} />
+      {/* ✅ HEADER */}
+      <MemoizedPageHeader
+        readOnly={!canEdit || status === "approved"}
+        page={page}
+        status={status}
+        setStatus={setStatus}
+        setChangeRequests={setChangeRequests} // 🔥 PASS DOWN
+      />
 
-        <MemoizedFullEditor
-          key={page.id}
-          pageId={page.id}
-          title={page.title}
-          content={page.content}
-          slugId={page.slugId}
-          spaceSlug={page?.space?.slug}
-          editable={canEdit}
-        />
-        <MemoizedHistoryModal pageId={page.id} />
-      </div>
-    )
+      {/* Editor */}
+      <MemoizedFullEditor
+        key={page.id}
+        pageId={page.id}
+        title={page.title}
+        content={page.content}
+        slugId={page.slugId}
+        spaceSlug={page.space?.slug}
+        editable={canEdit && status !== "approved"}
+      />
+
+      {/* ✅ SHOW CHANGE REQUESTS (REAL DATA) */}
+      {changeRequests.length > 0 && (
+        <div style={{ marginTop: 20 }}>
+          {changeRequests.map((req, i) => (
+            <Text key={i} size="sm" c="yellow">
+              🔁 {req}
+            </Text>
+          ))}
+        </div>
+      )}
+
+      {/* History */}
+      <MemoizedHistoryModal pageId={page.id} />
+    </div>
   );
 }
