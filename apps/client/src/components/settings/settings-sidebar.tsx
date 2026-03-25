@@ -9,6 +9,11 @@ import {
   IconSpaces,
   IconBrush,
   IconWorld,
+  IconWebhook,
+  IconKey,
+  IconHistory,
+  IconTemplate,
+  IconTags,
 } from "@tabler/icons-react";
 import { useLocation, useNavigate } from "react-router-dom";
 import classes from "./settings.module.css";
@@ -60,6 +65,31 @@ const groupedData: DataGroup[] = [
       { label: "Groups", icon: IconUsersGroup, path: "/settings/groups" },
       { label: "Spaces", icon: IconSpaces, path: "/settings/spaces" },
       { label: "Public sharing", icon: IconWorld, path: "/settings/sharing" },
+      {
+        label: "Automation Webhooks",
+        icon: IconWebhook,
+        path: "/settings/webhooks",
+      },
+      {
+        label: "API Keys",
+        icon: IconKey,
+        path: "/settings/api-keys",
+      },
+      {
+        label: "Audit Log",
+        icon: IconHistory,
+        path: "/settings/audit-log",
+      },
+      {
+        label: "Smart Templates",
+        icon: IconTemplate,
+        path: "/settings/templates",
+      },
+      {
+        label: "Taxonomy",
+        icon: IconTags,
+        path: "/settings/taxonomy",
+      },
     ],
   },
 ];

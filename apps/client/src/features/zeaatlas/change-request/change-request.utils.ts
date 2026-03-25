@@ -68,8 +68,16 @@ function collectText(node: any): string[] {
   return node.content.flatMap((child) => collectText(child));
 }
 
+export function changeRequestContentToText(content: any) {
+  if (typeof content === "string") {
+    return content.trim();
+  }
+
+  return collectText(content).join(" ").replace(/\s+/g, " ").trim();
+}
+
 export function getChangeRequestPreview(content: any) {
-  const preview = collectText(content).join(" ").replace(/\s+/g, " ").trim();
+  const preview = changeRequestContentToText(content);
   return preview || "No preview";
 }
 

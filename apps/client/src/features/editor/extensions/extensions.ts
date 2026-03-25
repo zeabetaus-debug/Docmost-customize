@@ -93,6 +93,7 @@ import i18n from "@/i18n.ts";
 import { MarkdownClipboard } from "@/features/editor/extensions/markdown-clipboard.ts";
 import EmojiCommand from "./emoji-command";
 import { countWords } from "alfaaz";
+import { MermaidNode } from "@/features/zeaatlas/diagrams/extensions/mermaid-extension";
 
 const lowlight = createLowlight(common);
 lowlight.register("mermaid", plaintext);
@@ -343,6 +344,7 @@ export const mainExtensions = [
   }).configure(),
   Columns,
   Column,
+  MermaidNode,
 ] as any;
 
 type CollabExtensions = (provider: HocuspocusProvider, user: IUser) => any[];

@@ -71,6 +71,7 @@ export default function ChangeRequestCard({
 
   const handleApprove = async () => {
     if (!validateRequestId()) return;
+    if (!window.confirm("Are you sure you want to approve this request?")) return;
 
     try {
       await approveMutation.mutateAsync(request.id);
@@ -82,6 +83,7 @@ export default function ChangeRequestCard({
 
   const handleReject = async () => {
     if (!validateRequestId()) return;
+    if (!window.confirm("Are you sure you want to reject this request?")) return;
 
     try {
       await rejectMutation.mutateAsync(request.id);
@@ -92,6 +94,7 @@ export default function ChangeRequestCard({
   };
 
   const handleReply = () => {
+    if (!isPending) return;
     if (!reply.trim()) return;
 
     const newComment = {
@@ -110,7 +113,14 @@ export default function ChangeRequestCard({
   };
 
   return (
-    <Paper withBorder p="sm" radius="md">
+    <Paper
+      withBorder
+      p="sm"
+      radius="md"
+      style={{
+        border: opened ? "1px solid #228be6" : undefined,
+      }}
+    >
       <Stack gap="sm">
         <Group justify="space-between" align="flex-start">
           <Stack gap={2}>
@@ -184,6 +194,7 @@ export default function ChangeRequestCard({
         <Divider my="sm" />
         <CommentThread
           comments={request.comments}
+          disabled={!isPending}
           reply={reply}
           onReplyChange={setReply}
           onReplySubmit={handleReply}
@@ -193,6 +204,7 @@ export default function ChangeRequestCard({
       <ChangeRequestViewModal
         opened={opened}
         onClose={close}
+        pageId={pageId}
         title={pageTitle || "Change Request"}
         content={request.content}
       />

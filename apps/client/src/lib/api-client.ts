@@ -7,6 +7,20 @@ const api: AxiosInstance = axios.create({
   withCredentials: true,
 });
 
+api.interceptors.request.use((config) => {
+  if (typeof window === "undefined") {
+    return config;
+  }
+
+  const apiKey = window.localStorage.getItem("zeaatlas_api_key");
+
+  if (apiKey) {
+    config.headers.set("Authorization", `Bearer ${apiKey}`);
+  }
+
+  return config;
+});
+
 api.interceptors.response.use(
   (response) => {
     // we need the response headers for these endpoints

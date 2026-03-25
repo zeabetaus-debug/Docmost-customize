@@ -4,6 +4,7 @@ import { IChangeRequestComment } from "@/features/zeaatlas/change-request/change
 
 interface CommentThreadProps {
   comments?: IChangeRequestComment[];
+  disabled?: boolean;
   reply: string;
   onReplyChange: (value: string) => void;
   onReplySubmit: () => void;
@@ -11,10 +12,17 @@ interface CommentThreadProps {
 
 export default function CommentThread({
   comments = [],
+  disabled = false,
   reply,
   onReplyChange,
   onReplySubmit,
 }: CommentThreadProps) {
+  const bottomRef = React.useRef<HTMLDivElement | null>(null);
+
+  React.useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [comments]);
+
   return (
     <Stack mt="sm" gap="xs">
       {comments.map((comment) => (
@@ -33,10 +41,14 @@ export default function CommentThread({
           onChange={(event) => onReplyChange(event.currentTarget.value)}
           minRows={2}
           autosize
+          disabled={disabled}
           style={{ flex: 1 }}
         />
-        <Button onClick={onReplySubmit}>Reply</Button>
+        <Button onClick={onReplySubmit} disabled={disabled}>
+          Reply
+        </Button>
       </Group>
+      <div ref={bottomRef} />
     </Stack>
   );
 }

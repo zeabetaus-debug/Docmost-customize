@@ -56,6 +56,7 @@ export default function PageHeader({
             <ApprovalActions
               page={page}
               onStatusChange={setStatus}
+              requests={changeRequests}
               setChangeRequests={setChangeRequests}
             />
           )}

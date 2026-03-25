@@ -13,6 +13,7 @@ type StatusType = "draft" | "review" | "approved" | "archived";
 interface Props {
   page: IPage;
   onStatusChange?: (s: StatusType) => void;
+  requests?: IChangeRequest[];
   setChangeRequests?: React.Dispatch<React.SetStateAction<IChangeRequest[]>>;
 }
 
@@ -31,6 +32,7 @@ const getValidStatus = (status: string | null | undefined): StatusType => {
 export default function ApprovalActions({
   page,
   onStatusChange,
+  requests,
   setChangeRequests,
 }: Props) {
   const mutation = useUpdatePageMutation();
@@ -81,10 +83,26 @@ export default function ApprovalActions({
       return;
     }
 
+    const normalizedMessage = message.trim();
+    const exists = (requests || []).some(
+      (request) =>
+        request.status === "pending" &&
+        typeof request.content === "string" &&
+        request.content.trim() === normalizedMessage,
+    );
+
+    if (exists) {
+      notifications.show({
+        message: "This pending change request already exists",
+        color: "yellow",
+      });
+      return;
+    }
+
     setChangeRequests?.((prev) => [
       ...prev,
       createLocalChangeRequest({
-        content: message.trim(),
+        content: normalizedMessage,
         pageId: page.id,
         user: currentUser?.user,
       }),
@@ -124,6 +142,7 @@ export default function ApprovalActions({
           <Button
             size="sm"
             variant="default"
+            disabled={page.status === "approved"}
             onClick={() => setOpenModal(true)}
           >
             Request Change
@@ -134,9 +153,14 @@ export default function ApprovalActions({
 
     if (status === "approved") {
       return (
-        <Text size="sm" c="green" fw={500}>
-          Approved (Locked)
-        </Text>
+        <>
+          <Text size="sm" c="green" fw={500}>
+            Approved (Locked)
+          </Text>
+          <Text size="xs" c="green">
+            Page is locked. No further changes allowed.
+          </Text>
+        </>
       );
     }
 

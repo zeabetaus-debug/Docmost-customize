@@ -124,7 +124,7 @@ export default function ChangeRequestIndicator({
       >
         <Stack gap="sm">
           <Text fw={600} size="sm">
-            Change Requests
+            Change Requests ({visibleRequests.length})
           </Text>
 
           {hasRequests ? (
