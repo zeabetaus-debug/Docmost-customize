@@ -39,9 +39,12 @@ import ExportModal from "@/components/common/export-modal";
 import { mobileSidebarAtom } from "@/components/layouts/global/hooks/atoms/sidebar-atom.ts";
 import { useToggleSidebar } from "@/components/layouts/global/hooks/hooks/use-toggle-sidebar.ts";
 import { searchSpotlight } from "@/features/search/constants";
+import { useClientGuard } from "@/features/zeaatlas/client-mode/use-client-guard";
+import { useNavigate } from "react-router-dom";
 
 export function SpaceSidebar() {
   const { t } = useTranslation();
+  const { isClient, guardClientAction } = useClientGuard();
   const [tree] = useAtom(treeApiAtom);
   const location = useLocation();
   const [opened, { open: openSettings, close: closeSettings }] =
@@ -117,7 +120,10 @@ export function SpaceSidebar() {
               </div>
             </UnstyledButton>
 
-            <UnstyledButton className={classes.menu} onClick={openSettings}>
+            <UnstyledButton
+              className={classes.menu}
+              onClick={() => guardClientAction(openSettings)}
+            >
               <div className={classes.menuItemInner}>
                 <IconSettings
                   size={18}
@@ -128,7 +134,7 @@ export function SpaceSidebar() {
               </div>
             </UnstyledButton>
 
-            {spaceAbility.can(
+            {!isClient && spaceAbility.can(
               SpaceCaslAction.Manage,
               SpaceCaslSubject.Page,
             ) && (
@@ -160,7 +166,7 @@ export function SpaceSidebar() {
               {t("Pages")}
             </Text>
 
-            {spaceAbility.can(
+            {!isClient && spaceAbility.can(
               SpaceCaslAction.Manage,
               SpaceCaslSubject.Page,
             ) && (
@@ -208,6 +214,8 @@ interface SpaceMenuProps {
 }
 function SpaceMenu({ spaceId, onSpaceSettings }: SpaceMenuProps) {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  const { canExport, guardClientAction } = useClientGuard();
   const { spaceSlug } = useParams();
   const [importOpened, { open: openImportModal, close: closeImportModal }] =
     useDisclosure(false);
@@ -235,14 +243,21 @@ function SpaceMenu({ spaceId, onSpaceSettings }: SpaceMenuProps) {
 
         <Menu.Dropdown>
           <Menu.Item
-            onClick={openImportModal}
+            onClick={() => guardClientAction(openImportModal)}
             leftSection={<IconArrowDown size={16} />}
           >
             {t("Import pages")}
           </Menu.Item>
 
           <Menu.Item
-            onClick={openExportModal}
+            onClick={() => {
+              if (!canExport) {
+                guardClientAction(undefined);
+                return;
+              }
+
+              openExportModal();
+            }}
             leftSection={<IconFileExport size={16} />}
           >
             {t("Export space")}
@@ -251,15 +266,16 @@ function SpaceMenu({ spaceId, onSpaceSettings }: SpaceMenuProps) {
           <Menu.Divider />
 
           <Menu.Item
-            onClick={onSpaceSettings}
+            onClick={() => guardClientAction(onSpaceSettings)}
             leftSection={<IconSettings size={16} />}
           >
             {t("Space settings")}
           </Menu.Item>
 
           <Menu.Item
-            component={Link}
-            to={`/s/${spaceSlug}/trash`}
+            onClick={() =>
+              guardClientAction(() => navigate(`/s/${spaceSlug}/trash`))
+            }
             leftSection={<IconTrash size={16} />}
           >
             {t("Trash")}

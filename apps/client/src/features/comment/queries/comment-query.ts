@@ -20,6 +20,8 @@ import { notifications } from "@mantine/notifications";
 import { IPagination } from "@/lib/types.ts";
 import { useTranslation } from "react-i18next";
 import { useEffect, useMemo } from "react";
+import usePermission from "@/hooks/use-permission";
+import { CLIENT_READ_ONLY_MESSAGE } from "@/features/zeaatlas/client-mode/client-mode.utils";
 
 export const RQ_KEY = (pageId: string) => ["comments", pageId];
 
@@ -58,9 +60,16 @@ export function useCommentsQuery(params: ICommentParams) {
 export function useCreateCommentMutation() {
   const queryClient = useQueryClient();
   const { t } = useTranslation();
+  const permission = usePermission();
 
   return useMutation<IComment, Error, Partial<IComment>>({
-    mutationFn: (data) => createComment(data),
+    mutationFn: (data) => {
+      if (permission.isClient) {
+        throw new Error(CLIENT_READ_ONLY_MESSAGE);
+      }
+
+      return createComment(data);
+    },
     onSuccess: (newComment) => {
       const cache = queryClient.getQueryData(
         RQ_KEY(newComment.pageId),
@@ -80,10 +89,13 @@ export function useCreateCommentMutation() {
 
       notifications.show({ message: t("Comment created successfully") });
     },
-    onError: () => {
+    onError: (error) => {
       notifications.show({
-        message: t("Error creating comment"),
-        color: "red",
+        message:
+          error.message === CLIENT_READ_ONLY_MESSAGE
+            ? CLIENT_READ_ONLY_MESSAGE
+            : t("Error creating comment"),
+        color: error.message === CLIENT_READ_ONLY_MESSAGE ? "gray" : "red",
       });
     },
   });
@@ -92,9 +104,16 @@ export function useCreateCommentMutation() {
 export function useUpdateCommentMutation() {
   const queryClient = useQueryClient();
   const { t } = useTranslation();
+  const permission = usePermission();
 
   return useMutation<IComment, Error, Partial<IComment>>({
-    mutationFn: (data) => updateComment(data),
+    mutationFn: (data) => {
+      if (permission.isClient) {
+        throw new Error(CLIENT_READ_ONLY_MESSAGE);
+      }
+
+      return updateComment(data);
+    },
     onSuccess: (updatedComment) => {
       const cache = queryClient.getQueryData(
         RQ_KEY(updatedComment.pageId),
@@ -114,10 +133,13 @@ export function useUpdateCommentMutation() {
 
       notifications.show({ message: t("Comment updated successfully") });
     },
-    onError: () => {
+    onError: (error) => {
       notifications.show({
-        message: t("Failed to update comment"),
-        color: "red",
+        message:
+          error.message === CLIENT_READ_ONLY_MESSAGE
+            ? CLIENT_READ_ONLY_MESSAGE
+            : t("Failed to update comment"),
+        color: error.message === CLIENT_READ_ONLY_MESSAGE ? "gray" : "red",
       });
     },
   });
@@ -126,9 +148,16 @@ export function useUpdateCommentMutation() {
 export function useDeleteCommentMutation(pageId?: string) {
   const queryClient = useQueryClient();
   const { t } = useTranslation();
+  const permission = usePermission();
 
   return useMutation({
-    mutationFn: (commentId: string) => deleteComment(commentId),
+    mutationFn: (commentId: string) => {
+      if (permission.isClient) {
+        throw new Error(CLIENT_READ_ONLY_MESSAGE);
+      }
+
+      return deleteComment(commentId);
+    },
     onSuccess: (_data, commentId) => {
       const cache = queryClient.getQueryData(
         RQ_KEY(pageId),
@@ -146,10 +175,13 @@ export function useDeleteCommentMutation(pageId?: string) {
 
       notifications.show({ message: t("Comment deleted successfully") });
     },
-    onError: () => {
+    onError: (error) => {
       notifications.show({
-        message: t("Failed to delete comment"),
-        color: "red",
+        message:
+          error.message === CLIENT_READ_ONLY_MESSAGE
+            ? CLIENT_READ_ONLY_MESSAGE
+            : t("Failed to delete comment"),
+        color: error.message === CLIENT_READ_ONLY_MESSAGE ? "gray" : "red",
       });
     },
   });
@@ -158,9 +190,16 @@ export function useDeleteCommentMutation(pageId?: string) {
 export function useResolveCommentMutation() {
   const queryClient = useQueryClient();
   const { t } = useTranslation();
+  const permission = usePermission();
 
   return useMutation<IComment, Error, IResolveComment>({
-    mutationFn: (data) => resolveComment(data),
+    mutationFn: (data) => {
+      if (permission.isClient) {
+        throw new Error(CLIENT_READ_ONLY_MESSAGE);
+      }
+
+      return resolveComment(data);
+    },
     onSuccess: (updatedComment) => {
       const cache = queryClient.getQueryData(
         RQ_KEY(updatedComment.pageId),
@@ -180,8 +219,14 @@ export function useResolveCommentMutation() {
 
       notifications.show({ message: t("Comment updated successfully") });
     },
-    onError: () => {
-      notifications.show({ message: t("Failed to toggle resolved state"), color: "red" });
+    onError: (error) => {
+      notifications.show({
+        message:
+          error.message === CLIENT_READ_ONLY_MESSAGE
+            ? CLIENT_READ_ONLY_MESSAGE
+            : t("Failed to toggle resolved state"),
+        color: error.message === CLIENT_READ_ONLY_MESSAGE ? "gray" : "red",
+      });
     },
   });
 }

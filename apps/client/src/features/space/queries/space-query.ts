@@ -30,32 +30,24 @@ import { queryClient } from "@/main.tsx";
 import { getRecentChanges } from "@/features/page/services/page-service.ts";
 import { useEffect } from "react";
 import { validate as isValidUuid } from "uuid";
-import { useAtom } from "jotai";
-import { clientAtom } from "@/store/client-store";
+import usePermission from "@/hooks/use-permission";
+import { filterClientAllowedSpaces } from "@/features/zeaatlas/client-mode/client-mode.utils";
 
 export function useGetSpacesQuery(
   params?: QueryParams,
 ): UseQueryResult<IPagination<ISpace>, Error> {
-
-  const [clientId] = useAtom(clientAtom); // 🔥 reactive
+  const permission = usePermission();
 
   return useQuery({
-    queryKey: ["spaces", params, clientId],
-
+    queryKey: ["spaces", params, permission.isClient],
     queryFn: async () => {
       const data = await getSpaces(params);
 
-      // 🔥 UI CHANGE LOGIC
-      if (clientId === "client-b") {
-        return {
-          ...data,
-          items: [], // 👈 EMPTY UI
-        };
-      }
-
-      return data;
+      return {
+        ...data,
+        items: filterClientAllowedSpaces(data.items, permission.isClient),
+      };
     },
-
     placeholderData: keepPreviousData,
     refetchOnMount: true,
   });
@@ -67,6 +59,7 @@ export function useSpaceQuery(spaceId: string): UseQueryResult<ISpace, Error> {
     queryFn: () => getSpaceById(spaceId),
     enabled: !!spaceId,
   });
+
   useEffect(() => {
     if (query.data) {
       if (isValidUuid(spaceId)) {
@@ -75,7 +68,7 @@ export function useSpaceQuery(spaceId: string): UseQueryResult<ISpace, Error> {
         queryClient.setQueryData(["space", query.data.id], query.data);
       }
     }
-  }, [query.data]);
+  }, [query.data, spaceId]);
 
   return query;
 }
@@ -87,7 +80,6 @@ export const prefetchSpace = (spaceSlug: string, spaceId?: string) => {
   });
 
   if (spaceId) {
-    // this endpoint only accepts uuid for now
     queryClient.prefetchQuery({
       queryKey: ["recent-changes", spaceId],
       queryFn: () => getRecentChanges(spaceId),
@@ -117,9 +109,19 @@ export function useCreateSpaceMutation() {
 export function useGetSpaceBySlugQuery(
   spaceId: string,
 ): UseQueryResult<ISpace, Error> {
+  const permission = usePermission();
+
   return useQuery({
-    queryKey: ["space", spaceId],
-    queryFn: () => getSpaceById(spaceId),
+    queryKey: ["space", spaceId, permission.isClient],
+    queryFn: async () => {
+      const space = await getSpaceById(spaceId);
+
+      if (permission.isClient && !space?.isClientAllowed) {
+        throw Object.assign(new Error("Space access denied"), { status: 403 });
+      }
+
+      return space;
+    },
     enabled: !!spaceId,
     staleTime: 5 * 60 * 1000,
   });
@@ -171,14 +173,12 @@ export function useDeleteSpaceMutation() {
         });
       }
 
-      // Remove space-specific queries
       if (variables.id) {
         queryClient.removeQueries({
           queryKey: ["space", variables.id],
           exact: true,
         });
 
-        // Invalidate recent changes
         queryClient.invalidateQueries({
           queryKey: ["recent-changes"],
         });
@@ -188,16 +188,6 @@ export function useDeleteSpaceMutation() {
         });
       }
 
-      // Update spaces list cache
-      /* const spaces = queryClient.getQueryData(["spaces"]) as any;
-      if (spaces) {
-        spaces.items = spaces.items?.filter(
-          (space: ISpace) => space.id !== variables.id,
-        );
-        queryClient.setQueryData(["spaces"], spaces);
-      }*/
-
-      // Invalidate all spaces queries to refresh lists
       queryClient.invalidateQueries({
         predicate: (item) => ["spaces"].includes(item.queryKey[0] as string),
       });
@@ -271,7 +261,6 @@ export function useChangeSpaceMemberRoleMutation() {
     mutationFn: (data) => changeMemberRole(data),
     onSuccess: (data, variables) => {
       notifications.show({ message: t("Member role updated successfully") });
-      // due to pagination levels, change in cache instead
       queryClient.refetchQueries({
         queryKey: ["spaceMembers", variables.spaceId],
       });

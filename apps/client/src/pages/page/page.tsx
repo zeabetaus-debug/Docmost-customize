@@ -14,6 +14,7 @@ import { Button } from "@mantine/core";
 import { Link } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 import { useChangeRequestsState } from "@/features/zeaatlas/change-request/use-change-requests-state";
+import usePermission from "@/hooks/use-permission";
 
 const MemoizedFullEditor = React.memo(FullEditor);
 const MemoizedPageHeader = React.memo(PageHeader);
@@ -47,6 +48,7 @@ export default function Page() {
 
 function PageContent({ pageSlug }: { pageSlug: string | undefined }) {
   const { t } = useTranslation();
+  const permission = usePermission();
 
   const {
     data: page,
@@ -57,7 +59,7 @@ function PageContent({ pageSlug }: { pageSlug: string | undefined }) {
 
   const { data: space } = useGetSpaceBySlugQuery(page?.space?.slug);
 
-  const canEdit = page?.permissions?.canEdit ?? false;
+  const canEdit = (page?.permissions?.canEdit ?? false) && permission.canEdit;
   const [status, setStatus] = React.useState<StatusType>("draft");
   const [changeRequests, setChangeRequests] = useChangeRequestsState(page?.id);
 
@@ -99,7 +101,7 @@ function PageContent({ pageSlug }: { pageSlug: string | undefined }) {
       </Helmet>
 
       <MemoizedPageHeader
-        readOnly={!canEdit || status === "approved"}
+        readOnly={!canEdit || status === "approved" || permission.isReadOnly}
         page={page}
         status={status}
         setStatus={setStatus}
@@ -114,7 +116,7 @@ function PageContent({ pageSlug }: { pageSlug: string | undefined }) {
         content={page.content}
         slugId={page.slugId}
         spaceSlug={page.space?.slug}
-        editable={canEdit && status !== "approved"}
+        editable={canEdit && status !== "approved" && !permission.isReadOnly}
       />
 
       <MemoizedHistoryModal pageId={page.id} />

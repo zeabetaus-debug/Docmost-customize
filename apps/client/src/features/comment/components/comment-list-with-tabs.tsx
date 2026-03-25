@@ -30,9 +30,13 @@ import { IconArrowUp, IconMessageOff } from "@tabler/icons-react";
 import { useAtom } from "jotai";
 import { currentUserAtom } from "@/features/user/atoms/current-user-atom";
 import { CustomAvatar } from "@/components/ui/custom-avatar.tsx";
+import usePermission from "@/hooks/use-permission";
+import { notifications } from "@mantine/notifications";
+import { CLIENT_READ_ONLY_MESSAGE } from "@/features/zeaatlas/client-mode/client-mode.utils";
 
 function CommentListWithTabs() {
   const { t } = useTranslation();
+  const permission = usePermission();
   const { pageSlug } = useParams();
   const { data: page } = usePageQuery({ pageId: extractPageSlugId(pageSlug) });
   const {
@@ -44,7 +48,7 @@ function CommentListWithTabs() {
   const [isLoading, setIsLoading] = useState(false);
   const { data: space } = useGetSpaceBySlugQuery(page?.space?.slug);
 
-  const canComment = page?.permissions?.canEdit ?? false;
+  const canComment = (page?.permissions?.canEdit ?? false) && permission.canComment;
 
   // Separate active and resolved comments
   const { activeComments, resolvedComments } = useMemo(() => {
@@ -70,6 +74,10 @@ function CommentListWithTabs() {
 
   const handleAddPageComment = useCallback(
     async (_commentId: string, content: string) => {
+      if (!canComment) {
+        notifications.show({ message: CLIENT_READ_ONLY_MESSAGE, color: "gray" });
+        return;
+      }
       try {
         setIsPageCommentLoading(true);
         const createdComment = await createCommentMutation.mutateAsync({
@@ -96,6 +104,10 @@ function CommentListWithTabs() {
 
   const handleAddReply = useCallback(
     async (commentId: string, content: string) => {
+      if (!canComment) {
+        notifications.show({ message: CLIENT_READ_ONLY_MESSAGE, color: "gray" });
+        return;
+      }
       try {
         setIsLoading(true);
         const commentData = {

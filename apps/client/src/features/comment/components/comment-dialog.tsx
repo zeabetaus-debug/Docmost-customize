@@ -15,6 +15,9 @@ import { asideStateAtom } from "@/components/layouts/global/hooks/atoms/sidebar-
 import { useEditor } from "@tiptap/react";
 import { CustomAvatar } from "@/components/ui/custom-avatar.tsx";
 import { useTranslation } from "react-i18next";
+import usePermission from "@/hooks/use-permission";
+import { notifications } from "@mantine/notifications";
+import { CLIENT_READ_ONLY_MESSAGE } from "@/features/zeaatlas/client-mode/client-mode.utils";
 
 interface CommentDialogProps {
   editor: ReturnType<typeof useEditor>;
@@ -28,6 +31,7 @@ function CommentDialog({ editor, pageId }: CommentDialogProps) {
   const [, setActiveCommentId] = useAtom(activeCommentIdAtom);
   const [draftCommentId, setDraftCommentId] = useAtom(draftCommentIdAtom);
   const [currentUser] = useAtom(currentUserAtom);
+  const permission = usePermission();
   const [, setAsideState] = useAtom(asideStateAtom);
   const useClickOutsideRef = useClickOutside(() => {
     if (document.querySelector("#mention")) return;
@@ -47,6 +51,11 @@ function CommentDialog({ editor, pageId }: CommentDialogProps) {
   };
 
   const handleAddComment = async () => {
+    if (permission.isClient) {
+      notifications.show({ message: CLIENT_READ_ONLY_MESSAGE, color: "gray" });
+      return;
+    }
+
     try {
       const selectedText = getSelectedText();
       const commentData = {
@@ -123,10 +132,12 @@ function CommentDialog({ editor, pageId }: CommentDialogProps) {
           onUpdate={handleCommentEditorChange}
           onSave={handleAddComment}
           placeholder={t("Write a comment")}
-          editable={true}
-          autofocus={true}
+          editable={!permission.isClient}
+          autofocus={!permission.isClient}
         />
-        <CommentActions onSave={handleAddComment} isLoading={isPending} />
+        {!permission.isClient && (
+          <CommentActions onSave={handleAddComment} isLoading={isPending} />
+        )}
       </Stack>
     </Dialog>
   );

@@ -40,6 +40,7 @@ import { formattedDate } from "@/lib/time.ts";
 import { PageStateSegmentedControl } from "@/features/user/components/page-state-pref.tsx";
 import MovePageModal from "@/features/page/components/move-page-modal.tsx";
 import { useTimeAgo } from "@/hooks/use-time-ago.tsx";
+import { useClientGuard } from "@/features/zeaatlas/client-mode/use-client-guard";
 
 
 interface PageHeaderMenuProps {
@@ -48,6 +49,7 @@ interface PageHeaderMenuProps {
 export default function PageHeaderMenu({ readOnly }: PageHeaderMenuProps) {
   const { t } = useTranslation();
   const toggleAside = useToggleAside();
+  const { guardClientAction } = useClientGuard();
 
   useHotkeys(
     [
@@ -82,7 +84,9 @@ export default function PageHeaderMenu({ readOnly }: PageHeaderMenuProps) {
         <ActionIcon
           variant="subtle"
           color="dark"
-          onClick={() => toggleAside("comments")}
+          onClick={() =>
+            guardClientAction(() => toggleAside("comments"))
+          }
         >
           <IconMessage size={20} stroke={2} />
         </ActionIcon>
@@ -108,6 +112,7 @@ interface PageActionMenuProps {
 }
 function PageActionMenu({ readOnly }: PageActionMenuProps) {
   const { t } = useTranslation();
+  const { canExport, guardClientAction } = useClientGuard();
   const [, setHistoryModalOpen] = useAtom(historyAtoms);
   const clipboard = useClipboard({ timeout: 500 });
   const { pageSlug, spaceSlug } = useParams();
@@ -134,7 +139,10 @@ function PageActionMenu({ readOnly }: PageActionMenuProps) {
   };
 
   const handleCopyAsMarkdown = () => {
-    if (!pageEditor) return;
+    if (!canExport || !pageEditor) {
+      guardClientAction(undefined);
+      return;
+    }
     const html = pageEditor.getHTML();
     const markdown = htmlToMarkdown(html);
     const title = page?.title ? `# ${page.title}\n\n` : "";
@@ -143,6 +151,10 @@ function PageActionMenu({ readOnly }: PageActionMenuProps) {
   };
 
   const handlePrint = () => {
+    if (!canExport) {
+      guardClientAction(undefined);
+      return;
+    }
     setTimeout(() => {
       window.print();
     }, 250);
@@ -214,7 +226,7 @@ function PageActionMenu({ readOnly }: PageActionMenuProps) {
 
           <Menu.Item
             leftSection={<IconFileExport size={16} />}
-            onClick={openExportModal}
+            onClick={() => guardClientAction(openExportModal)}
           >
             {t("Export")}
           </Menu.Item>
