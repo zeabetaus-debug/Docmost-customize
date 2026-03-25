@@ -3,15 +3,17 @@ import { Group, Button, Text, Modal, Textarea } from "@mantine/core";
 import { useUpdatePageMutation } from "@/features/page/queries/page-query";
 import { IPage } from "@/features/page/types/page.types";
 import { notifications } from "@mantine/notifications";
+import { useAtomValue } from "jotai";
+import { currentUserAtom } from "@/features/user/atoms/current-user-atom";
+import { IChangeRequest } from "@/features/zeaatlas/change-request/change-request.types";
+import { createLocalChangeRequest } from "@/features/zeaatlas/change-request/change-request.utils";
 
 type StatusType = "draft" | "review" | "approved" | "archived";
 
 interface Props {
   page: IPage;
   onStatusChange?: (s: StatusType) => void;
-
-  // 🔥 ADD THIS (RECEIVE FROM PARENT)
-  setChangeRequests?: React.Dispatch<React.SetStateAction<string[]>>;
+  setChangeRequests?: React.Dispatch<React.SetStateAction<IChangeRequest[]>>;
 }
 
 const getValidStatus = (status: string | null | undefined): StatusType => {
@@ -29,16 +31,20 @@ const getValidStatus = (status: string | null | undefined): StatusType => {
 export default function ApprovalActions({
   page,
   onStatusChange,
-  setChangeRequests, // 👈 RECEIVE HERE
+  setChangeRequests,
 }: Props) {
   const mutation = useUpdatePageMutation();
+  const currentUser = useAtomValue(currentUserAtom);
 
   const [localStatus, setLocalStatus] = React.useState<StatusType>(
     getValidStatus(page?.status)
   );
-
   const [openModal, setOpenModal] = React.useState(false);
-  const [comment, setComment] = React.useState("");
+  const [message, setMessage] = React.useState("");
+
+  React.useEffect(() => {
+    setLocalStatus(getValidStatus(page?.status));
+  }, [page?.status]);
 
   const status = localStatus;
 
@@ -66,14 +72,25 @@ export default function ApprovalActions({
     }
   };
 
-  // ✅ FINAL FIX — SEND DATA TO PARENT
   const handleSubmitRequest = () => {
-    if (!comment.trim()) return;
+    if (!message.trim()) {
+      notifications.show({
+        message: "Please enter your change request",
+        color: "red",
+      });
+      return;
+    }
 
-    // 🔥 SEND TO Page.tsx
-    setChangeRequests?.((prev) => [...prev, comment]);
+    setChangeRequests?.((prev) => [
+      ...prev,
+      createLocalChangeRequest({
+        content: message.trim(),
+        pageId: page.id,
+        user: currentUser?.user,
+      }),
+    ]);
 
-    setComment("");
+    setMessage("");
     setOpenModal(false);
 
     updateStatus("draft");
@@ -132,20 +149,31 @@ export default function ApprovalActions({
         {renderActions()}
       </Group>
 
-      {/* Modal */}
       <Modal
         opened={openModal}
-        onClose={() => setOpenModal(false)}
+        onClose={() => {
+          setMessage("");
+          setOpenModal(false);
+        }}
         title="Request Change"
+        size="md"
       >
         <Textarea
-          placeholder="Describe what needs to be changed..."
-          value={comment}
-          onChange={(e) => setComment(e.currentTarget.value)}
+          placeholder="Describe what changes you want..."
+          minRows={6}
+          autosize
+          value={message}
+          onChange={(e) => setMessage(e.currentTarget.value)}
         />
 
         <Group mt="md" justify="flex-end">
-          <Button variant="default" onClick={() => setOpenModal(false)}>
+          <Button
+            variant="default"
+            onClick={() => {
+              setMessage("");
+              setOpenModal(false);
+            }}
+          >
             Cancel
           </Button>
           <Button onClick={handleSubmitRequest}>

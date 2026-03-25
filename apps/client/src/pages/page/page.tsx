@@ -10,9 +10,10 @@ import { useTranslation } from "react-i18next";
 import React from "react";
 import { EmptyState } from "@/components/ui/empty-state.tsx";
 import { IconAlertTriangle, IconFileOff } from "@tabler/icons-react";
-import { Button, Text } from "@mantine/core";
+import { Button } from "@mantine/core";
 import { Link } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
+import { useChangeRequestsState } from "@/features/zeaatlas/change-request/use-change-requests-state";
 
 const MemoizedFullEditor = React.memo(FullEditor);
 const MemoizedPageHeader = React.memo(PageHeader);
@@ -57,14 +58,9 @@ function PageContent({ pageSlug }: { pageSlug: string | undefined }) {
   const { data: space } = useGetSpaceBySlugQuery(page?.space?.slug);
 
   const canEdit = page?.permissions?.canEdit ?? false;
-
-  // ✅ Approval Workflow State
   const [status, setStatus] = React.useState<StatusType>("draft");
+  const [changeRequests, setChangeRequests] = useChangeRequestsState(page?.id);
 
-  // ✅ Change Requests State (CORRECT PLACE)
-  const [changeRequests, setChangeRequests] = React.useState<string[]>([]);
-
-  // 🔁 Sync with backend
   React.useEffect(() => {
     if (page?.status) {
       setStatus(page.status as StatusType);
@@ -102,16 +98,15 @@ function PageContent({ pageSlug }: { pageSlug: string | undefined }) {
         <title>{`${page.icon || ""} ${page.title || t("untitled")}`}</title>
       </Helmet>
 
-      {/* ✅ HEADER */}
       <MemoizedPageHeader
         readOnly={!canEdit || status === "approved"}
         page={page}
         status={status}
         setStatus={setStatus}
-        setChangeRequests={setChangeRequests} // 🔥 PASS DOWN
+        changeRequests={changeRequests}
+        setChangeRequests={setChangeRequests}
       />
 
-      {/* Editor */}
       <MemoizedFullEditor
         key={page.id}
         pageId={page.id}
@@ -122,18 +117,6 @@ function PageContent({ pageSlug }: { pageSlug: string | undefined }) {
         editable={canEdit && status !== "approved"}
       />
 
-      {/* ✅ SHOW CHANGE REQUESTS (REAL DATA) */}
-      {changeRequests.length > 0 && (
-        <div style={{ marginTop: 20 }}>
-          {changeRequests.map((req, i) => (
-            <Text key={i} size="sm" c="yellow">
-              🔁 {req}
-            </Text>
-          ))}
-        </div>
-      )}
-
-      {/* History */}
       <MemoizedHistoryModal pageId={page.id} />
     </div>
   );
