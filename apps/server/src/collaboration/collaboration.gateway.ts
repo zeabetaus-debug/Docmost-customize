@@ -116,9 +116,10 @@ export class CollaborationGateway {
 
       // Forward close events
       client.on('close', (code: number, reason: Buffer) => {
-        this.redisSync!.onSocketClose(socketId, code, reason);
+        this.redisSync!.onSocketClose(socketId, code, reason as any);
       });
 
+      
       // Forward pong events for keepalive
       client.on('pong', (data: Buffer) => {
         wrappedSocket.emit('pong', data);
