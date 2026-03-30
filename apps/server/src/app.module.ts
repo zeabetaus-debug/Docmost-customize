@@ -26,6 +26,7 @@ import KeyvRedis from '@keyv/redis';
 import { LoggerModule } from './common/logger/logger.module';
 import { ClsModule } from 'nestjs-cls';
 import { NoopAuditModule } from './integrations/audit/audit.module';
+import { ZeaAtlasModule } from './modules/zeaatlas/zeaatlas.module';
 
 const enterpriseModules = [];
 try {
@@ -47,6 +48,7 @@ try {
       global: true,
       middleware: { mount: true },
     }),
+    ZeaAtlasModule,
     LoggerModule,
     NoopAuditModule,
     CoreModule,
