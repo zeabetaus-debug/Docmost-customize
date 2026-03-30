@@ -41,10 +41,13 @@ import { useToggleSidebar } from "@/components/layouts/global/hooks/hooks/use-to
 import { searchSpotlight } from "@/features/search/constants";
 import { useClientGuard } from "@/features/zeaatlas/client-mode/use-client-guard";
 import { useNavigate } from "react-router-dom";
+import { clientModeAtom } from "@/store/client-store";
 
 export function SpaceSidebar() {
+  const [clientMode] = useAtom(clientModeAtom);
   const { t } = useTranslation();
-  const { isClient, guardClientAction } = useClientGuard();
+  const { guardClientAction } = useClientGuard();
+const isClient = clientMode; // 🔥 MAIN CHANGE
   const [tree] = useAtom(treeApiAtom);
   const location = useLocation();
   const [opened, { open: openSettings, close: closeSettings }] =
@@ -63,9 +66,9 @@ export function SpaceSidebar() {
   }
 
   function handleCreatePage() {
-    tree?.create({ parentId: null, type: "internal", index: 0 });
-  }
-
+  if (clientMode) return; // 🔥 BLOCK ACTION
+  tree?.create({ parentId: null, type: "internal", index: 0 });
+}
   return (
     <>
       <div className={classes.navbar}>
@@ -122,7 +125,10 @@ export function SpaceSidebar() {
 
             <UnstyledButton
               className={classes.menu}
-              onClick={() => guardClientAction(openSettings)}
+              onClick={() => {
+             if (clientMode) return;
+             guardClientAction(openSettings);
+}}
             >
               <div className={classes.menuItemInner}>
                 <IconSettings
@@ -189,12 +195,15 @@ export function SpaceSidebar() {
 
           <div className={classes.pages}>
             <SpaceTree
-              spaceId={space.id}
-              readOnly={spaceAbility.cannot(
-                SpaceCaslAction.Manage,
-                SpaceCaslSubject.Page,
-              )}
-            />
+  spaceId={space.id}
+  readOnly={
+    clientMode ||
+    spaceAbility.cannot(
+      SpaceCaslAction.Manage,
+      SpaceCaslSubject.Page,
+    )
+  }
+/>
           </div>
         </div>
       </div>

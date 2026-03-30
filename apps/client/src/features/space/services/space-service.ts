@@ -10,27 +10,6 @@ import {
 import { IPagination, QueryParams } from "@/lib/types.ts";
 import { saveAs } from "file-saver";
 
-import { getDefaultStore } from "jotai";
-import { clientAtom } from "@/store/client-store";
-
-/**
- * ✅ Get current clientId safely
- */
-function getClientId() {
-  const store = getDefaultStore();
-  return store.get(clientAtom);
-}
-
-/**
- * ✅ Attach clientId automatically
- */
-function withClient<T extends object>(data?: T): T & { clientId: string | null } {
-  return {
-    ...(data || ({} as T)),
-    clientId: getClientId(),
-  };
-}
-
 /**
  * =========================
  * SPACES
@@ -40,41 +19,32 @@ function withClient<T extends object>(data?: T): T & { clientId: string | null }
 export async function getSpaces(
   params?: QueryParams,
 ): Promise<IPagination<ISpace>> {
-  const req = await api.post("/spaces", withClient(params));
+  const req = await api.post("/spaces", params);
   return req.data;
 }
 
 export async function getSpaceById(spaceId: string): Promise<ISpace> {
-  const req = await api.post<ISpace>(
-    "/spaces/info",
-    withClient({ spaceId }),
-  );
+  const req = await api.post<ISpace>("/spaces/info", { spaceId });
   return req.data;
 }
 
 export async function createSpace(data: Partial<ISpace>): Promise<ISpace> {
-  const req = await api.post<ISpace>(
-    "/spaces/create",
-    withClient(data),
-  );
+  const req = await api.post<ISpace>("/spaces/create", data);
   return req.data;
 }
 
 export async function updateSpace(data: Partial<ISpace>): Promise<ISpace> {
-  const req = await api.post<ISpace>(
-    "/spaces/update",
-    withClient(data),
-  );
+  const req = await api.post<ISpace>("/spaces/update", data);
   return req.data;
 }
 
 export async function deleteSpace(spaceId: string): Promise<void> {
-  await api.post("/spaces/delete", withClient({ spaceId }));
+  await api.post("/spaces/delete", { spaceId });
 }
 
 /**
  * =========================
- * MEMBERS (NO CLIENT NEEDED)
+ * MEMBERS
  * =========================
  */
 
@@ -111,7 +81,7 @@ export async function changeMemberRole(
 export async function exportSpace(data: IExportSpaceParams): Promise<void> {
   const req = await api.post(
     "/spaces/export",
-    withClient(data),
+    data,
     { responseType: "blob" },
   );
 
@@ -124,7 +94,7 @@ export async function exportSpace(data: IExportSpaceParams): Promise<void> {
   try {
     decodedFileName = decodeURIComponent(fileName);
   } catch {
-    // Ignore decoding errors and use the original fileName
+    // ignore
   }
 
   saveAs(req.data, decodedFileName);

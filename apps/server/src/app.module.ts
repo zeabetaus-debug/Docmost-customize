@@ -27,6 +27,7 @@ import { LoggerModule } from './common/logger/logger.module';
 import { ClsModule } from 'nestjs-cls';
 import { NoopAuditModule } from './integrations/audit/audit.module';
 import { ZeaAtlasModule } from './modules/zeaatlas/zeaatlas.module';
+import { ClientModeModule } from './modules/zeaatlas/client-mode.module';
 
 const enterpriseModules = [];
 try {
@@ -48,6 +49,7 @@ try {
       global: true,
       middleware: { mount: true },
     }),
+    ClientModeModule,
     ZeaAtlasModule,
     LoggerModule,
     NoopAuditModule,

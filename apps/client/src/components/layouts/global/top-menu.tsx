@@ -26,6 +26,7 @@ import useAuth from "@/features/auth/hooks/use-auth.ts";
 import { CustomAvatar } from "@/components/ui/custom-avatar.tsx";
 import { useTranslation } from "react-i18next";
 import { AvatarIconType } from "@/features/attachments/types/attachment.types.ts";
+import ClientModeToggle from "@/components/client-mode-toggle";
 
 export default function TopMenu() {
   const { t } = useTranslation();
@@ -59,6 +60,7 @@ export default function TopMenu() {
           </Group>
         </UnstyledButton>
       </Menu.Target>
+
       <Menu.Dropdown>
         <Menu.Label>{t("Workspace")}</Menu.Label>
 
@@ -80,7 +82,16 @@ export default function TopMenu() {
 
         <Menu.Divider />
 
+        {/* ✅ CLIENT MODE TOGGLE ADDED HERE */}
+        <Menu.Label>Client Mode</Menu.Label>
+        <Menu.Item closeMenuOnClick={false}>
+          <ClientModeToggle />
+        </Menu.Item>
+
+        <Menu.Divider />
+
         <Menu.Label>{t("Account")}</Menu.Label>
+
         <Menu.Item component={Link} to={APP_ROUTE.SETTINGS.ACCOUNT.PROFILE}>
           <Group wrap={"nowrap"}>
             <CustomAvatar
@@ -88,7 +99,6 @@ export default function TopMenu() {
               avatarUrl={user.avatarUrl}
               name={user.name}
             />
-
             <div style={{ width: 190 }}>
               <Text size="sm" fw={500} lineClamp={1}>
                 {user.name}
@@ -99,6 +109,7 @@ export default function TopMenu() {
             </div>
           </Group>
         </Menu.Item>
+
         <Menu.Item
           component={Link}
           to={APP_ROUTE.SETTINGS.ACCOUNT.PROFILE}
@@ -132,6 +143,7 @@ export default function TopMenu() {
             >
               {t("Light")}
             </Menu.Item>
+
             <Menu.Item
               onClick={() => setColorScheme("dark")}
               leftSection={<IconMoon size={16} />}
@@ -141,6 +153,7 @@ export default function TopMenu() {
             >
               {t("Dark")}
             </Menu.Item>
+
             <Menu.Item
               onClick={() => setColorScheme("auto")}
               leftSection={<IconDeviceDesktop size={16} />}

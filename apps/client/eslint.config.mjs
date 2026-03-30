@@ -4,6 +4,11 @@ import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 import pluginQuery from "@tanstack/eslint-plugin-query";
+import path from "path";
+import { fileURLToPath } from "url";
+
+// 🔥 FIX
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default tseslint.config(
   { ignores: ["dist"] },
@@ -13,6 +18,10 @@ export default tseslint.config(
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
+      parserOptions: {
+        project: path.resolve(__dirname, "./tsconfig.json"), // ✅ FIX
+        tsconfigRootDir: __dirname, // ✅ FIX
+      },
     },
     plugins: {
       "react-hooks": reactHooks,
@@ -32,5 +41,5 @@ export default tseslint.config(
       "@typescript-eslint/no-unused-expressions": "off",
       "no-useless-escape": "off",
     },
-  },
+  }
 );
