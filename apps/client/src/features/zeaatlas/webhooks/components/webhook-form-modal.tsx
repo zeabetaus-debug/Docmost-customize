@@ -1,171 +1,204 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import {
+  Modal,
+  TextInput,
   Button,
+  Stack,
   Checkbox,
   Group,
-  Modal,
-  Stack,
   Switch,
-  TextInput,
 } from "@mantine/core";
-import { notifications } from "@mantine/notifications";
-import {
-  IWebhook,
-  IWebhookInput,
-  WEBHOOK_EVENTS,
-  WebhookEvent,
-} from "@/features/zeaatlas/webhooks/types/webhook.types";
+
 import {
   useCreateWebhookMutation,
   useUpdateWebhookMutation,
 } from "@/features/zeaatlas/webhooks/api/webhook-query";
 
-interface WebhookFormModalProps {
+import {
+  IWebhook,
+  IWebhookInput,
+  WebhookEvent,
+} from "@/features/zeaatlas/webhooks/types/webhook.types";
+
+interface Props {
   opened: boolean;
   onClose: () => void;
   webhook?: IWebhook | null;
-}
-
-function generateSecret() {
-  return crypto.randomUUID().replace(/-/g, "");
-}
-
-function getInitialState(webhook?: IWebhook | null): IWebhookInput {
-  return {
-    name: webhook?.name || "",
-    url: webhook?.url || "",
-    events: webhook?.events || [],
-    active: webhook?.active ?? true,
-    secret: webhook?.secret || generateSecret(),
-  };
 }
 
 export default function WebhookFormModal({
   opened,
   onClose,
   webhook,
-}: WebhookFormModalProps) {
-  const createMutation = useCreateWebhookMutation();
-  const updateMutation = useUpdateWebhookMutation();
-  const [form, setForm] = React.useState<IWebhookInput>(getInitialState(webhook));
+}: Props) {
+  const { mutateAsync: createWebhook } = useCreateWebhookMutation();
+  const { mutateAsync: updateWebhook } = useUpdateWebhookMutation();
 
-  React.useEffect(() => {
-    if (opened) {
-      setForm(getInitialState(webhook));
+  const [loading, setLoading] = useState(false);
+
+  const [form, setForm] = useState<IWebhookInput>({
+    name: "",
+    url: "",
+    events: [],
+    apiToken: "",
+    active: true,
+  });
+
+  // ✅ EDIT MODE
+  useEffect(() => {
+    if (webhook) {
+      setForm({
+        name: webhook.name || "",
+        url: webhook.url || "",
+        events: webhook.events || [],
+        apiToken: webhook.apiToken || "",
+        active: webhook.active ?? true,
+      });
+    } else {
+      setForm({
+        name: "",
+        url: "",
+        events: [],
+        apiToken: "",
+        active: true,
+      });
     }
-  }, [opened, webhook]);
+  }, [webhook]);
 
-  const isLoading = createMutation.isPending || updateMutation.isPending;
-
-  const handleEventsChange = (eventName: WebhookEvent, checked: boolean) => {
-    setForm((current) => ({
-      ...current,
-      events: checked
-        ? [...current.events, eventName]
-        : current.events.filter((item) => item !== eventName),
+  // ✅ INPUT CHANGE
+  const handleChange = <K extends keyof IWebhookInput>(
+    field: K,
+    value: IWebhookInput[K]
+  ) => {
+    setForm((prev) => ({
+      ...prev,
+      [field]: value,
     }));
   };
 
+  // ✅ TOGGLE EVENTS (TYPE SAFE)
+  const toggleEvent = (event: WebhookEvent) => {
+    setForm((prev) => ({
+      ...prev,
+      events: prev.events.includes(event)
+        ? prev.events.filter((e) => e !== event)
+        : [...prev.events, event],
+    }));
+  };
+
+  // ✅ TOKEN GENERATOR
+  const generateToken = () => {
+    const token = Math.random().toString(36).substring(2, 18);
+    handleChange("apiToken", token);
+  };
+
+  // ✅ SUBMIT (FINAL FIX 🔥)
   const handleSubmit = async () => {
-    try {
-      const url = new URL(form.url);
-      if (!url.protocol.startsWith("http")) {
-        throw new Error("Invalid URL");
-      }
-    } catch {
-      notifications.show({ message: "Please enter a valid URL", color: "red" });
+    if (!form.url) {
+      alert("Webhook URL is required");
       return;
     }
 
     if (form.events.length === 0) {
-      notifications.show({ message: "Select at least one event", color: "red" });
+      alert("Select at least one event");
       return;
     }
 
-    if (webhook?.id) {
-      await updateMutation.mutateAsync({ id: webhook.id, ...form });
-    } else {
-      await createMutation.mutateAsync(form);
-    }
+    try {
+      setLoading(true);
 
-    onClose();
+      console.log("🚀 Submitting:", form);
+
+      if (webhook?.id) {
+        await updateWebhook({
+          id: webhook.id,
+          ...form,
+        });
+      } else {
+        await createWebhook(form);
+      }
+
+      console.log("✅ Success");
+
+      onClose();
+    } catch (err) {
+      console.error("❌ Failed:", err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <Modal
-      opened={opened}
-      onClose={onClose}
-      title={webhook ? "Edit Webhook" : "Add Webhook"}
-      size="lg"
-    >
-      <Stack gap="md">
+    <Modal opened={opened} onClose={onClose} title="Add Webhook" centered>
+      <Stack>
+
+        {/* NAME */}
         <TextInput
           label="Name"
-          placeholder="n8n outbound hook"
           value={form.name}
-          onChange={(event) =>
-            setForm((current) => ({ ...current, name: event.currentTarget.value }))
-          }
+          onChange={(e) => handleChange("name", e.target.value)}
         />
 
+        {/* URL */}
         <TextInput
           label="Webhook URL"
-          placeholder="https://n8n.example.com/webhook/docmost"
+          placeholder="https://webhook.site/xxxx"
           value={form.url}
-          onChange={(event) =>
-            setForm((current) => ({ ...current, url: event.currentTarget.value }))
-          }
+          onChange={(e) => handleChange("url", e.target.value)}
         />
 
-        <Checkbox.Group label="Events" value={form.events}>
-          <Stack gap="xs" mt="xs">
-            {WEBHOOK_EVENTS.map((eventName) => (
-              <Checkbox
-                key={eventName}
-                label={eventName}
-                checked={form.events.includes(eventName)}
-                onChange={(event) =>
-                  handleEventsChange(eventName, event.currentTarget.checked)
-                }
-              />
-            ))}
-          </Stack>
-        </Checkbox.Group>
+        {/* EVENTS */}
+        <Stack gap={4}>
+          <Checkbox
+            label="page.created"
+            checked={form.events.includes("page.created")}
+            onChange={() => toggleEvent("page.created")}
+          />
+          <Checkbox
+            label="page.updated"
+            checked={form.events.includes("page.updated")}
+            onChange={() => toggleEvent("page.updated")}
+          />
+          <Checkbox
+            label="page.approved"
+            checked={form.events.includes("page.approved")}
+            onChange={() => toggleEvent("page.approved")}
+          />
+        </Stack>
 
-        <Group align="flex-end" grow>
+        {/* TOKEN */}
+        <Group grow>
           <TextInput
             label="Secret Token"
-            value={form.secret || ""}
-            onChange={(event) =>
-              setForm((current) => ({ ...current, secret: event.currentTarget.value }))
-            }
+            value={form.apiToken}
+            onChange={(e) => handleChange("apiToken", e.target.value)}
           />
-          <Button
-            variant="default"
-            onClick={() =>
-              setForm((current) => ({ ...current, secret: generateSecret() }))
-            }
-          >
+
+          <Button mt={25} onClick={generateToken}>
             Auto-generate
           </Button>
         </Group>
 
+        {/* ACTIVE */}
         <Switch
           label="Active"
           checked={form.active}
-          onChange={(event) =>
-            setForm((current) => ({ ...current, active: event.currentTarget.checked }))
+          onChange={(e) =>
+            handleChange("active", e.currentTarget.checked)
           }
         />
 
+        {/* ACTIONS */}
         <Group justify="flex-end">
           <Button variant="default" onClick={onClose}>
             Cancel
           </Button>
-          <Button onClick={handleSubmit} loading={isLoading}>
-            {webhook ? "Save Changes" : "Create Webhook"}
+
+          <Button onClick={handleSubmit} loading={loading}>
+            {webhook ? "Update Webhook" : "Create Webhook"}
           </Button>
         </Group>
+
       </Stack>
     </Modal>
   );

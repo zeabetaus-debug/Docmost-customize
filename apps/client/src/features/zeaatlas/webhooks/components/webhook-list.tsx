@@ -9,6 +9,7 @@ import {
   Stack,
   Switch,
   Text,
+  Tooltip,
 } from "@mantine/core";
 import {
   IconCopy,
@@ -23,6 +24,21 @@ import {
 } from "@/features/zeaatlas/webhooks/api/webhook-query";
 import { IWebhook } from "@/features/zeaatlas/webhooks/types/webhook.types";
 
+/* =====================================================
+   ✅ USER NAME (SAFE FETCH)
+===================================================== */
+function getUserName() {
+  try {
+    const user = JSON.parse(localStorage.getItem("user") || "{}");
+    return user?.name || localStorage.getItem("user_name") || "User";
+  } catch {
+    return "User";
+  }
+}
+
+/* =====================================================
+   TYPES
+===================================================== */
 interface WebhookListProps {
   webhooks?: IWebhook[];
   isLoading?: boolean;
@@ -30,11 +46,48 @@ interface WebhookListProps {
   onEditWebhook: (webhook: IWebhook) => void;
 }
 
-function maskSecret(secret?: string) {
-  if (!secret) return "Not set";
-  const suffix = secret.slice(-4);
-  return `****${suffix}`;
+/* =====================================================
+   HELPERS
+===================================================== */
+
+// EVENTS
+function parseEvents(events: any): string[] {
+  try {
+    if (Array.isArray(events)) return events;
+    return JSON.parse(events || "[]");
+  } catch {
+    return [];
+  }
 }
+
+// TOKEN
+function maskToken(token?: string) {
+  if (!token) return "Not set";
+  return `****${token.slice(-4)}`;
+}
+
+// DATE
+function formatDate(date?: string) {
+  if (!date) return "N/A";
+
+  const d = new Date(date);
+
+  const day = String(d.getDate()).padStart(2, "0");
+  const month = d.toLocaleString("en-IN", { month: "short" });
+  const year = d.getFullYear();
+
+  let hours = d.getHours();
+  const minutes = String(d.getMinutes()).padStart(2, "0");
+
+  const ampm = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12 || 12;
+
+  return `${day} ${month} ${year}, ${hours}:${minutes} ${ampm}`;
+}
+
+/* =====================================================
+   COMPONENT
+===================================================== */
 
 export default function WebhookList({
   webhooks = [],
@@ -46,23 +99,35 @@ export default function WebhookList({
   const updateMutation = useUpdateWebhookMutation();
   const deleteMutation = useDeleteWebhookMutation();
 
+  // 🔥 FIX: DEFINE USER NAME INSIDE COMPONENT
+  const ACCOUNT_NAME = getUserName();
+
+  // COPY
   const handleCopy = (value: string, label: string) => {
     clipboard.copy(value);
-    notifications.show({ message: `${label} copied`, color: "green" });
-  };
-
-  const handleToggle = async (webhook: IWebhook, active: boolean) => {
-    await updateMutation.mutateAsync({
-      id: webhook.id,
-      active,
+    notifications.show({
+      message: `${label} copied`,
+      color: "green",
     });
   };
 
-  const handleDelete = async (id: string) => {
-    if (!window.confirm("Delete this webhook?")) return;
-    await deleteMutation.mutateAsync(id);
+  // TOGGLE
+  const handleToggle = (webhook: IWebhook) => {
+    if (updateMutation.isPending) return;
+
+    updateMutation.mutate({
+      id: webhook.id,
+      active: !webhook.active,
+    });
   };
 
+  // DELETE
+  const handleDelete = (id: string) => {
+    if (!window.confirm("Delete this webhook?")) return;
+    deleteMutation.mutate(id);
+  };
+
+  /* LOADING */
   if (isLoading) {
     return (
       <Stack gap="md">
@@ -80,6 +145,7 @@ export default function WebhookList({
     );
   }
 
+  /* EMPTY */
   if (webhooks.length === 0) {
     return (
       <Card withBorder radius="md" p="xl">
@@ -91,101 +157,90 @@ export default function WebhookList({
     );
   }
 
+  /* UI */
   return (
     <Stack gap="md">
       {webhooks.map((webhook) => (
         <Card key={webhook.id} withBorder radius="md" p="md">
           <Stack gap="md">
-            <Group justify="space-between" align="flex-start">
+
+            {/* HEADER */}
+            <Group justify="space-between">
               <Stack gap={2}>
                 <Group gap="xs">
                   <Text fw={600}>{webhook.name}</Text>
-                  <Badge color={webhook.active ? "green" : "gray"} variant="light">
-                    {webhook.active ? "Active" : "Inactive"}
+
+                  <Badge color={webhook.active ? "green" : "gray"}>
+                    {webhook.active ? "ACTIVE" : "INACTIVE"}
                   </Badge>
-                  {webhook.status && (
-                    <Badge
-                      color={webhook.status === "success" ? "green" : "red"}
-                      variant="dot"
-                    >
-                      {webhook.status}
-                    </Badge>
-                  )}
                 </Group>
+
+                {/* URL */}
                 <Group gap={6}>
                   <Text size="sm" c="dimmed">
                     {webhook.url}
                   </Text>
-                  <ActionIcon
-                    variant="subtle"
-                    color="gray"
-                    onClick={() => handleCopy(webhook.url, "Webhook URL")}
-                  >
-                    <IconCopy size={16} />
-                  </ActionIcon>
-                </Group>
-              </Stack>
 
-              <Group gap="xs">
-                <Switch
-                  checked={webhook.active}
-                  onChange={(event) =>
-                    handleToggle(webhook, event.currentTarget.checked)
-                  }
-                  disabled={updateMutation.isPending}
-                />
-                <ActionIcon
-                  variant="subtle"
-                  color="gray"
-                  onClick={() => onEditWebhook(webhook)}
-                >
-                  <IconEdit size={16} />
-                </ActionIcon>
-                <ActionIcon
-                  variant="subtle"
-                  color="red"
-                  onClick={() => handleDelete(webhook.id)}
-                  loading={deleteMutation.isPending}
-                >
-                  <IconTrash size={16} />
-                </ActionIcon>
-              </Group>
-            </Group>
-
-            <Group gap="xs">
-              {webhook.events.map((eventName) => (
-                <Badge key={eventName} variant="light" color="blue">
-                  {eventName}
-                </Badge>
-              ))}
-            </Group>
-
-            <Group justify="space-between" align="flex-start">
-              <Stack gap={2}>
-                <Group gap={6}>
-                  <Text size="sm" c="dimmed">
-                    Secret: {maskSecret(webhook.secret)}
-                  </Text>
-                  {webhook.secret && (
+                  <Tooltip label="Copy URL">
                     <ActionIcon
-                      variant="subtle"
-                      color="gray"
-                      onClick={() => handleCopy(webhook.secret!, "Secret token")}
+                      onClick={() => handleCopy(webhook.url, "URL")}
                     >
                       <IconCopy size={16} />
                     </ActionIcon>
-                  )}
+                  </Tooltip>
                 </Group>
-                <Text size="xs" c="dimmed">
-                  Created: {new Date(webhook.createdAt).toLocaleString()}
-                </Text>
-                {webhook.lastTriggeredAt && (
-                  <Text size="xs" c="dimmed">
-                    Last triggered: {new Date(webhook.lastTriggeredAt).toLocaleString()}
-                  </Text>
-                )}
               </Stack>
+
+              {/* ACTIONS */}
+              <Group>
+                <Tooltip label="Enable / Disable webhook">
+                  <Switch
+                    checked={!!webhook.active}
+                    disabled={updateMutation.isPending}
+                    onChange={() => handleToggle(webhook)}
+                  />
+                </Tooltip>
+
+                <Tooltip label="Edit">
+                  <ActionIcon
+                    color="blue"
+                    onClick={() => onEditWebhook(webhook)}
+                  >
+                    <IconEdit size={16} />
+                  </ActionIcon>
+                </Tooltip>
+
+                <Tooltip label="Delete">
+                  <ActionIcon
+                    color="red"
+                    onClick={() => handleDelete(webhook.id)}
+                  >
+                    <IconTrash size={16} />
+                  </ActionIcon>
+                </Tooltip>
+              </Group>
             </Group>
+
+            {/* EVENTS */}
+            {webhook.active && (
+              <Group>
+                {parseEvents(webhook.events).map((event) => (
+                  <Badge key={event}>{event}</Badge>
+                ))}
+              </Group>
+            )}
+
+            {/* FOOTER */}
+            <Stack gap={2}>
+              <Text size="sm">
+                Token: {maskToken(webhook.apiToken)}
+              </Text>
+
+              <Text size="xs" c="dimmed">
+                Created by: {ACCOUNT_NAME} • {formatDate(webhook.createdAt)}
+              </Text>
+            </Stack>
+
           </Stack>
         </Card>
       ))}

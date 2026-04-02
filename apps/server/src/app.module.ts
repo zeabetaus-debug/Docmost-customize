@@ -1,40 +1,53 @@
 import { Module } from '@nestjs/common';
 import { APP_INTERCEPTOR } from '@nestjs/core';
+
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+
 import { EnvironmentService } from './integrations/environment/environment.service';
 import { AuditActorInterceptor } from './common/interceptors/audit-actor.interceptor';
+
 import { CoreModule } from './core/core.module';
 import { EnvironmentModule } from './integrations/environment/environment.module';
 import { CollaborationModule } from './collaboration/collaboration.module';
 import { WsModule } from './ws/ws.module';
+
 import { DatabaseModule } from '@docmost/db/database.module';
 import { StorageModule } from './integrations/storage/storage.module';
 import { MailModule } from './integrations/mail/mail.module';
 import { QueueModule } from './integrations/queue/queue.module';
 import { StaticModule } from './integrations/static/static.module';
+
 import { EventEmitterModule } from '@nestjs/event-emitter';
 import { HealthModule } from './integrations/health/health.module';
 import { ExportModule } from './integrations/export/export.module';
 import { ImportModule } from './integrations/import/import.module';
 import { SecurityModule } from './integrations/security/security.module';
 import { TelemetryModule } from './integrations/telemetry/telemetry.module';
+
 import { RedisModule } from '@nestjs-labs/nestjs-ioredis';
 import { RedisConfigService } from './integrations/redis/redis-config.service';
+
 import { CacheModule } from '@nestjs/cache-manager';
 import KeyvRedis from '@keyv/redis';
+
 import { LoggerModule } from './common/logger/logger.module';
 import { ClsModule } from 'nestjs-cls';
 import { NoopAuditModule } from './integrations/audit/audit.module';
+
+// ✅ YOUR CUSTOM MODULES
 import { ZeaAtlasModule } from './modules/zeaatlas/zeaatlas.module';
 import { ClientModeModule } from './modules/zeaatlas/client-mode.module';
+import { AutomationWebhooksModule } from './modules/automation-webhooks/automation-webhooks.module';
 
+
+// ✅ ENTERPRISE SAFE LOAD
 const enterpriseModules = [];
 try {
   // eslint-disable-next-line @typescript-eslint/no-require-imports
-  if (require('./ee/ee.module')?.EeModule) {
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    enterpriseModules.push(require('./ee/ee.module')?.EeModule);
+  const ee = require('./ee/ee.module');
+  if (ee?.EeModule) {
+    enterpriseModules.push(ee.EeModule);
   }
 } catch (err) {
   if (process.env.CLOUD === 'true') {
@@ -49,16 +62,22 @@ try {
       global: true,
       middleware: { mount: true },
     }),
-    ClientModeModule,
+
+    // ✅ YOUR MODULES (ADD HERE ONLY)
     ZeaAtlasModule,
+    ClientModeModule,
+    AutomationWebhooksModule,
+
     LoggerModule,
     NoopAuditModule,
     CoreModule,
     DatabaseModule,
     EnvironmentModule,
+
     RedisModule.forRootAsync({
       useClass: RedisConfigService,
     }),
+
     CacheModule.registerAsync({
       isGlobal: true,
       useFactory: async (environmentService: EnvironmentService) => {
@@ -71,6 +90,7 @@ try {
       },
       inject: [EnvironmentService],
     }),
+
     CollaborationModule,
     WsModule,
     QueueModule,
@@ -78,18 +98,25 @@ try {
     HealthModule,
     ImportModule,
     ExportModule,
+
     StorageModule.forRootAsync({
       imports: [EnvironmentModule],
     }),
+
     MailModule.forRootAsync({
       imports: [EnvironmentModule],
     }),
+
     EventEmitterModule.forRoot(),
     SecurityModule,
     TelemetryModule,
+
+    // ✅ KEEP THIS LAST
     ...enterpriseModules,
   ],
+
   controllers: [AppController],
+
   providers: [
     AppService,
     {

@@ -23,6 +23,8 @@ import { getPageTitle } from '../../../common/helpers';
 import { executeTx } from '@docmost/db/utils';
 import { AttachmentRepo } from '@docmost/db/repos/attachment/attachment.repo';
 import { v7 as uuid7 } from 'uuid';
+import { AutomationWebhooksModule } from '../../../modules/automation-webhooks/automation-webhooks.module';
+
 import {
   createYdocFromJson,
   getAttachmentIds,
@@ -50,12 +52,14 @@ import { CollaborationGateway } from '../../../collaboration/collaboration.gatew
 import { markdownToHtml } from '@docmost/editor-ext';
 import { WatcherService } from '../../watcher/watcher.service';
 import { sql } from 'kysely';
+import { AutomationWebhooksService } from '../../../modules/automation-webhooks/automation-webhooks.service';
 
 @Injectable()
 export class PageService {
   private readonly logger = new Logger(PageService.name);
 
   constructor(
+    private readonly automationWebhooksService: AutomationWebhooksService,
     private pageRepo: PageRepo,
     private pagePermissionRepo: PagePermissionRepo,
     private attachmentRepo: AttachmentRepo,
@@ -83,75 +87,72 @@ export class PageService {
   }
 
   async create(
-    userId: string,
-    workspaceId: string,
-    createPageDto: CreatePageDto,
-  ): Promise<Page> {
-    let parentPageId = undefined;
+  userId: string,
+  workspaceId: string,
+  createPageDto: CreatePageDto,
+): Promise<Page> {
 
-    // check if parent page exists
-    if (createPageDto.parentPageId) {
-      const parentPage = await this.pageRepo.findById(
-        createPageDto.parentPageId,
-      );
+  let parentPageId = undefined;
 
-      if (
-        !parentPage ||
-        parentPage.deletedAt ||
-        parentPage.spaceId !== createPageDto.spaceId
-      ) {
-        throw new NotFoundException('Parent page not found');
-      }
+  if (createPageDto.parentPageId) {
+    const parentPage = await this.pageRepo.findById(
+      createPageDto.parentPageId,
+    );
 
-      parentPageId = parentPage.id;
+    if (
+      !parentPage ||
+      parentPage.deletedAt ||
+      parentPage.spaceId !== createPageDto.spaceId
+    ) {
+      throw new NotFoundException('Parent page not found');
     }
 
-    let content = undefined;
-    let textContent = undefined;
-    let ydoc = undefined;
-
-    if (createPageDto?.content && createPageDto?.format) {
-      const prosemirrorJson = await this.parseProsemirrorContent(
-        createPageDto.content,
-        createPageDto.format,
-      );
-
-      content = prosemirrorJson;
-      textContent = jsonToText(prosemirrorJson);
-      ydoc = createYdocFromJson(prosemirrorJson);
-    }
-
-    const page = await this.pageRepo.insertPage({
-      slugId: generateSlugId(),
-      title: createPageDto.title,
-      position: await this.nextPagePosition(
-        createPageDto.spaceId,
-        parentPageId,
-      ),
-      icon: createPageDto.icon,
-      parentPageId: parentPageId,
-      spaceId: createPageDto.spaceId,
-      creatorId: userId,
-      workspaceId: workspaceId,
-      lastUpdatedById: userId,
-      content,
-      textContent,
-      ydoc,
-    });
-
-    this.generalQueue
-      .add(QueueJob.ADD_PAGE_WATCHERS, {
-        userIds: [userId],
-        pageId: page.id,
-        spaceId: createPageDto.spaceId,
-        workspaceId,
-      })
-      .catch((err) =>
-        this.logger.warn(`Failed to queue add-page-watchers: ${err.message}`),
-      );
-
-    return page;
+    parentPageId = parentPage.id;
   }
+
+  let content = undefined;
+  let textContent = undefined;
+  let ydoc = undefined;
+
+  if (createPageDto?.content && createPageDto?.format) {
+    const prosemirrorJson = await this.parseProsemirrorContent(
+      createPageDto.content,
+      createPageDto.format,
+    );
+
+    content = prosemirrorJson;
+    textContent = jsonToText(prosemirrorJson);
+    ydoc = createYdocFromJson(prosemirrorJson);
+  }
+
+  // ✅ CREATE PAGE FIRST
+  const page = await this.pageRepo.insertPage({
+    slugId: generateSlugId(),
+    title: createPageDto.title,
+    position: await this.nextPagePosition(
+      createPageDto.spaceId,
+      parentPageId,
+    ),
+    icon: createPageDto.icon,
+    parentPageId: parentPageId,
+    spaceId: createPageDto.spaceId,
+    creatorId: userId,
+    workspaceId: workspaceId,
+    lastUpdatedById: userId,
+    content,
+    textContent,
+    ydoc,
+  });
+
+  // ✅ THEN TRIGGER WEBHOOK
+  await this.automationWebhooksService.triggerWebhooks('page.created', {
+    pageId: page.id,
+    title: page.title,
+    spaceId: page.spaceId,
+  });
+
+  return page;
+}
 
   async nextPagePosition(spaceId: string, parentPageId?: string) {
     let pagePosition: string;
@@ -238,7 +239,11 @@ export class PageService {
         user,
       );
     }
-
+// 🔥 WEBHOOK TRIGGER (UPDATE)
+await this.automationWebhooksService.triggerWebhooks('page.updated', {
+  pageId: page.id,
+  title: updatePageDto.title,
+});
     return await this.pageRepo.findById(page.id, {
       includeSpace: true,
       includeContent: true,

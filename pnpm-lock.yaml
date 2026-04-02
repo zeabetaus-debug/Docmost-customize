@@ -570,6 +570,9 @@ importers:
       ai-sdk-ollama:
         specifier: ^3.7.0
         version: 3.8.2(ai@6.0.140(zod@4.3.6))(zod@4.3.6)
+      axios:
+        specifier: ^1.13.5
+        version: 1.13.6
       bcrypt:
         specifier: ^6.0.0
         version: 6.0.0
@@ -5585,6 +5588,7 @@ packages:
   '@xmldom/xmldom@0.8.11':
     resolution: {integrity: sha512-cQzWCtO6C8TQiYl1ruKNn2U6Ao4o4WBBcbL61yJl84x+j5sOWWFU9X7DpND8XZG3daDppSsigMdfAIl2upQBRw==}
     engines: {node: '>=10.0.0'}
+    deprecated: this version has critical issues, please update to the latest version
 
   '@xtuc/ieee754@1.2.0':
     resolution: {integrity: sha512-DX8nKgqcGwsc0eJSqYt5lwP4DH5FlHnmuWWBRy7X0NcaGR0ZtuyeESgMwTYVEtxmsNGY+qit4QYT/MIYTOTPeA==}
