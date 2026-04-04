@@ -91,14 +91,7 @@ async function bootstrap() {
     }),
   );
 
-app.enableCors({
-  origin: [
-    "http://localhost:5174", // Docmost UI
-    "http://localhost:5175", // Excel UI
-  ],
-  credentials: true,
-});
-
+  app.enableCors();
   app.useGlobalInterceptors(new TransformHttpResponseInterceptor(reflector));
   app.enableShutdownHooks();
 

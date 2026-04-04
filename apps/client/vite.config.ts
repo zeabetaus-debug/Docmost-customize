@@ -60,11 +60,6 @@ export default defineConfig(({ mode }) => {
           secure: false,
           ws: true,
         },
-        "/sheets": {
-          target: "http://localhost:5175",
-          changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/sheets/, ""),
-        },
       },
     },
   };

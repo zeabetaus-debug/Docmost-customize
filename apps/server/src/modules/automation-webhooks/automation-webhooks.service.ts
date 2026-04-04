@@ -1,13 +1,11 @@
 import {
   Injectable,
   Logger,
-  NotFoundException,
 } from '@nestjs/common';
 import { CreateWebhookDto } from './automation-webhooks.dto';
 import { InjectKysely } from 'nestjs-kysely';
 import { Kysely } from 'kysely';
 import axios from 'axios';
-import { randomBytes } from 'crypto';
 
 @Injectable()
 export class AutomationWebhooksService {
@@ -18,109 +16,73 @@ export class AutomationWebhooksService {
   ) {}
 
   /* =====================================================
-     ✅ CREATE WEBHOOK (FIXED TOKEN + EVENTS + TIMESTAMP)
+     ✅ CREATE OR UPDATE WEBHOOK (UPSERT)
   ===================================================== */
   async createWebhook(data: CreateWebhookDto) {
-    try {
-      const events: string[] = Array.isArray(data.events)
-        ? data.events
-        : data.events
-        ? [data.events]
-        : [];
-
-      // ✅ GENERATE TOKEN IF NOT PROVIDED
-      const token =
-        data.apiToken || randomBytes(32).toString('hex');
-
-      const result = await this.db
-        .insertInto('automation_webhooks')
-        .values({
-          name: data.name?.trim() || 'Untitled',
-          url: data.url,
-          events: events,
-          api_token: token,
-          is_active:
-            typeof data.active === 'boolean'
-              ? data.active
-              : true,
-          created_by: data.createdBy ?? 'User',
-          created_at: new Date(),
-          updated_at: new Date(), // ✅ IMPORTANT
-        })
-        .returningAll()
-        .executeTakeFirst();
-
-      return this.formatWebhook(result);
-    } catch (error: any) {
-      this.logger.error('❌ CREATE WEBHOOK ERROR', error);
-      throw error;
-    }
-  }
-
-  /* =====================================================
-     ✅ GET WEBHOOKS (FIXED EVENTS PARSE)
-  ===================================================== */
-  async getWebhooks() {
-    const data = await this.db
-      .selectFrom('automation_webhooks')
-      .selectAll()
-      .orderBy('created_at', 'desc')
-      .execute();
-
-    return data.map((item) => this.formatWebhook(item));
-  }
-
-  /* =====================================================
-     ✅ TOGGLE WEBHOOK (FIXED PERSIST + TIMESTAMP)
-  ===================================================== */
- async toggleWebhook(id: string, isActive: boolean) {
   try {
-    const existing = await this.db
-      .selectFrom('automation_webhooks')
-      .selectAll()
-      .where('id', '=', id)
-      .executeTakeFirst();
+    const events: string[] = Array.isArray(data.events)
+      ? data.events
+      : data.events
+      ? [data.events]
+      : [];
 
-    if (!existing) {
-      throw new NotFoundException('Webhook not found');
-    }
+    const result = await this.db
+      .insertInto('automation_webhooks')
+      .values({
+        name: data.name?.trim() || 'Untitled',
+        url: data.url,
+        events: events,
+        api_token: data.apiToken ?? '',
 
-    const updated = await this.db
-      .updateTable('automation_webhooks')
-      .set({
-        is_active: isActive,          // ✅ UI value
-        updated_at: new Date(),       // ✅ persist change
+        // ✅ STRICT BOOLEAN
+        is_active:
+          typeof data.active === 'boolean'
+            ? data.active
+            : true,
+
+        created_by: data.createdBy ?? 'User',
       })
-      .where('id', '=', id)
-      .returningAll()                 // ✅ return updated row
+      .returningAll()
       .executeTakeFirst();
 
-    return this.formatWebhook(updated);
+    return result;
   } catch (error: any) {
-    this.logger.error('❌ TOGGLE WEBHOOK ERROR', error);
+    this.logger.error('❌ CREATE WEBHOOK ERROR', error);
     throw error;
   }
 }
 
   /* =====================================================
-     ✅ DELETE WEBHOOK
+     ✅ GET WEBHOOKS (🔥 CRITICAL FIX)
   ===================================================== */
-  async deleteWebhook(id: string) {
-    const result = await this.db
-      .deleteFrom('automation_webhooks')
-      .where('id', '=', id)
-      .returningAll()
-      .executeTakeFirst();
+  async getWebhooks() {
+    const data = await this.db
+      .selectFrom('automation_webhooks')
+      .selectAll()
+      .execute();
 
-    if (!result) {
-      throw new NotFoundException('Webhook not found');
-    }
-
-    return { success: true };
+    // ✅ FORCE BOOLEAN (PREVENT TOGGLE RESET)
+    return data.map((item) => ({
+  ...item,
+  is_active:
+    item.is_active === true ||
+    item.is_active === 1 ||
+    item.is_active === 'true',
+}));
   }
 
   /* =====================================================
-     ✅ UPDATE WEBHOOK (FIXED EVENTS + TOKEN + TIMESTAMP)
+     ✅ DELETE WEBHOOK
+  ===================================================== */
+  async deleteWebhook(id: string) {
+    return await this.db
+      .deleteFrom('automation_webhooks')
+      .where('id', '=', id)
+      .execute();
+  }
+
+  /* =====================================================
+     ✅ UPDATE WEBHOOK (🔥 FINAL FIX)
   ===================================================== */
   async updateWebhook(id: string, data: any) {
     try {
@@ -131,11 +93,12 @@ export class AutomationWebhooksService {
         .executeTakeFirst();
 
       if (!existing) {
-        throw new NotFoundException('Webhook not found');
+        throw new Error('Webhook not found');
       }
 
       const updateData: any = {};
 
+      // ✅ ONLY UPDATE PROVIDED FIELDS (NO OVERRIDE)
       if (data.name !== undefined) {
         updateData.name = data.name.trim();
       }
@@ -154,11 +117,10 @@ export class AutomationWebhooksService {
         updateData.api_token = data.apiToken;
       }
 
+      // 🔥 MOST IMPORTANT FIX
       if (data.active !== undefined) {
-        updateData.is_active = Boolean(data.active);
-      }
-
-      updateData.updated_at = new Date(); // ✅ IMPORTANT
+  updateData.is_active = data.active === true;
+}
 
       const result = await this.db
         .updateTable('automation_webhooks')
@@ -167,7 +129,8 @@ export class AutomationWebhooksService {
         .returningAll()
         .executeTakeFirst();
 
-      return this.formatWebhook(result);
+      this.logger.log(`✏️ Updated webhook: ${id}`);
+      return result;
     } catch (error: any) {
       this.logger.error('❌ UPDATE WEBHOOK ERROR', error);
       throw error;
@@ -215,36 +178,5 @@ export class AutomationWebhooksService {
         );
       }
     }
-  }
-
-  /* =====================================================
-     ✅ FORMAT RESPONSE (FIXED TOKEN + EVENTS + TIMESTAMP)
-  ===================================================== */
-  private formatWebhook(item: any) {
-    return {
-      id: item.id,
-      name: item.name,
-      url: item.url,
-
-      // ✅ ALWAYS ARRAY
-      events: Array.isArray(item.events)
-        ? item.events
-        : [],
-
-      // ✅ FIX TOKEN DISPLAY
-      apiToken: item.api_token || null,
-
-      active: Boolean(item.is_active),
-
-      createdAt: item.created_at
-        ? new Date(item.created_at).toISOString()
-        : null,
-
-      updatedAt: item.updated_at
-        ? new Date(item.updated_at).toISOString()
-        : null,
-
-      createdBy: item.created_by || 'User',
-    };
   }
 }

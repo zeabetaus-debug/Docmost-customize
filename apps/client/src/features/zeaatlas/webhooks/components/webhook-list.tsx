@@ -25,7 +25,7 @@ import {
 import { IWebhook } from "@/features/zeaatlas/webhooks/types/webhook.types";
 
 /* =====================================================
-   ✅ USER NAME
+   ✅ USER NAME (SAFE FETCH)
 ===================================================== */
 function getUserName() {
   try {
@@ -99,11 +99,10 @@ export default function WebhookList({
   const updateMutation = useUpdateWebhookMutation();
   const deleteMutation = useDeleteWebhookMutation();
 
+  // 🔥 FIX: DEFINE USER NAME INSIDE COMPONENT
   const ACCOUNT_NAME = getUserName();
 
-  /* =====================================================
-     COPY
-  ===================================================== */
+  // COPY
   const handleCopy = (value: string, label: string) => {
     clipboard.copy(value);
     notifications.show({
@@ -112,33 +111,23 @@ export default function WebhookList({
     });
   };
 
-  /* =====================================================
-     DELETE
-  ===================================================== */
+  // TOGGLE
+  const handleToggle = (webhook: IWebhook) => {
+    if (updateMutation.isPending) return;
+
+    updateMutation.mutate({
+      id: webhook.id,
+      active: !webhook.active,
+    });
+  };
+
+  // DELETE
   const handleDelete = (id: string) => {
     if (!window.confirm("Delete this webhook?")) return;
     deleteMutation.mutate(id);
   };
 
-  /* =====================================================
-     🔥 TOGGLE FIX (FINAL)
-  ===================================================== */
-  const handleToggle = async (webhook: IWebhook) => {
-    if (updateMutation.isPending) return; // prevent spam
-
-    try {
-      await updateMutation.mutateAsync({
-        id: webhook.id,
-        active: !webhook.active,
-      });
-    } catch (err) {
-      console.error("Toggle failed:", err);
-    }
-  };
-
-  /* =====================================================
-     LOADING
-  ===================================================== */
+  /* LOADING */
   if (isLoading) {
     return (
       <Stack gap="md">
@@ -156,9 +145,7 @@ export default function WebhookList({
     );
   }
 
-  /* =====================================================
-     EMPTY
-  ===================================================== */
+  /* EMPTY */
   if (webhooks.length === 0) {
     return (
       <Card withBorder radius="md" p="xl">
@@ -170,9 +157,7 @@ export default function WebhookList({
     );
   }
 
-  /* =====================================================
-     UI
-  ===================================================== */
+  /* UI */
   return (
     <Stack gap="md">
       {webhooks.map((webhook) => (
@@ -210,7 +195,7 @@ export default function WebhookList({
               <Group>
                 <Tooltip label="Enable / Disable webhook">
                   <Switch
-                    checked={webhook.active}
+                    checked={!!webhook.active}
                     disabled={updateMutation.isPending}
                     onChange={() => handleToggle(webhook)}
                   />
