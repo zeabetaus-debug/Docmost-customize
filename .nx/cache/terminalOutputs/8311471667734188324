@@ -1,0 +1,456 @@
+
+> client@0.70.3 dev C:\Users\Ashok Kumar\Desktop\Docy customize\docmost-customize\apps\client
+> vite
+
+
+  [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m2654[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5174[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m10:48:46 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/users/me[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:48:46 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/auth/collab-token[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:48:48 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/auth/collab-token[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:48:53 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/auth/collab-token[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:49:03 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/auth/collab-token[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:49:49 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/pages/recent[39m
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+[2m10:49:49 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/spaces[39m
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+[2m10:49:49 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+[2m10:49:49 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/notifications/unread-count[39m
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+[2m10:49:50 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:49:52 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:49:55 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:49:55 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/notifications/unread-count[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:49:55 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/version[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:49:56 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:49:56 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/notifications/unread-count[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:49:56 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:49:56 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/version[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:49:57 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/zeaatlas/webhooks[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:49:58 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:00 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:03 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/workspace/members[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:03 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:04 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:04 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/notifications/unread-count[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:04 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/spaces[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:04 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/pages/recent[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:05 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:08 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:09 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:09 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/notifications/unread-count[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:09 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/version[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:09 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/workspace/members[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:10 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:10 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/workspace/invites[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:11 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/workspace/members[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:12 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:15 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/workspace/invites[39m
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+[2m10:50:15 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+[2m10:50:15 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/groups[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:16 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:17 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/spaces[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:17 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/shares[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:18 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:18 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/notifications/unread-count[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:18 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/version[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:19 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:50:21 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:58:02 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+[2m10:58:04 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:58:06 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:58:10 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:58:16 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:59:11 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+[2m10:59:12 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:59:16 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:59:19 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:59:49 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+[2m10:59:51 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m10:59:54 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:00:00 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:04:29 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/pages/webhook-settings-page.tsx, /@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/components/webhook-form-modal.tsx, /@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/components/webhook-list.tsx, /@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/components/webhook-test-panel.tsx[22m
+[2m11:04:29 am[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 2 errors:
+C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/api/webhook-query.ts:26:30: ERROR: Cannot use "||" with "??" without parentheses
+C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/api/webhook-query.ts:27:27: ERROR: Cannot use "||" with "??" without parentheses
+  Plugin: [35mvite:esbuild[39m
+  File: [36mC:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/api/webhook-query.ts[39m:26:30
+[33m  
+  [33mCannot use "||" with "??" without parentheses[33m
+  24 |      active:
+  25 |        data.active ??
+  26 |        data.is_active === true ||
+     |                                ^
+  27 |        data.is_active === 1 ||
+  28 |        data.is_active === "true",
+  
+  [33mCannot use "||" with "??" without parentheses[33m
+  25 |        data.active ??
+  26 |        data.is_active === true ||
+  27 |        data.is_active === 1 ||
+     |                             ^
+  28 |        data.is_active === "true",
+  29 |  
+  [39m
+[2m11:04:29 am[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 2 errors:
+C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/api/webhook-query.ts:26:30: ERROR: Cannot use "||" with "??" without parentheses
+C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/api/webhook-query.ts:27:27: ERROR: Cannot use "||" with "??" without parentheses
+  Plugin: [35mvite:esbuild[39m
+  File: [36mC:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/api/webhook-query.ts[39m:26:30
+[33m  
+  [33mCannot use "||" with "??" without parentheses[33m
+  24 |      active:
+  25 |        data.active ??
+  26 |        data.is_active === true ||
+     |                                ^
+  27 |        data.is_active === 1 ||
+  28 |        data.is_active === "true",
+  
+  [33mCannot use "||" with "??" without parentheses[33m
+  25 |        data.active ??
+  26 |        data.is_active === true ||
+  27 |        data.is_active === 1 ||
+     |                             ^
+  28 |        data.is_active === "true",
+  29 |  
+  [39m
+[2m11:04:29 am[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 2 errors:
+C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/api/webhook-query.ts:26:30: ERROR: Cannot use "||" with "??" without parentheses
+C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/api/webhook-query.ts:27:27: ERROR: Cannot use "||" with "??" without parentheses
+  Plugin: [35mvite:esbuild[39m
+  File: [36mC:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/api/webhook-query.ts[39m:26:30
+[33m  
+  [33mCannot use "||" with "??" without parentheses[33m
+  24 |      active:
+  25 |        data.active ??
+  26 |        data.is_active === true ||
+     |                                ^
+  27 |        data.is_active === 1 ||
+  28 |        data.is_active === "true",
+  
+  [33mCannot use "||" with "??" without parentheses[33m
+  25 |        data.active ??
+  26 |        data.is_active === true ||
+  27 |        data.is_active === 1 ||
+     |                             ^
+  28 |        data.is_active === "true",
+  29 |  
+  [39m
+[2m11:04:29 am[22m [31m[1m[vite][22m[39m [31mInternal server error: Transform failed with 2 errors:
+C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/api/webhook-query.ts:26:30: ERROR: Cannot use "||" with "??" without parentheses
+C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/api/webhook-query.ts:27:27: ERROR: Cannot use "||" with "??" without parentheses[39m
+  Plugin: [35mvite:esbuild[39m
+  File: [36mC:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/api/webhook-query.ts[39m:26:30
+[33m  
+  [33mCannot use "||" with "??" without parentheses[33m
+  24 |      active:
+  25 |        data.active ??
+  26 |        data.is_active === true ||
+     |                                ^
+  27 |        data.is_active === 1 ||
+  28 |        data.is_active === "true",
+  
+  [33mCannot use "||" with "??" without parentheses[33m
+  25 |        data.active ??
+  26 |        data.is_active === true ||
+  27 |        data.is_active === 1 ||
+     |                             ^
+  28 |        data.is_active === "true",
+  29 |  
+  [39m
+      at failureErrorWithLog (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\esbuild@0.27.4\node_modules\esbuild\lib\main.js:1748:15)
+      at C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\esbuild@0.27.4\node_modules\esbuild\lib\main.js:1017:50
+      at responseCallbacks.<computed> (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\esbuild@0.27.4\node_modules\esbuild\lib\main.js:884:9)
+      at handleIncomingPacket (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\esbuild@0.27.4\node_modules\esbuild\lib\main.js:939:12)
+      at Socket.readFromStdout (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\esbuild@0.27.4\node_modules\esbuild\lib\main.js:862:7)
+      at Socket.emit (node:events:524:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:191:23)
+[2m11:04:29 am[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 2 errors:
+C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/api/webhook-query.ts:26:30: ERROR: Cannot use "||" with "??" without parentheses
+C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/api/webhook-query.ts:27:27: ERROR: Cannot use "||" with "??" without parentheses
+  Plugin: [35mvite:esbuild[39m
+  File: [36mC:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/api/webhook-query.ts[39m:26:30
+[33m  
+  [33mCannot use "||" with "??" without parentheses[33m
+  24 |      active:
+  25 |        data.active ??
+  26 |        data.is_active === true ||
+     |                                ^
+  27 |        data.is_active === 1 ||
+  28 |        data.is_active === "true",
+  
+  [33mCannot use "||" with "??" without parentheses[33m
+  25 |        data.active ??
+  26 |        data.is_active === true ||
+  27 |        data.is_active === 1 ||
+     |                             ^
+  28 |        data.is_active === "true",
+  29 |  
+  [39m
+[2m11:04:35 am[22m [31m[1m[vite][22m[39m [31mInternal server error: Transform failed with 2 errors:
+C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/api/webhook-query.ts:26:30: ERROR: Cannot use "||" with "??" without parentheses
+C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/api/webhook-query.ts:27:27: ERROR: Cannot use "||" with "??" without parentheses[39m
+  Plugin: [35mvite:esbuild[39m
+  File: [36mC:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/api/webhook-query.ts[39m:26:30
+[33m  
+  [33mCannot use "||" with "??" without parentheses[33m
+  24 |      active:
+  25 |        data.active ??
+  26 |        data.is_active === true ||
+     |                                ^
+  27 |        data.is_active === 1 ||
+  28 |        data.is_active === "true",
+  
+  [33mCannot use "||" with "??" without parentheses[33m
+  25 |        data.active ??
+  26 |        data.is_active === true ||
+  27 |        data.is_active === 1 ||
+     |                             ^
+  28 |        data.is_active === "true",
+  29 |  
+  [39m
+      at failureErrorWithLog (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\esbuild@0.27.4\node_modules\esbuild\lib\main.js:1748:15)
+      at C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\esbuild@0.27.4\node_modules\esbuild\lib\main.js:1017:50
+      at responseCallbacks.<computed> (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\esbuild@0.27.4\node_modules\esbuild\lib\main.js:884:9)
+      at handleIncomingPacket (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\esbuild@0.27.4\node_modules\esbuild\lib\main.js:939:12)
+      at Socket.readFromStdout (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\esbuild@0.27.4\node_modules\esbuild\lib\main.js:862:7)
+      at Socket.emit (node:events:524:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:191:23)
+[2m11:05:36 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/pages/webhook-settings-page.tsx, /@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/components/webhook-form-modal.tsx, /@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/components/webhook-list.tsx, /@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/components/webhook-test-panel.tsx[22m
+[2m11:07:29 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/zeaatlas/webhooks/components/webhook-list.tsx[22m
+[2m11:14:37 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+[2m11:14:39 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:14:41 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:14:46 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:14:51 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:14:58 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:15:03 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:21:40 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+[2m11:21:41 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:21:43 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:21:48 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:21:53 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:22:00 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:22:06 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+[2m11:22:07 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:22:09 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:22:13 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:26:51 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+[2m11:26:52 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:26:54 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:27:00 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:27:07 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:27:13 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:27:19 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:27:25 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:27:31 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:27:37 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:27:43 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:32:19 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+[2m11:32:20 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:32:24 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:32:28 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:32:34 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:32:39 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:32:44 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:32:49 am[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[41m[30m ELIFECYCLE [39m[49m [31mCommand failed with exit code 3221225786.[39m

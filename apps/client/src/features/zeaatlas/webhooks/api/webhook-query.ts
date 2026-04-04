@@ -12,25 +12,36 @@ const WEBHOOK_QUERY_KEY = ["zeaatlas-webhooks"];
 const BASE = "/zeaatlas/webhooks";
 
 /* =====================================================
-   🔥 NORMALIZER
+   🔥 NORMALIZER (FIXED)
 ===================================================== */
 function normalizeWebhook(data: any): IWebhook {
   return {
-    ...data,
+    id: data.id,
+    name: data.name,
+    url: data.url,
 
+    // ✅ ALWAYS BOOLEAN
     active:
-      data.is_active === true ||
+  typeof data.active === "boolean"
+    ? data.active
+    : data.is_active === true ||
       data.is_active === 1 ||
       data.is_active === "true",
 
+    // ✅ TOKEN FIX
     apiToken:
-      data.api_token ||
       data.apiToken ||
-      "",
+      data.api_token ||
+      null,
+
+    // ✅ EVENTS FIX
+    events: Array.isArray(data.events)
+      ? data.events
+      : [],
 
     createdAt:
-      data.created_at ||
       data.createdAt ||
+      data.created_at ||
       null,
   };
 }
@@ -42,9 +53,9 @@ async function getWebhooks(): Promise<IWebhook[]> {
   try {
     const res = await api.get(BASE);
 
-    const list = Array.isArray(res.data?.data)
-      ? res.data.data
-      : [];
+    const list = Array.isArray(res.data)
+      ? res.data
+      : res.data?.data || [];
 
     return list.map(normalizeWebhook);
   } catch (error) {
@@ -64,20 +75,30 @@ async function createWebhook(input: IWebhookInput): Promise<IWebhook> {
     createdBy: user?.name || "User",
   });
 
-  return normalizeWebhook(res.data?.data);
+  return normalizeWebhook(res.data);
 }
 
 /* =====================================================
-   ✅ UPDATE
+   ✅ UPDATE (🔥 FIXED TOGGLE + EDIT)
 ===================================================== */
 async function updateWebhook(
   input: Partial<IWebhookInput> & { id: string }
 ): Promise<IWebhook> {
-  const { id, ...body } = input;
+  const { id, active, ...body } = input;
 
+  // ✅ TOGGLE FIX
+  if (typeof active === "boolean") {
+    const res = await api.patch(`${BASE}/${id}/toggle`, {
+      active,
+    });
+
+    return normalizeWebhook(res.data);
+  }
+
+  // ✅ NORMAL EDIT FIX
   const res = await api.patch(`${BASE}/${id}`, body);
 
-  return normalizeWebhook(res.data?.data);
+  return normalizeWebhook(res.data);
 }
 
 /* =====================================================
@@ -103,9 +124,6 @@ export function useWebhooksQuery() {
   return useQuery({
     queryKey: WEBHOOK_QUERY_KEY,
     queryFn: getWebhooks,
-    refetchOnWindowFocus: false,
-    refetchOnReconnect: false,
-    refetchOnMount: false,
     staleTime: Infinity,
   });
 }
@@ -131,20 +149,20 @@ export function useCreateWebhookMutation() {
 }
 
 /* =====================================================
-   ✅ UPDATE MUTATION (🔥 FINAL CLEAN)
+   ✅ UPDATE MUTATION (🔥 FINAL FIX)
 ===================================================== */
 export function useUpdateWebhookMutation() {
   return useMutation({
     mutationFn: updateWebhook,
 
+    // ✅ OPTIMISTIC UPDATE
     onMutate: async (updated) => {
       await queryClient.cancelQueries({
         queryKey: WEBHOOK_QUERY_KEY,
       });
 
-      const previous = queryClient.getQueryData<IWebhook[]>(
-        WEBHOOK_QUERY_KEY
-      );
+      const previous =
+        queryClient.getQueryData<IWebhook[]>(WEBHOOK_QUERY_KEY);
 
       queryClient.setQueryData<IWebhook[]>(
         WEBHOOK_QUERY_KEY,
@@ -173,12 +191,31 @@ export function useUpdateWebhookMutation() {
       });
     },
 
-    onSuccess: (_data, variables) => {
+    // ✅ FINAL SYNC FIX (IMPORTANT)
+    onSuccess: (updatedWebhook, variables) => {
+      queryClient.setQueryData<IWebhook[]>(
+        WEBHOOK_QUERY_KEY,
+        (old = []) =>
+          old.map((item) =>
+            item.id === updatedWebhook.id
+              ? updatedWebhook
+              : item
+          )
+      );
+
       notifications.show({
-        message: variables.active
-          ? "Webhook enabled"
-          : "Webhook disabled",
-        color: variables.active ? "green" : "gray",
+        message:
+          typeof variables.active === "boolean"
+            ? variables.active
+              ? "Webhook enabled"
+              : "Webhook disabled"
+            : "Webhook updated",
+        color:
+          typeof variables.active === "boolean"
+            ? variables.active
+              ? "green"
+              : "gray"
+            : "green",
       });
     },
   });
@@ -196,9 +233,8 @@ export function useDeleteWebhookMutation() {
         queryKey: WEBHOOK_QUERY_KEY,
       });
 
-      const previous = queryClient.getQueryData<IWebhook[]>(
-        WEBHOOK_QUERY_KEY
-      );
+      const previous =
+        queryClient.getQueryData<IWebhook[]>(WEBHOOK_QUERY_KEY);
 
       queryClient.setQueryData<IWebhook[]>(
         WEBHOOK_QUERY_KEY,

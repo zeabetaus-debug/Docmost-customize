@@ -1,0 +1,27 @@
+services:
+  backend:
+    container_name: excel-clone-backend
+    build:
+      context: ./ExcelClone.Api
+      dockerfile: Dockerfile
+    image: excel-clone-backend:latest
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      DisableHttpsRedirection: "true"
+    ports:
+      - "5278:8080"
+    restart: unless-stopped
+
+  frontend:
+    container_name: excel-clone-frontend
+    build:
+      context: ./front-end
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: ${VITE_API_URL:-/api}
+    image: excel-clone-frontend:latest
+    depends_on:
+      - backend
+    ports:
+      - "3001:80"
+    restart: unless-stopped

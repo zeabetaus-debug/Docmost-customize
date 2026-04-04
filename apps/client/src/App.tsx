@@ -30,6 +30,7 @@ import { useTrackOrigin } from "@/hooks/use-track-origin";
 import SpacesPage from "@/pages/spaces/spaces.tsx";
 import SpaceTrash from "@/pages/space/space-trash.tsx";
 import React, { Suspense } from "react";
+import SheetsPage from "./pages/sheets";
 
 const WebhookSettingsPage = React.lazy(
   () => import("@/features/zeaatlas/webhooks/pages/webhook-settings-page"),
@@ -71,6 +72,7 @@ export default function App() {
   }, [currentUser]);
 
   return (
+    
     <Routes>
       {/* ✅ DEFAULT REDIRECT */}
       <Route index element={<Navigate to="/home" />} />
@@ -168,6 +170,7 @@ export default function App() {
           }
         />
       </Route>
+      <Route path="/sheets" element={<SheetsPage />} />
 
       {/* ✅ FALLBACK */}
       <Route path="*" element={<Error404 />} />

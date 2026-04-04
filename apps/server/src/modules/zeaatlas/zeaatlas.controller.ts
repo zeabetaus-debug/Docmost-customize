@@ -1,17 +1,16 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
-import { ZeaAtlasService } from './zeaatlas.service';
+import { Controller, Get, Req, UseGuards } from '@nestjs/common';
+import { JwtAuthGuard } from '../../core/auth/guards/jwt-auth.guard';
 
 @Controller('zeaatlas')
 export class ZeaAtlasController {
-  constructor(private readonly service: ZeaAtlasService) {}
 
-  @Get('pages')
-  getPages() {
-    return this.service.getPages();
-  }
-
-  @Post('pages')
-  createPage(@Body() body: { title: string }) {
-    return this.service.createPage(body);
+  @UseGuards(JwtAuthGuard) // 🔐 REAL USER
+  @Get('me')
+  getProfile(@Req() req: any) {
+    return {
+      id: req.user.id,
+      name: req.user.name,
+      email: req.user.email,
+    };
   }
 }

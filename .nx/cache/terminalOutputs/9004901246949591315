@@ -1,0 +1,703 @@
+
+> server@0.70.3 start:dev C:\Users\Ashok Kumar\Desktop\Docy customize\docmost-customize\apps\server
+> cross-env NODE_ENV=development nest start --watch
+
+[2J[3J[H[[90m5:08:14 pm[0m] Starting compilation in watch mode...
+
+[[90m5:09:35 pm[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m5:09:36 pm[0m] File change detected. Starting incremental compilation...
+
+[[90m5:09:40 pm[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m5:09:57 pm[0m] File change detected. Starting incremental compilation...
+
+[[90m5:09:59 pm[0m] Found 0 errors. Watching for file changes.
+
+[2026-04-03 17:10:13.274 +0530] [32mINFO[39m: [36mWsGateway subscribed to the "message" message[39m [90m{"context":"WebSocketsController"}[39m
+[2026-04-03 17:10:13.274 +0530] [32mINFO[39m: [36mWsGateway subscribed to the "join-room" message[39m [90m{"context":"WebSocketsController"}[39m
+[2026-04-03 17:10:13.274 +0530] [32mINFO[39m: [36mWsGateway subscribed to the "leave-room" message[39m [90m{"context":"WebSocketsController"}[39m
+[2026-04-03 17:10:13.276 +0530] [34mDEBUG[39m: [36mMounting ClsMiddleware to {*path}[39m [90m{"context":"ClsModule"}[39m
+[2026-04-03 17:10:13.364 +0530] [33mWARN[39m: [36mUnsupported route path: "/api/*". In previous versions, the symbols ?, *, and + were used to denote optional or repeating path parameters. The latest version of "path-to-regexp" now requires the use of named parameters. For example, instead of using a route like /users/* to capture all routes starting with "/users", you should use /users/*path. For more details, refer to the migration guide. Attempting to auto-convert...[39m [90m{"context":"LegacyRouteConverter"}[39m
+[2026-04-03 17:10:13.364 +0530] [33mWARN[39m: [36mUnsupported route path: "/api/*". In previous versions, the symbols ?, *, and + were used to denote optional or repeating path parameters. The latest version of "path-to-regexp" now requires the use of named parameters. For example, instead of using a route like /users/* to capture all routes starting with "/users", you should use /users/*path. For more details, refer to the migration guide. Attempting to auto-convert...[39m [90m{"context":"LegacyRouteConverter"}[39m
+[2026-04-03 17:10:13.365 +0530] [33mWARN[39m: [36mUnsupported route path: "/api/*". In previous versions, the symbols ?, *, and + were used to denote optional or repeating path parameters. The latest version of "path-to-regexp" now requires the use of named parameters. For example, instead of using a route like /users/* to capture all routes starting with "/users", you should use /users/*path. For more details, refer to the migration guide. Attempting to auto-convert...[39m [90m{"context":"LegacyRouteConverter"}[39m
+[2026-04-03 17:10:13.365 +0530] [33mWARN[39m: [36mUnsupported route path: "/api/*". In previous versions, the symbols ?, *, and + were used to denote optional or repeating path parameters. The latest version of "path-to-regexp" now requires the use of named parameters. For example, instead of using a route like /users/* to capture all routes starting with "/users", you should use /users/*path. For more details, refer to the migration guide. Attempting to auto-convert...[39m [90m{"context":"LegacyRouteConverter"}[39m
+[2026-04-03 17:10:13.368 +0530] [32mINFO[39m: [36mAppController {/api}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:10:13.382 +0530] [32mINFO[39m: [36mMapped {/api, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.383 +0530] [32mINFO[39m: [36mMapped {/api/test, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.384 +0530] [32mINFO[39m: [36mMapped {/api/profile-test, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.384 +0530] [32mINFO[39m: [36mZeaAtlasController {/api/zeaatlas}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:10:13.385 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/me, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.386 +0530] [32mINFO[39m: [36mClientModeController {/api/client-mode}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:10:13.387 +0530] [32mINFO[39m: [36mMapped {/api/client-mode, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.388 +0530] [32mINFO[39m: [36mMapped {/api/client-mode, PATCH} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.389 +0530] [32mINFO[39m: [36mAutomationWebhooksController {/api/zeaatlas/webhooks}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:10:13.390 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/webhooks, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.391 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/webhooks, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.397 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/webhooks/:id/toggle, PATCH} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.398 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/webhooks/incoming, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.399 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/webhooks/:id, DELETE} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.399 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/webhooks/trigger-test, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.399 +0530] [32mINFO[39m: [36mUserController {/api/users}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:10:13.403 +0530] [32mINFO[39m: [36mMapped {/api/users/me, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.403 +0530] [32mINFO[39m: [36mMapped {/api/users/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.403 +0530] [32mINFO[39m: [36mAuthController {/api/auth}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:10:13.404 +0530] [32mINFO[39m: [36mMapped {/api/auth/login, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.420 +0530] [32mINFO[39m: [36mMapped {/api/auth/setup, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.421 +0530] [32mINFO[39m: [36mMapped {/api/auth/change-password, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.421 +0530] [32mINFO[39m: [36mMapped {/api/auth/forgot-password, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.422 +0530] [32mINFO[39m: [36mMapped {/api/auth/password-reset, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.422 +0530] [32mINFO[39m: [36mMapped {/api/auth/verify-token, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.423 +0530] [32mINFO[39m: [36mMapped {/api/auth/collab-token, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.423 +0530] [32mINFO[39m: [36mMapped {/api/auth/logout, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.423 +0530] [32mINFO[39m: [36mWorkspaceController {/api/workspace}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:10:13.424 +0530] [32mINFO[39m: [36mMapped {/api/workspace/public, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.424 +0530] [32mINFO[39m: [36mMapped {/api/workspace/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.424 +0530] [32mINFO[39m: [36mMapped {/api/workspace/entitlements, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.425 +0530] [32mINFO[39m: [36mMapped {/api/workspace/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.425 +0530] [32mINFO[39m: [36mMapped {/api/workspace/members, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.425 +0530] [32mINFO[39m: [36mMapped {/api/workspace/members/deactivate, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.426 +0530] [32mINFO[39m: [36mMapped {/api/workspace/members/activate, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.426 +0530] [32mINFO[39m: [36mMapped {/api/workspace/members/delete, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.427 +0530] [32mINFO[39m: [36mMapped {/api/workspace/members/change-role, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.427 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.427 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.428 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites/create, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.428 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites/resend, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.429 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites/revoke, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.429 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites/accept, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.430 +0530] [32mINFO[39m: [36mMapped {/api/workspace/check-hostname, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.430 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites/link, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.430 +0530] [32mINFO[39m: [36mSpaceController {/api/spaces}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:10:13.431 +0530] [32mINFO[39m: [36mMapped {/api/spaces, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.431 +0530] [32mINFO[39m: [36mMapped {/api/spaces/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.432 +0530] [32mINFO[39m: [36mMapped {/api/spaces/create, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.432 +0530] [32mINFO[39m: [36mMapped {/api/spaces/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.432 +0530] [32mINFO[39m: [36mMapped {/api/spaces/delete, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.432 +0530] [32mINFO[39m: [36mMapped {/api/spaces/members, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.433 +0530] [32mINFO[39m: [36mMapped {/api/spaces/members/add, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.433 +0530] [32mINFO[39m: [36mMapped {/api/spaces/members/remove, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.433 +0530] [32mINFO[39m: [36mMapped {/api/spaces/members/change-role, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.434 +0530] [32mINFO[39m: [36mPageController {/api/pages}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:10:13.434 +0530] [32mINFO[39m: [36mMapped {/api/pages/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.434 +0530] [32mINFO[39m: [36mMapped {/api/pages/create, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.434 +0530] [32mINFO[39m: [36mMapped {/api/pages/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.435 +0530] [32mINFO[39m: [36mMapped {/api/pages/delete, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.435 +0530] [32mINFO[39m: [36mMapped {/api/pages/restore, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.437 +0530] [32mINFO[39m: [36mMapped {/api/pages/recent, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.438 +0530] [32mINFO[39m: [36mMapped {/api/pages/trash, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.438 +0530] [32mINFO[39m: [36mMapped {/api/pages/history, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.438 +0530] [32mINFO[39m: [36mMapped {/api/pages/history/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.439 +0530] [32mINFO[39m: [36mMapped {/api/pages/sidebar-pages, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.439 +0530] [32mINFO[39m: [36mMapped {/api/pages/move-to-space, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.440 +0530] [32mINFO[39m: [36mMapped {/api/pages/duplicate, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.440 +0530] [32mINFO[39m: [36mMapped {/api/pages/move, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.441 +0530] [32mINFO[39m: [36mMapped {/api/pages/breadcrumbs, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.441 +0530] [32mINFO[39m: [36mAttachmentController {/api}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:10:13.441 +0530] [32mINFO[39m: [36mMapped {/api/files/upload, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.442 +0530] [32mINFO[39m: [36mMapped {/api/files/:fileId/:fileName, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.443 +0530] [32mINFO[39m: [36mMapped {/api/files/public/:fileId/:fileName, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.443 +0530] [32mINFO[39m: [36mMapped {/api/attachments/upload-image, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.444 +0530] [32mINFO[39m: [36mMapped {/api/attachments/img/:attachmentType/:fileName, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.444 +0530] [32mINFO[39m: [36mMapped {/api/files/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.445 +0530] [32mINFO[39m: [36mMapped {/api/attachments/remove-icon, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.445 +0530] [32mINFO[39m: [36mCommentController {/api/comments}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:10:13.445 +0530] [32mINFO[39m: [36mMapped {/api/comments/create, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.446 +0530] [32mINFO[39m: [36mMapped {/api/comments, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.446 +0530] [32mINFO[39m: [36mMapped {/api/comments/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.446 +0530] [32mINFO[39m: [36mMapped {/api/comments/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.447 +0530] [32mINFO[39m: [36mMapped {/api/comments/delete, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.447 +0530] [32mINFO[39m: [36mSearchController {/api/search}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:10:13.447 +0530] [32mINFO[39m: [36mMapped {/api/search, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.447 +0530] [32mINFO[39m: [36mMapped {/api/search/suggest, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.448 +0530] [32mINFO[39m: [36mMapped {/api/search/share-search, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.448 +0530] [32mINFO[39m: [36mGroupController {/api/groups}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:10:13.448 +0530] [32mINFO[39m: [36mMapped {/api/groups, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.448 +0530] [32mINFO[39m: [36mMapped {/api/groups/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.449 +0530] [32mINFO[39m: [36mMapped {/api/groups/create, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.449 +0530] [32mINFO[39m: [36mMapped {/api/groups/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.449 +0530] [32mINFO[39m: [36mMapped {/api/groups/members, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.450 +0530] [32mINFO[39m: [36mMapped {/api/groups/members/add, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.450 +0530] [32mINFO[39m: [36mMapped {/api/groups/members/remove, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.450 +0530] [32mINFO[39m: [36mMapped {/api/groups/delete, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.450 +0530] [32mINFO[39m: [36mShareController {/api/shares}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:10:13.451 +0530] [32mINFO[39m: [36mMapped {/api/shares, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.451 +0530] [32mINFO[39m: [36mMapped {/api/shares/page-info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.451 +0530] [32mINFO[39m: [36mMapped {/api/shares/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.452 +0530] [32mINFO[39m: [36mMapped {/api/shares/for-page, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.452 +0530] [32mINFO[39m: [36mMapped {/api/shares/create, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.452 +0530] [32mINFO[39m: [36mMapped {/api/shares/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.452 +0530] [32mINFO[39m: [36mMapped {/api/shares/delete, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.453 +0530] [32mINFO[39m: [36mMapped {/api/shares/tree, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.453 +0530] [32mINFO[39m: [36mShareSeoController {/api/share}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:10:13.473 +0530] [32mINFO[39m: [36mMapped {/share/:shareId/p/:pageSlug, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.474 +0530] [32mINFO[39m: [36mMapped {/api/share/p/:pageSlug, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.474 +0530] [32mINFO[39m: [36mNotificationController {/api/notifications}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:10:13.474 +0530] [32mINFO[39m: [36mMapped {/api/notifications, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.475 +0530] [32mINFO[39m: [36mMapped {/api/notifications/unread-count, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.475 +0530] [32mINFO[39m: [36mMapped {/api/notifications/mark-read, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.476 +0530] [32mINFO[39m: [36mMapped {/api/notifications/mark-all-read, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.476 +0530] [32mINFO[39m: [36mHealthController {/api/health}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:10:13.476 +0530] [32mINFO[39m: [36mMapped {/api/health, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.477 +0530] [32mINFO[39m: [36mMapped {/api/health/live, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.477 +0530] [32mINFO[39m: [36mImportController {/api}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:10:13.477 +0530] [32mINFO[39m: [36mMapped {/api/pages/import, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.477 +0530] [32mINFO[39m: [36mMapped {/api/pages/import-zip, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.478 +0530] [32mINFO[39m: [36mFileTaskController {/api/file-tasks}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:10:13.478 +0530] [32mINFO[39m: [36mMapped {/api/file-tasks, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.478 +0530] [32mINFO[39m: [36mMapped {/api/file-tasks/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.478 +0530] [32mINFO[39m: [36mExportController {/api}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:10:13.479 +0530] [32mINFO[39m: [36mMapped {/api/pages/export, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.479 +0530] [32mINFO[39m: [36mMapped {/api/spaces/export, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.479 +0530] [32mINFO[39m: [36mRobotsTxtController {/api/robots.txt}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:10:13.479 +0530] [32mINFO[39m: [36mMapped {/robots.txt, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.479 +0530] [32mINFO[39m: [36mVersionController {/api/version}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:10:13.480 +0530] [32mINFO[39m: [36mMapped {/api/version, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:10:13.535 +0530] [32mINFO[39m: [36mEstablishing database connection[39m [90m{"context":"DatabaseModule"}[39m
+[2026-04-03 17:10:13.641 +0530] [32mINFO[39m: [36mdefault: the connection was successfully established[39m [90m{"context":"RedisModule"}[39m
+[2026-04-03 17:10:14.575 +0530] [32mINFO[39m: [36mDatabase connection successful[39m [90m{"context":"DatabaseModule"}[39m
+[2026-04-03 17:10:14.585 +0530] [32mINFO[39m: [36mNest application successfully started[39m [90m{"context":"NestApplication"}[39m
+[2026-04-03 17:10:14.603 +0530] [32mINFO[39m: [36mListening on http://127.0.0.1:3000 / http://127.0.0.1:3000[39m [90m{"context":"NestApplication"}[39m
+[2026-04-03 17:10:33.886 +0530] [34mDEBUG[39m: [36mAuthenticated user 019d3dab-b64a-7204-b32e-0bf82589710b on page 019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"AuthenticationExtension"}[39m
+[2026-04-03 17:10:34.196 +0530] [34mDEBUG[39m: [36mydoc loaded from db: 019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"PersistenceExtension"}[39m
+[2026-04-03 17:10:34.399 +0530] [34mDEBUG[39m: [36mUser disconnected from page.019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"CollabLoggerExtension"}[39m
+[2026-04-03 17:10:34.399 +0530] [34mDEBUG[39m: [36mUser disconnected from page.019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"CollabLoggerExtension"}[39m
+[2026-04-03 17:10:34.400 +0530] [34mDEBUG[39m: [36mUnloaded page.019d52b2-bae6-7031-b7c6-f25165fa8398 from memory[39m [90m{"context":"CollabLoggerExtension"}[39m
+[2J[3J[H[[90m5:13:45 pm[0m] File change detected. Starting incremental compilation...
+
+[[90m5:13:47 pm[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m5:13:51 pm[0m] File change detected. Starting incremental compilation...
+
+[[90m5:13:53 pm[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m5:13:55 pm[0m] File change detected. Starting incremental compilation...
+
+[[90m5:13:56 pm[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m5:14:03 pm[0m] File change detected. Starting incremental compilation...
+
+[[90m5:14:04 pm[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m5:14:09 pm[0m] File change detected. Starting incremental compilation...
+
+[[90m5:14:10 pm[0m] Found 0 errors. Watching for file changes.
+
+[2026-04-03 17:14:19.135 +0530] [32mINFO[39m: [36mWsGateway subscribed to the "message" message[39m [90m{"context":"WebSocketsController"}[39m
+[2026-04-03 17:14:19.136 +0530] [32mINFO[39m: [36mWsGateway subscribed to the "join-room" message[39m [90m{"context":"WebSocketsController"}[39m
+[2026-04-03 17:14:19.136 +0530] [32mINFO[39m: [36mWsGateway subscribed to the "leave-room" message[39m [90m{"context":"WebSocketsController"}[39m
+[2026-04-03 17:14:19.138 +0530] [34mDEBUG[39m: [36mMounting ClsMiddleware to {*path}[39m [90m{"context":"ClsModule"}[39m
+[2026-04-03 17:14:19.148 +0530] [33mWARN[39m: [36mUnsupported route path: "/api/*". In previous versions, the symbols ?, *, and + were used to denote optional or repeating path parameters. The latest version of "path-to-regexp" now requires the use of named parameters. For example, instead of using a route like /users/* to capture all routes starting with "/users", you should use /users/*path. For more details, refer to the migration guide. Attempting to auto-convert...[39m [90m{"context":"LegacyRouteConverter"}[39m
+[2026-04-03 17:14:19.149 +0530] [33mWARN[39m: [36mUnsupported route path: "/api/*". In previous versions, the symbols ?, *, and + were used to denote optional or repeating path parameters. The latest version of "path-to-regexp" now requires the use of named parameters. For example, instead of using a route like /users/* to capture all routes starting with "/users", you should use /users/*path. For more details, refer to the migration guide. Attempting to auto-convert...[39m [90m{"context":"LegacyRouteConverter"}[39m
+[2026-04-03 17:14:19.149 +0530] [33mWARN[39m: [36mUnsupported route path: "/api/*". In previous versions, the symbols ?, *, and + were used to denote optional or repeating path parameters. The latest version of "path-to-regexp" now requires the use of named parameters. For example, instead of using a route like /users/* to capture all routes starting with "/users", you should use /users/*path. For more details, refer to the migration guide. Attempting to auto-convert...[39m [90m{"context":"LegacyRouteConverter"}[39m
+[2026-04-03 17:14:19.149 +0530] [33mWARN[39m: [36mUnsupported route path: "/api/*". In previous versions, the symbols ?, *, and + were used to denote optional or repeating path parameters. The latest version of "path-to-regexp" now requires the use of named parameters. For example, instead of using a route like /users/* to capture all routes starting with "/users", you should use /users/*path. For more details, refer to the migration guide. Attempting to auto-convert...[39m [90m{"context":"LegacyRouteConverter"}[39m
+[2026-04-03 17:14:19.150 +0530] [32mINFO[39m: [36mAppController {/api}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:14:19.154 +0530] [32mINFO[39m: [36mMapped {/api, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.155 +0530] [32mINFO[39m: [36mMapped {/api/test, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.156 +0530] [32mINFO[39m: [36mMapped {/api/profile-test, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.156 +0530] [32mINFO[39m: [36mZeaAtlasController {/api/zeaatlas}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:14:19.158 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/me, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.158 +0530] [32mINFO[39m: [36mClientModeController {/api/client-mode}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:14:19.159 +0530] [32mINFO[39m: [36mMapped {/api/client-mode, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.160 +0530] [32mINFO[39m: [36mMapped {/api/client-mode, PATCH} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.160 +0530] [32mINFO[39m: [36mAutomationWebhooksController {/api/zeaatlas/webhooks}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:14:19.161 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/webhooks, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.162 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/webhooks, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.163 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/webhooks/:id/toggle, PATCH} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.164 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/webhooks/incoming, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.164 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/webhooks/:id, DELETE} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.165 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/webhooks/trigger-test, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.165 +0530] [32mINFO[39m: [36mUserController {/api/users}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:14:19.166 +0530] [32mINFO[39m: [36mMapped {/api/users/me, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.166 +0530] [32mINFO[39m: [36mMapped {/api/users/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.166 +0530] [32mINFO[39m: [36mAuthController {/api/auth}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:14:19.167 +0530] [32mINFO[39m: [36mMapped {/api/auth/login, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.167 +0530] [32mINFO[39m: [36mMapped {/api/auth/setup, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.168 +0530] [32mINFO[39m: [36mMapped {/api/auth/change-password, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.168 +0530] [32mINFO[39m: [36mMapped {/api/auth/forgot-password, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.169 +0530] [32mINFO[39m: [36mMapped {/api/auth/password-reset, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.169 +0530] [32mINFO[39m: [36mMapped {/api/auth/verify-token, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.170 +0530] [32mINFO[39m: [36mMapped {/api/auth/collab-token, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.170 +0530] [32mINFO[39m: [36mMapped {/api/auth/logout, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.170 +0530] [32mINFO[39m: [36mWorkspaceController {/api/workspace}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:14:19.170 +0530] [32mINFO[39m: [36mMapped {/api/workspace/public, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.171 +0530] [32mINFO[39m: [36mMapped {/api/workspace/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.171 +0530] [32mINFO[39m: [36mMapped {/api/workspace/entitlements, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.171 +0530] [32mINFO[39m: [36mMapped {/api/workspace/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.172 +0530] [32mINFO[39m: [36mMapped {/api/workspace/members, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.172 +0530] [32mINFO[39m: [36mMapped {/api/workspace/members/deactivate, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.172 +0530] [32mINFO[39m: [36mMapped {/api/workspace/members/activate, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.173 +0530] [32mINFO[39m: [36mMapped {/api/workspace/members/delete, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.173 +0530] [32mINFO[39m: [36mMapped {/api/workspace/members/change-role, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.173 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.174 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.174 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites/create, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.174 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites/resend, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.175 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites/revoke, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.175 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites/accept, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.175 +0530] [32mINFO[39m: [36mMapped {/api/workspace/check-hostname, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.182 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites/link, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.182 +0530] [32mINFO[39m: [36mSpaceController {/api/spaces}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:14:19.183 +0530] [32mINFO[39m: [36mMapped {/api/spaces, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.183 +0530] [32mINFO[39m: [36mMapped {/api/spaces/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.183 +0530] [32mINFO[39m: [36mMapped {/api/spaces/create, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.184 +0530] [32mINFO[39m: [36mMapped {/api/spaces/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.184 +0530] [32mINFO[39m: [36mMapped {/api/spaces/delete, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.184 +0530] [32mINFO[39m: [36mMapped {/api/spaces/members, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.185 +0530] [32mINFO[39m: [36mMapped {/api/spaces/members/add, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.185 +0530] [32mINFO[39m: [36mMapped {/api/spaces/members/remove, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.185 +0530] [32mINFO[39m: [36mMapped {/api/spaces/members/change-role, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.185 +0530] [32mINFO[39m: [36mPageController {/api/pages}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:14:19.186 +0530] [32mINFO[39m: [36mMapped {/api/pages/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.186 +0530] [32mINFO[39m: [36mMapped {/api/pages/create, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.186 +0530] [32mINFO[39m: [36mMapped {/api/pages/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.187 +0530] [32mINFO[39m: [36mMapped {/api/pages/delete, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.187 +0530] [32mINFO[39m: [36mMapped {/api/pages/restore, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.187 +0530] [32mINFO[39m: [36mMapped {/api/pages/recent, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.188 +0530] [32mINFO[39m: [36mMapped {/api/pages/trash, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.188 +0530] [32mINFO[39m: [36mMapped {/api/pages/history, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.188 +0530] [32mINFO[39m: [36mMapped {/api/pages/history/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.188 +0530] [32mINFO[39m: [36mMapped {/api/pages/sidebar-pages, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.189 +0530] [32mINFO[39m: [36mMapped {/api/pages/move-to-space, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.189 +0530] [32mINFO[39m: [36mMapped {/api/pages/duplicate, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.190 +0530] [32mINFO[39m: [36mMapped {/api/pages/move, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.190 +0530] [32mINFO[39m: [36mMapped {/api/pages/breadcrumbs, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.190 +0530] [32mINFO[39m: [36mAttachmentController {/api}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:14:19.190 +0530] [32mINFO[39m: [36mMapped {/api/files/upload, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.191 +0530] [32mINFO[39m: [36mMapped {/api/files/:fileId/:fileName, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.192 +0530] [32mINFO[39m: [36mMapped {/api/files/public/:fileId/:fileName, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.192 +0530] [32mINFO[39m: [36mMapped {/api/attachments/upload-image, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.193 +0530] [32mINFO[39m: [36mMapped {/api/attachments/img/:attachmentType/:fileName, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.194 +0530] [32mINFO[39m: [36mMapped {/api/files/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.194 +0530] [32mINFO[39m: [36mMapped {/api/attachments/remove-icon, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.194 +0530] [32mINFO[39m: [36mCommentController {/api/comments}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:14:19.195 +0530] [32mINFO[39m: [36mMapped {/api/comments/create, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.195 +0530] [32mINFO[39m: [36mMapped {/api/comments, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.195 +0530] [32mINFO[39m: [36mMapped {/api/comments/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.196 +0530] [32mINFO[39m: [36mMapped {/api/comments/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.197 +0530] [32mINFO[39m: [36mMapped {/api/comments/delete, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.197 +0530] [32mINFO[39m: [36mSearchController {/api/search}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:14:19.197 +0530] [32mINFO[39m: [36mMapped {/api/search, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.198 +0530] [32mINFO[39m: [36mMapped {/api/search/suggest, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.198 +0530] [32mINFO[39m: [36mMapped {/api/search/share-search, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.198 +0530] [32mINFO[39m: [36mGroupController {/api/groups}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:14:19.198 +0530] [32mINFO[39m: [36mMapped {/api/groups, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.199 +0530] [32mINFO[39m: [36mMapped {/api/groups/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.200 +0530] [32mINFO[39m: [36mMapped {/api/groups/create, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.200 +0530] [32mINFO[39m: [36mMapped {/api/groups/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.200 +0530] [32mINFO[39m: [36mMapped {/api/groups/members, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.201 +0530] [32mINFO[39m: [36mMapped {/api/groups/members/add, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.201 +0530] [32mINFO[39m: [36mMapped {/api/groups/members/remove, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.201 +0530] [32mINFO[39m: [36mMapped {/api/groups/delete, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.201 +0530] [32mINFO[39m: [36mShareController {/api/shares}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:14:19.202 +0530] [32mINFO[39m: [36mMapped {/api/shares, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.202 +0530] [32mINFO[39m: [36mMapped {/api/shares/page-info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.202 +0530] [32mINFO[39m: [36mMapped {/api/shares/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.203 +0530] [32mINFO[39m: [36mMapped {/api/shares/for-page, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.203 +0530] [32mINFO[39m: [36mMapped {/api/shares/create, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.203 +0530] [32mINFO[39m: [36mMapped {/api/shares/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.203 +0530] [32mINFO[39m: [36mMapped {/api/shares/delete, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.204 +0530] [32mINFO[39m: [36mMapped {/api/shares/tree, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.204 +0530] [32mINFO[39m: [36mShareSeoController {/api/share}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:14:19.204 +0530] [32mINFO[39m: [36mMapped {/share/:shareId/p/:pageSlug, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.205 +0530] [32mINFO[39m: [36mMapped {/api/share/p/:pageSlug, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.205 +0530] [32mINFO[39m: [36mNotificationController {/api/notifications}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:14:19.205 +0530] [32mINFO[39m: [36mMapped {/api/notifications, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.206 +0530] [32mINFO[39m: [36mMapped {/api/notifications/unread-count, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.207 +0530] [32mINFO[39m: [36mMapped {/api/notifications/mark-read, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.207 +0530] [32mINFO[39m: [36mMapped {/api/notifications/mark-all-read, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.207 +0530] [32mINFO[39m: [36mHealthController {/api/health}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:14:19.208 +0530] [32mINFO[39m: [36mMapped {/api/health, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.212 +0530] [32mINFO[39m: [36mMapped {/api/health/live, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.212 +0530] [32mINFO[39m: [36mImportController {/api}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:14:19.213 +0530] [32mINFO[39m: [36mMapped {/api/pages/import, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.213 +0530] [32mINFO[39m: [36mMapped {/api/pages/import-zip, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.213 +0530] [32mINFO[39m: [36mFileTaskController {/api/file-tasks}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:14:19.214 +0530] [32mINFO[39m: [36mMapped {/api/file-tasks, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.214 +0530] [32mINFO[39m: [36mMapped {/api/file-tasks/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.214 +0530] [32mINFO[39m: [36mExportController {/api}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:14:19.214 +0530] [32mINFO[39m: [36mMapped {/api/pages/export, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.215 +0530] [32mINFO[39m: [36mMapped {/api/spaces/export, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.215 +0530] [32mINFO[39m: [36mRobotsTxtController {/api/robots.txt}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:14:19.215 +0530] [32mINFO[39m: [36mMapped {/robots.txt, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.215 +0530] [32mINFO[39m: [36mVersionController {/api/version}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:14:19.216 +0530] [32mINFO[39m: [36mMapped {/api/version, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:14:19.244 +0530] [32mINFO[39m: [36mEstablishing database connection[39m [90m{"context":"DatabaseModule"}[39m
+[2026-04-03 17:14:19.389 +0530] [32mINFO[39m: [36mdefault: the connection was successfully established[39m [90m{"context":"RedisModule"}[39m
+[2026-04-03 17:14:20.163 +0530] [32mINFO[39m: [36mDatabase connection successful[39m [90m{"context":"DatabaseModule"}[39m
+[2026-04-03 17:14:20.173 +0530] [32mINFO[39m: [36mNest application successfully started[39m [90m{"context":"NestApplication"}[39m
+[2026-04-03 17:14:20.192 +0530] [32mINFO[39m: [36mListening on http://127.0.0.1:3000 / http://127.0.0.1:3000[39m [90m{"context":"NestApplication"}[39m
+[2026-04-03 17:15:26.220 +0530] [34mDEBUG[39m: [36mAuthenticated user 019d3dab-b64a-7204-b32e-0bf82589710b on page 019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"AuthenticationExtension"}[39m
+[2026-04-03 17:15:26.533 +0530] [34mDEBUG[39m: [36mydoc loaded from db: 019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"PersistenceExtension"}[39m
+[2026-04-03 17:15:26.540 +0530] [34mDEBUG[39m: [36mUser disconnected from page.019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"CollabLoggerExtension"}[39m
+[2026-04-03 17:15:26.540 +0530] [34mDEBUG[39m: [36mUnloaded page.019d52b2-bae6-7031-b7c6-f25165fa8398 from memory[39m [90m{"context":"CollabLoggerExtension"}[39m
+[2026-04-03 17:25:30.216 +0530] [34mDEBUG[39m: [36mAuthenticated user 019d3dab-b64a-7204-b32e-0bf82589710b on page 019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"AuthenticationExtension"}[39m
+[2026-04-03 17:25:30.528 +0530] [34mDEBUG[39m: [36mydoc loaded from db: 019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"PersistenceExtension"}[39m
+[2026-04-03 17:25:30.530 +0530] [34mDEBUG[39m: [36mUser disconnected from page.019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"CollabLoggerExtension"}[39m
+[2026-04-03 17:25:30.530 +0530] [34mDEBUG[39m: [36mUnloaded page.019d52b2-bae6-7031-b7c6-f25165fa8398 from memory[39m [90m{"context":"CollabLoggerExtension"}[39m
+[2026-04-03 17:25:42.819 +0530] [34mDEBUG[39m: [36mAuthenticated user 019d3dab-b64a-7204-b32e-0bf82589710b on page 019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"AuthenticationExtension"}[39m
+[2026-04-03 17:25:43.103 +0530] [34mDEBUG[39m: [36mydoc loaded from db: 019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"PersistenceExtension"}[39m
+[2026-04-03 17:25:43.495 +0530] [34mDEBUG[39m: [36mUser disconnected from page.019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"CollabLoggerExtension"}[39m
+[2026-04-03 17:25:43.495 +0530] [34mDEBUG[39m: [36mUser disconnected from page.019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"CollabLoggerExtension"}[39m
+[2026-04-03 17:25:43.495 +0530] [34mDEBUG[39m: [36mUnloaded page.019d52b2-bae6-7031-b7c6-f25165fa8398 from memory[39m [90m{"context":"CollabLoggerExtension"}[39m
+[2J[3J[H[[90m5:28:51 pm[0m] File change detected. Starting incremental compilation...
+
+[[90m5:28:53 pm[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m5:28:57 pm[0m] File change detected. Starting incremental compilation...
+
+[[90m5:28:58 pm[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m5:29:04 pm[0m] File change detected. Starting incremental compilation...
+
+[[90m5:29:06 pm[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m5:29:06 pm[0m] File change detected. Starting incremental compilation...
+
+[[90m5:29:07 pm[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m5:29:14 pm[0m] File change detected. Starting incremental compilation...
+
+[[90m5:29:15 pm[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m5:29:25 pm[0m] File change detected. Starting incremental compilation...
+
+[[90m5:29:27 pm[0m] Found 0 errors. Watching for file changes.
+
+[2026-04-03 17:29:45.641 +0530] [32mINFO[39m: [36mWsGateway subscribed to the "message" message[39m [90m{"context":"WebSocketsController"}[39m
+[2026-04-03 17:29:45.642 +0530] [32mINFO[39m: [36mWsGateway subscribed to the "join-room" message[39m [90m{"context":"WebSocketsController"}[39m
+[2026-04-03 17:29:45.642 +0530] [32mINFO[39m: [36mWsGateway subscribed to the "leave-room" message[39m [90m{"context":"WebSocketsController"}[39m
+[2026-04-03 17:29:45.643 +0530] [34mDEBUG[39m: [36mMounting ClsMiddleware to {*path}[39m [90m{"context":"ClsModule"}[39m
+[2026-04-03 17:29:45.674 +0530] [33mWARN[39m: [36mUnsupported route path: "/api/*". In previous versions, the symbols ?, *, and + were used to denote optional or repeating path parameters. The latest version of "path-to-regexp" now requires the use of named parameters. For example, instead of using a route like /users/* to capture all routes starting with "/users", you should use /users/*path. For more details, refer to the migration guide. Attempting to auto-convert...[39m [90m{"context":"LegacyRouteConverter"}[39m
+[2026-04-03 17:29:45.675 +0530] [33mWARN[39m: [36mUnsupported route path: "/api/*". In previous versions, the symbols ?, *, and + were used to denote optional or repeating path parameters. The latest version of "path-to-regexp" now requires the use of named parameters. For example, instead of using a route like /users/* to capture all routes starting with "/users", you should use /users/*path. For more details, refer to the migration guide. Attempting to auto-convert...[39m [90m{"context":"LegacyRouteConverter"}[39m
+[2026-04-03 17:29:45.675 +0530] [33mWARN[39m: [36mUnsupported route path: "/api/*". In previous versions, the symbols ?, *, and + were used to denote optional or repeating path parameters. The latest version of "path-to-regexp" now requires the use of named parameters. For example, instead of using a route like /users/* to capture all routes starting with "/users", you should use /users/*path. For more details, refer to the migration guide. Attempting to auto-convert...[39m [90m{"context":"LegacyRouteConverter"}[39m
+[2026-04-03 17:29:45.675 +0530] [33mWARN[39m: [36mUnsupported route path: "/api/*". In previous versions, the symbols ?, *, and + were used to denote optional or repeating path parameters. The latest version of "path-to-regexp" now requires the use of named parameters. For example, instead of using a route like /users/* to capture all routes starting with "/users", you should use /users/*path. For more details, refer to the migration guide. Attempting to auto-convert...[39m [90m{"context":"LegacyRouteConverter"}[39m
+[2026-04-03 17:29:45.676 +0530] [32mINFO[39m: [36mAppController {/api}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:29:45.681 +0530] [32mINFO[39m: [36mMapped {/api, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.682 +0530] [32mINFO[39m: [36mMapped {/api/test, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.683 +0530] [32mINFO[39m: [36mMapped {/api/profile-test, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.683 +0530] [32mINFO[39m: [36mZeaAtlasController {/api/zeaatlas}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:29:45.684 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/me, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.684 +0530] [32mINFO[39m: [36mClientModeController {/api/client-mode}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:29:45.685 +0530] [32mINFO[39m: [36mMapped {/api/client-mode, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.686 +0530] [32mINFO[39m: [36mMapped {/api/client-mode, PATCH} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.686 +0530] [32mINFO[39m: [36mAutomationWebhooksController {/api/zeaatlas/webhooks}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:29:45.687 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/webhooks, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.688 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/webhooks, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.689 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/webhooks/:id/toggle, PATCH} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.690 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/webhooks/incoming, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.691 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/webhooks/:id, DELETE} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.691 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/webhooks/trigger-test, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.691 +0530] [32mINFO[39m: [36mUserController {/api/users}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:29:45.692 +0530] [32mINFO[39m: [36mMapped {/api/users/me, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.693 +0530] [32mINFO[39m: [36mMapped {/api/users/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.693 +0530] [32mINFO[39m: [36mAuthController {/api/auth}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:29:45.693 +0530] [32mINFO[39m: [36mMapped {/api/auth/login, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.694 +0530] [32mINFO[39m: [36mMapped {/api/auth/setup, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.694 +0530] [32mINFO[39m: [36mMapped {/api/auth/change-password, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.694 +0530] [32mINFO[39m: [36mMapped {/api/auth/forgot-password, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.695 +0530] [32mINFO[39m: [36mMapped {/api/auth/password-reset, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.695 +0530] [32mINFO[39m: [36mMapped {/api/auth/verify-token, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.695 +0530] [32mINFO[39m: [36mMapped {/api/auth/collab-token, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.696 +0530] [32mINFO[39m: [36mMapped {/api/auth/logout, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.696 +0530] [32mINFO[39m: [36mWorkspaceController {/api/workspace}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:29:45.696 +0530] [32mINFO[39m: [36mMapped {/api/workspace/public, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.697 +0530] [32mINFO[39m: [36mMapped {/api/workspace/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.697 +0530] [32mINFO[39m: [36mMapped {/api/workspace/entitlements, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.708 +0530] [32mINFO[39m: [36mMapped {/api/workspace/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.708 +0530] [32mINFO[39m: [36mMapped {/api/workspace/members, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.708 +0530] [32mINFO[39m: [36mMapped {/api/workspace/members/deactivate, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.709 +0530] [32mINFO[39m: [36mMapped {/api/workspace/members/activate, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.710 +0530] [32mINFO[39m: [36mMapped {/api/workspace/members/delete, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.710 +0530] [32mINFO[39m: [36mMapped {/api/workspace/members/change-role, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.711 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.711 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.711 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites/create, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.712 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites/resend, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.712 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites/revoke, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.712 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites/accept, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.713 +0530] [32mINFO[39m: [36mMapped {/api/workspace/check-hostname, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.717 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites/link, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.717 +0530] [32mINFO[39m: [36mSpaceController {/api/spaces}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:29:45.718 +0530] [32mINFO[39m: [36mMapped {/api/spaces, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.718 +0530] [32mINFO[39m: [36mMapped {/api/spaces/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.719 +0530] [32mINFO[39m: [36mMapped {/api/spaces/create, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.719 +0530] [32mINFO[39m: [36mMapped {/api/spaces/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.720 +0530] [32mINFO[39m: [36mMapped {/api/spaces/delete, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.720 +0530] [32mINFO[39m: [36mMapped {/api/spaces/members, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.721 +0530] [32mINFO[39m: [36mMapped {/api/spaces/members/add, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.721 +0530] [32mINFO[39m: [36mMapped {/api/spaces/members/remove, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.721 +0530] [32mINFO[39m: [36mMapped {/api/spaces/members/change-role, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.722 +0530] [32mINFO[39m: [36mPageController {/api/pages}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:29:45.722 +0530] [32mINFO[39m: [36mMapped {/api/pages/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.722 +0530] [32mINFO[39m: [36mMapped {/api/pages/create, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.723 +0530] [32mINFO[39m: [36mMapped {/api/pages/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.723 +0530] [32mINFO[39m: [36mMapped {/api/pages/delete, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.723 +0530] [32mINFO[39m: [36mMapped {/api/pages/restore, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.723 +0530] [32mINFO[39m: [36mMapped {/api/pages/recent, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.724 +0530] [32mINFO[39m: [36mMapped {/api/pages/trash, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.724 +0530] [32mINFO[39m: [36mMapped {/api/pages/history, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.724 +0530] [32mINFO[39m: [36mMapped {/api/pages/history/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.725 +0530] [32mINFO[39m: [36mMapped {/api/pages/sidebar-pages, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.725 +0530] [32mINFO[39m: [36mMapped {/api/pages/move-to-space, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.725 +0530] [32mINFO[39m: [36mMapped {/api/pages/duplicate, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.726 +0530] [32mINFO[39m: [36mMapped {/api/pages/move, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.726 +0530] [32mINFO[39m: [36mMapped {/api/pages/breadcrumbs, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.726 +0530] [32mINFO[39m: [36mAttachmentController {/api}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:29:45.726 +0530] [32mINFO[39m: [36mMapped {/api/files/upload, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.727 +0530] [32mINFO[39m: [36mMapped {/api/files/:fileId/:fileName, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.728 +0530] [32mINFO[39m: [36mMapped {/api/files/public/:fileId/:fileName, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.728 +0530] [32mINFO[39m: [36mMapped {/api/attachments/upload-image, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.729 +0530] [32mINFO[39m: [36mMapped {/api/attachments/img/:attachmentType/:fileName, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.730 +0530] [32mINFO[39m: [36mMapped {/api/files/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.730 +0530] [32mINFO[39m: [36mMapped {/api/attachments/remove-icon, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.730 +0530] [32mINFO[39m: [36mCommentController {/api/comments}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:29:45.731 +0530] [32mINFO[39m: [36mMapped {/api/comments/create, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.731 +0530] [32mINFO[39m: [36mMapped {/api/comments, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.731 +0530] [32mINFO[39m: [36mMapped {/api/comments/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.732 +0530] [32mINFO[39m: [36mMapped {/api/comments/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.732 +0530] [32mINFO[39m: [36mMapped {/api/comments/delete, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.732 +0530] [32mINFO[39m: [36mSearchController {/api/search}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:29:45.732 +0530] [32mINFO[39m: [36mMapped {/api/search, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.733 +0530] [32mINFO[39m: [36mMapped {/api/search/suggest, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.733 +0530] [32mINFO[39m: [36mMapped {/api/search/share-search, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.733 +0530] [32mINFO[39m: [36mGroupController {/api/groups}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:29:45.734 +0530] [32mINFO[39m: [36mMapped {/api/groups, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.734 +0530] [32mINFO[39m: [36mMapped {/api/groups/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.735 +0530] [32mINFO[39m: [36mMapped {/api/groups/create, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.735 +0530] [32mINFO[39m: [36mMapped {/api/groups/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.735 +0530] [32mINFO[39m: [36mMapped {/api/groups/members, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.735 +0530] [32mINFO[39m: [36mMapped {/api/groups/members/add, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.736 +0530] [32mINFO[39m: [36mMapped {/api/groups/members/remove, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.736 +0530] [32mINFO[39m: [36mMapped {/api/groups/delete, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.736 +0530] [32mINFO[39m: [36mShareController {/api/shares}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:29:45.736 +0530] [32mINFO[39m: [36mMapped {/api/shares, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.737 +0530] [32mINFO[39m: [36mMapped {/api/shares/page-info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.737 +0530] [32mINFO[39m: [36mMapped {/api/shares/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.737 +0530] [32mINFO[39m: [36mMapped {/api/shares/for-page, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.738 +0530] [32mINFO[39m: [36mMapped {/api/shares/create, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.738 +0530] [32mINFO[39m: [36mMapped {/api/shares/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.738 +0530] [32mINFO[39m: [36mMapped {/api/shares/delete, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.738 +0530] [32mINFO[39m: [36mMapped {/api/shares/tree, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.738 +0530] [32mINFO[39m: [36mShareSeoController {/api/share}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:29:45.739 +0530] [32mINFO[39m: [36mMapped {/share/:shareId/p/:pageSlug, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.740 +0530] [32mINFO[39m: [36mMapped {/api/share/p/:pageSlug, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.740 +0530] [32mINFO[39m: [36mNotificationController {/api/notifications}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:29:45.740 +0530] [32mINFO[39m: [36mMapped {/api/notifications, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.741 +0530] [32mINFO[39m: [36mMapped {/api/notifications/unread-count, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.741 +0530] [32mINFO[39m: [36mMapped {/api/notifications/mark-read, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.741 +0530] [32mINFO[39m: [36mMapped {/api/notifications/mark-all-read, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.742 +0530] [32mINFO[39m: [36mHealthController {/api/health}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:29:45.742 +0530] [32mINFO[39m: [36mMapped {/api/health, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.742 +0530] [32mINFO[39m: [36mMapped {/api/health/live, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.742 +0530] [32mINFO[39m: [36mImportController {/api}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:29:45.743 +0530] [32mINFO[39m: [36mMapped {/api/pages/import, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.743 +0530] [32mINFO[39m: [36mMapped {/api/pages/import-zip, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.743 +0530] [32mINFO[39m: [36mFileTaskController {/api/file-tasks}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:29:45.743 +0530] [32mINFO[39m: [36mMapped {/api/file-tasks, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.744 +0530] [32mINFO[39m: [36mMapped {/api/file-tasks/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.744 +0530] [32mINFO[39m: [36mExportController {/api}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:29:45.744 +0530] [32mINFO[39m: [36mMapped {/api/pages/export, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.798 +0530] [32mINFO[39m: [36mMapped {/api/spaces/export, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.798 +0530] [32mINFO[39m: [36mRobotsTxtController {/api/robots.txt}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:29:45.799 +0530] [32mINFO[39m: [36mMapped {/robots.txt, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.799 +0530] [32mINFO[39m: [36mVersionController {/api/version}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:29:45.799 +0530] [32mINFO[39m: [36mMapped {/api/version, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:29:45.829 +0530] [32mINFO[39m: [36mEstablishing database connection[39m [90m{"context":"DatabaseModule"}[39m
+[2026-04-03 17:29:46.001 +0530] [32mINFO[39m: [36mdefault: the connection was successfully established[39m [90m{"context":"RedisModule"}[39m
+[2026-04-03 17:29:46.945 +0530] [32mINFO[39m: [36mDatabase connection successful[39m [90m{"context":"DatabaseModule"}[39m
+[2026-04-03 17:29:46.956 +0530] [32mINFO[39m: [36mNest application successfully started[39m [90m{"context":"NestApplication"}[39m
+[2026-04-03 17:29:47.123 +0530] [32mINFO[39m: [36mListening on http://127.0.0.1:3000 / http://127.0.0.1:3000[39m [90m{"context":"NestApplication"}[39m
+[2026-04-03 17:31:43.706 +0530] [34mDEBUG[39m: [36mAuthenticated user 019d3dab-b64a-7204-b32e-0bf82589710b on page 019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"AuthenticationExtension"}[39m
+[2026-04-03 17:31:44.024 +0530] [34mDEBUG[39m: [36mydoc loaded from db: 019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"PersistenceExtension"}[39m
+[2026-04-03 17:31:48.124 +0530] [34mDEBUG[39m: [36mUser disconnected from page.019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"CollabLoggerExtension"}[39m
+[2026-04-03 17:31:48.124 +0530] [34mDEBUG[39m: [36mUser disconnected from page.019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"CollabLoggerExtension"}[39m
+[2026-04-03 17:31:48.125 +0530] [34mDEBUG[39m: [36mUnloaded page.019d52b2-bae6-7031-b7c6-f25165fa8398 from memory[39m [90m{"context":"CollabLoggerExtension"}[39m
+[2026-04-03 17:31:51.070 +0530] [34mDEBUG[39m: [36mAuthenticated user 019d3dab-b64a-7204-b32e-0bf82589710b on page 019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"AuthenticationExtension"}[39m
+[2026-04-03 17:31:51.356 +0530] [34mDEBUG[39m: [36mydoc loaded from db: 019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"PersistenceExtension"}[39m
+[2026-04-03 17:32:08.883 +0530] [34mDEBUG[39m: [36mUser disconnected from page.019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"CollabLoggerExtension"}[39m
+[2026-04-03 17:32:08.883 +0530] [34mDEBUG[39m: [36mUser disconnected from page.019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"CollabLoggerExtension"}[39m
+[2026-04-03 17:32:08.884 +0530] [34mDEBUG[39m: [36mUnloaded page.019d52b2-bae6-7031-b7c6-f25165fa8398 from memory[39m [90m{"context":"CollabLoggerExtension"}[39m
+[2026-04-03 17:38:32.569 +0530] [34mDEBUG[39m: [36mAuthenticated user 019d3dab-b64a-7204-b32e-0bf82589710b on page 019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"AuthenticationExtension"}[39m
+[2026-04-03 17:38:32.896 +0530] [34mDEBUG[39m: [36mydoc loaded from db: 019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"PersistenceExtension"}[39m
+[2026-04-03 17:38:32.897 +0530] [34mDEBUG[39m: [36mUser disconnected from page.019d52b2-bae6-7031-b7c6-f25165fa8398[39m [90m{"context":"CollabLoggerExtension"}[39m
+[2026-04-03 17:38:32.897 +0530] [34mDEBUG[39m: [36mUnloaded page.019d52b2-bae6-7031-b7c6-f25165fa8398 from memory[39m [90m{"context":"CollabLoggerExtension"}[39m
+[2J[3J[H[[90m5:40:47 pm[0m] File change detected. Starting incremental compilation...
+
+[[90m5:41:00 pm[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m5:41:01 pm[0m] File change detected. Starting incremental compilation...
+
+[[90m5:41:04 pm[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m5:41:07 pm[0m] File change detected. Starting incremental compilation...
+
+[[90m5:41:09 pm[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m5:41:13 pm[0m] File change detected. Starting incremental compilation...
+
+[[90m5:41:14 pm[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m5:41:21 pm[0m] File change detected. Starting incremental compilation...
+
+[[90m5:41:22 pm[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m5:41:29 pm[0m] File change detected. Starting incremental compilation...
+
+[[90m5:41:30 pm[0m] Found 0 errors. Watching for file changes.
+
+[2026-04-03 17:41:41.926 +0530] [32mINFO[39m: [36mWsGateway subscribed to the "message" message[39m [90m{"context":"WebSocketsController"}[39m
+[2026-04-03 17:41:41.929 +0530] [32mINFO[39m: [36mWsGateway subscribed to the "join-room" message[39m [90m{"context":"WebSocketsController"}[39m
+[2026-04-03 17:41:41.929 +0530] [32mINFO[39m: [36mWsGateway subscribed to the "leave-room" message[39m [90m{"context":"WebSocketsController"}[39m
+[2026-04-03 17:41:41.936 +0530] [34mDEBUG[39m: [36mMounting ClsMiddleware to {*path}[39m [90m{"context":"ClsModule"}[39m
+[2026-04-03 17:41:41.948 +0530] [33mWARN[39m: [36mUnsupported route path: "/api/*". In previous versions, the symbols ?, *, and + were used to denote optional or repeating path parameters. The latest version of "path-to-regexp" now requires the use of named parameters. For example, instead of using a route like /users/* to capture all routes starting with "/users", you should use /users/*path. For more details, refer to the migration guide. Attempting to auto-convert...[39m [90m{"context":"LegacyRouteConverter"}[39m
+[2026-04-03 17:41:41.948 +0530] [33mWARN[39m: [36mUnsupported route path: "/api/*". In previous versions, the symbols ?, *, and + were used to denote optional or repeating path parameters. The latest version of "path-to-regexp" now requires the use of named parameters. For example, instead of using a route like /users/* to capture all routes starting with "/users", you should use /users/*path. For more details, refer to the migration guide. Attempting to auto-convert...[39m [90m{"context":"LegacyRouteConverter"}[39m
+[2026-04-03 17:41:41.948 +0530] [33mWARN[39m: [36mUnsupported route path: "/api/*". In previous versions, the symbols ?, *, and + were used to denote optional or repeating path parameters. The latest version of "path-to-regexp" now requires the use of named parameters. For example, instead of using a route like /users/* to capture all routes starting with "/users", you should use /users/*path. For more details, refer to the migration guide. Attempting to auto-convert...[39m [90m{"context":"LegacyRouteConverter"}[39m
+[2026-04-03 17:41:41.949 +0530] [33mWARN[39m: [36mUnsupported route path: "/api/*". In previous versions, the symbols ?, *, and + were used to denote optional or repeating path parameters. The latest version of "path-to-regexp" now requires the use of named parameters. For example, instead of using a route like /users/* to capture all routes starting with "/users", you should use /users/*path. For more details, refer to the migration guide. Attempting to auto-convert...[39m [90m{"context":"LegacyRouteConverter"}[39m
+[2026-04-03 17:41:41.950 +0530] [32mINFO[39m: [36mAppController {/api}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:41:41.953 +0530] [32mINFO[39m: [36mMapped {/api, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.954 +0530] [32mINFO[39m: [36mMapped {/api/test, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.955 +0530] [32mINFO[39m: [36mMapped {/api/profile-test, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.955 +0530] [32mINFO[39m: [36mZeaAtlasController {/api/zeaatlas}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:41:41.957 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/me, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.957 +0530] [32mINFO[39m: [36mClientModeController {/api/client-mode}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:41:41.958 +0530] [32mINFO[39m: [36mMapped {/api/client-mode, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.958 +0530] [32mINFO[39m: [36mMapped {/api/client-mode, PATCH} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.959 +0530] [32mINFO[39m: [36mAutomationWebhooksController {/api/zeaatlas/webhooks}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:41:41.960 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/webhooks, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.961 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/webhooks, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.962 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/webhooks/:id/toggle, PATCH} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.963 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/webhooks/incoming, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.963 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/webhooks/:id, DELETE} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.964 +0530] [32mINFO[39m: [36mMapped {/api/zeaatlas/webhooks/trigger-test, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.964 +0530] [32mINFO[39m: [36mUserController {/api/users}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:41:41.965 +0530] [32mINFO[39m: [36mMapped {/api/users/me, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.965 +0530] [32mINFO[39m: [36mMapped {/api/users/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.965 +0530] [32mINFO[39m: [36mAuthController {/api/auth}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:41:41.966 +0530] [32mINFO[39m: [36mMapped {/api/auth/login, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.966 +0530] [32mINFO[39m: [36mMapped {/api/auth/setup, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.967 +0530] [32mINFO[39m: [36mMapped {/api/auth/change-password, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.967 +0530] [32mINFO[39m: [36mMapped {/api/auth/forgot-password, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.968 +0530] [32mINFO[39m: [36mMapped {/api/auth/password-reset, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.968 +0530] [32mINFO[39m: [36mMapped {/api/auth/verify-token, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.969 +0530] [32mINFO[39m: [36mMapped {/api/auth/collab-token, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.969 +0530] [32mINFO[39m: [36mMapped {/api/auth/logout, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.969 +0530] [32mINFO[39m: [36mWorkspaceController {/api/workspace}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:41:41.970 +0530] [32mINFO[39m: [36mMapped {/api/workspace/public, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.970 +0530] [32mINFO[39m: [36mMapped {/api/workspace/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.970 +0530] [32mINFO[39m: [36mMapped {/api/workspace/entitlements, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.971 +0530] [32mINFO[39m: [36mMapped {/api/workspace/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.971 +0530] [32mINFO[39m: [36mMapped {/api/workspace/members, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.971 +0530] [32mINFO[39m: [36mMapped {/api/workspace/members/deactivate, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.971 +0530] [32mINFO[39m: [36mMapped {/api/workspace/members/activate, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.972 +0530] [32mINFO[39m: [36mMapped {/api/workspace/members/delete, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.972 +0530] [32mINFO[39m: [36mMapped {/api/workspace/members/change-role, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.973 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.973 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.973 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites/create, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.973 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites/resend, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.974 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites/revoke, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.974 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites/accept, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.974 +0530] [32mINFO[39m: [36mMapped {/api/workspace/check-hostname, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.975 +0530] [32mINFO[39m: [36mMapped {/api/workspace/invites/link, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.975 +0530] [32mINFO[39m: [36mSpaceController {/api/spaces}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:41:41.975 +0530] [32mINFO[39m: [36mMapped {/api/spaces, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.976 +0530] [32mINFO[39m: [36mMapped {/api/spaces/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.977 +0530] [32mINFO[39m: [36mMapped {/api/spaces/create, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.978 +0530] [32mINFO[39m: [36mMapped {/api/spaces/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.978 +0530] [32mINFO[39m: [36mMapped {/api/spaces/delete, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.979 +0530] [32mINFO[39m: [36mMapped {/api/spaces/members, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.979 +0530] [32mINFO[39m: [36mMapped {/api/spaces/members/add, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.979 +0530] [32mINFO[39m: [36mMapped {/api/spaces/members/remove, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.980 +0530] [32mINFO[39m: [36mMapped {/api/spaces/members/change-role, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.980 +0530] [32mINFO[39m: [36mPageController {/api/pages}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:41:41.980 +0530] [32mINFO[39m: [36mMapped {/api/pages/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.981 +0530] [32mINFO[39m: [36mMapped {/api/pages/create, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.981 +0530] [32mINFO[39m: [36mMapped {/api/pages/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.981 +0530] [32mINFO[39m: [36mMapped {/api/pages/delete, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.982 +0530] [32mINFO[39m: [36mMapped {/api/pages/restore, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.982 +0530] [32mINFO[39m: [36mMapped {/api/pages/recent, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.983 +0530] [32mINFO[39m: [36mMapped {/api/pages/trash, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.983 +0530] [32mINFO[39m: [36mMapped {/api/pages/history, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.983 +0530] [32mINFO[39m: [36mMapped {/api/pages/history/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.984 +0530] [32mINFO[39m: [36mMapped {/api/pages/sidebar-pages, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.985 +0530] [32mINFO[39m: [36mMapped {/api/pages/move-to-space, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.985 +0530] [32mINFO[39m: [36mMapped {/api/pages/duplicate, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.986 +0530] [32mINFO[39m: [36mMapped {/api/pages/move, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.986 +0530] [32mINFO[39m: [36mMapped {/api/pages/breadcrumbs, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.986 +0530] [32mINFO[39m: [36mAttachmentController {/api}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:41:41.987 +0530] [32mINFO[39m: [36mMapped {/api/files/upload, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.988 +0530] [32mINFO[39m: [36mMapped {/api/files/:fileId/:fileName, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.988 +0530] [32mINFO[39m: [36mMapped {/api/files/public/:fileId/:fileName, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.989 +0530] [32mINFO[39m: [36mMapped {/api/attachments/upload-image, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.989 +0530] [32mINFO[39m: [36mMapped {/api/attachments/img/:attachmentType/:fileName, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.990 +0530] [32mINFO[39m: [36mMapped {/api/files/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.990 +0530] [32mINFO[39m: [36mMapped {/api/attachments/remove-icon, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.990 +0530] [32mINFO[39m: [36mCommentController {/api/comments}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:41:41.991 +0530] [32mINFO[39m: [36mMapped {/api/comments/create, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.991 +0530] [32mINFO[39m: [36mMapped {/api/comments, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.991 +0530] [32mINFO[39m: [36mMapped {/api/comments/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.991 +0530] [32mINFO[39m: [36mMapped {/api/comments/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.992 +0530] [32mINFO[39m: [36mMapped {/api/comments/delete, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.992 +0530] [32mINFO[39m: [36mSearchController {/api/search}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:41:41.992 +0530] [32mINFO[39m: [36mMapped {/api/search, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.993 +0530] [32mINFO[39m: [36mMapped {/api/search/suggest, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.993 +0530] [32mINFO[39m: [36mMapped {/api/search/share-search, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.993 +0530] [32mINFO[39m: [36mGroupController {/api/groups}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:41:41.994 +0530] [32mINFO[39m: [36mMapped {/api/groups, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.994 +0530] [32mINFO[39m: [36mMapped {/api/groups/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.994 +0530] [32mINFO[39m: [36mMapped {/api/groups/create, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.995 +0530] [32mINFO[39m: [36mMapped {/api/groups/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.995 +0530] [32mINFO[39m: [36mMapped {/api/groups/members, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.996 +0530] [32mINFO[39m: [36mMapped {/api/groups/members/add, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.996 +0530] [32mINFO[39m: [36mMapped {/api/groups/members/remove, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.996 +0530] [32mINFO[39m: [36mMapped {/api/groups/delete, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.996 +0530] [32mINFO[39m: [36mShareController {/api/shares}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:41:41.997 +0530] [32mINFO[39m: [36mMapped {/api/shares, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.997 +0530] [32mINFO[39m: [36mMapped {/api/shares/page-info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.997 +0530] [32mINFO[39m: [36mMapped {/api/shares/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.997 +0530] [32mINFO[39m: [36mMapped {/api/shares/for-page, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.998 +0530] [32mINFO[39m: [36mMapped {/api/shares/create, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.998 +0530] [32mINFO[39m: [36mMapped {/api/shares/update, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.998 +0530] [32mINFO[39m: [36mMapped {/api/shares/delete, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.998 +0530] [32mINFO[39m: [36mMapped {/api/shares/tree, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:41.998 +0530] [32mINFO[39m: [36mShareSeoController {/api/share}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:41:41.999 +0530] [32mINFO[39m: [36mMapped {/share/:shareId/p/:pageSlug, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:42.000 +0530] [32mINFO[39m: [36mMapped {/api/share/p/:pageSlug, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:42.000 +0530] [32mINFO[39m: [36mNotificationController {/api/notifications}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:41:42.000 +0530] [32mINFO[39m: [36mMapped {/api/notifications, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:42.000 +0530] [32mINFO[39m: [36mMapped {/api/notifications/unread-count, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:42.001 +0530] [32mINFO[39m: [36mMapped {/api/notifications/mark-read, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:42.001 +0530] [32mINFO[39m: [36mMapped {/api/notifications/mark-all-read, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:42.001 +0530] [32mINFO[39m: [36mHealthController {/api/health}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:41:42.002 +0530] [32mINFO[39m: [36mMapped {/api/health, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:42.002 +0530] [32mINFO[39m: [36mMapped {/api/health/live, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:42.002 +0530] [32mINFO[39m: [36mImportController {/api}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:41:42.003 +0530] [32mINFO[39m: [36mMapped {/api/pages/import, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:42.003 +0530] [32mINFO[39m: [36mMapped {/api/pages/import-zip, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:42.003 +0530] [32mINFO[39m: [36mFileTaskController {/api/file-tasks}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:41:42.003 +0530] [32mINFO[39m: [36mMapped {/api/file-tasks, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:42.004 +0530] [32mINFO[39m: [36mMapped {/api/file-tasks/info, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:42.004 +0530] [32mINFO[39m: [36mExportController {/api}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:41:42.004 +0530] [32mINFO[39m: [36mMapped {/api/pages/export, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:42.004 +0530] [32mINFO[39m: [36mMapped {/api/spaces/export, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:42.005 +0530] [32mINFO[39m: [36mRobotsTxtController {/api/robots.txt}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:41:42.005 +0530] [32mINFO[39m: [36mMapped {/robots.txt, GET} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:42.005 +0530] [32mINFO[39m: [36mVersionController {/api/version}:[39m [90m{"context":"RoutesResolver"}[39m
+[2026-04-03 17:41:42.005 +0530] [32mINFO[39m: [36mMapped {/api/version, POST} route[39m [90m{"context":"RouterExplorer"}[39m
+[2026-04-03 17:41:42.028 +0530] [32mINFO[39m: [36mEstablishing database connection[39m [90m{"context":"DatabaseModule"}[39m
+[2026-04-03 17:41:42.158 +0530] [32mINFO[39m: [36mdefault: the connection was successfully established[39m [90m{"context":"RedisModule"}[39m
+[2026-04-03 17:41:43.044 +0530] [32mINFO[39m: [36mDatabase connection successful[39m [90m{"context":"DatabaseModule"}[39m
+[2026-04-03 17:41:43.053 +0530] [32mINFO[39m: [36mNest application successfully started[39m [90m{"context":"NestApplication"}[39m
+[2026-04-03 17:41:43.090 +0530] [32mINFO[39m: [36mListening on http://127.0.0.1:3000 / http://127.0.0.1:3000[39m [90m{"context":"NestApplication"}[39m
+[2026-04-03 17:44:33.083 +0530] [31mERROR[39m: [36mError happened during shutdown[39m [90m{"context":"NestApplicationContext"}[39m
+    err: {
+      "type": "Error",
+      "message": "Error happened during shutdown",
+      "stack":
+          Error: kill ENOSYS
+              at process.kill (node:internal/process/per_thread:225:13)
+              at process.cleanup (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@nestjs+core@11.1.17_@nestj_32b21c0d180f55411861596333fd555f\node_modules\@nestjs\core\nest-application-context.js:220:29)
+              at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    }
+^C

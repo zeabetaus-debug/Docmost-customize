@@ -1,0 +1,2048 @@
+
+> client@0.70.3 dev C:\Users\Ashok Kumar\Desktop\Docy customize\docmost-customize\apps\client
+> vite
+
+
+  [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m4413[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5174[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m11:51:47 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/users/me[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m11:51:47 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/auth/collab-token[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:33:29 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+[2m12:33:31 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:33:33 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:33:39 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:33:45 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:33:51 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:33:57 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:34:03 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:34:09 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:56:14 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+[2m12:56:16 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:56:19 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:56:22 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:56:29 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:56:35 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:56:41 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:56:47 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:56:53 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:56:59 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:57:05 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:57:10 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:57:16 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:57:22 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:57:28 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:57:34 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:57:40 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:57:47 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:57:55 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:58:02 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:58:12 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:58:21 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:58:28 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:58:37 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:58:46 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:58:56 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:59:05 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:59:15 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:59:22 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:59:30 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:59:38 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:59:47 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m12:59:56 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:00:05 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:00:15 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:00:24 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:00:33 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:00:42 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:00:50 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:01:00 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:01:08 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:01:15 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:01:23 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:01:33 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:01:43 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:01:54 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:02:01 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:02:08 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:02:16 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:02:26 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:02:35 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:02:45 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:02:52 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:02:57 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:03:03 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:03:09 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:03:15 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:03:21 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:03:27 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:03:33 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:03:39 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:03:45 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:03:51 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:03:57 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:04:04 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:04:11 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:04:19 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:04:27 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:04:37 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:04:45 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:04:54 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:05:03 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:05:10 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:05:18 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:05:28 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:05:36 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:05:45 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:05:52 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:06:00 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:06:08 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:06:15 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:06:22 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:06:31 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:06:39 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:06:48 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:06:59 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:07:06 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:07:14 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:07:24 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:07:33 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:07:40 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:07:48 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:07:58 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:08:08 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:08:17 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:08:25 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:08:35 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:08:42 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:08:51 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:09:01 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:09:11 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:09:21 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:09:30 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:09:37 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:09:46 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:09:55 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:10:04 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:10:11 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:10:19 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:10:27 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:10:35 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:10:45 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:10:54 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:11:00 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:11:06 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:11:12 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:11:18 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:11:24 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:11:30 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:11:36 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:11:42 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:11:48 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:11:54 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:12:00 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:12:06 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:12:14 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:12:20 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:12:30 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:12:40 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:12:50 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:13:00 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:13:10 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:13:18 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:13:27 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:13:36 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:13:44 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:13:53 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:14:01 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:14:10 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:14:18 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:14:26 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:14:34 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:14:44 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:14:52 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:15:00 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:15:08 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:15:17 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:15:24 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:15:31 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:15:40 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:15:47 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:15:58 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:16:05 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:16:13 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:16:21 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:16:31 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:16:40 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:16:47 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:16:55 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:17:01 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:17:07 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:17:13 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:17:19 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:17:25 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:17:31 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:17:37 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:17:43 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:17:49 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:17:55 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:18:01 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:18:08 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:18:15 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:18:26 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:18:33 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:18:42 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:18:53 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:19:02 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:19:13 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:19:22 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:19:32 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:19:40 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:19:48 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:19:56 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:20:09 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:20:18 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:20:28 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:20:36 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:20:43 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:20:50 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:20:58 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:21:05 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:21:14 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:21:22 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:21:31 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:21:39 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:21:47 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:21:56 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:22:04 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:22:11 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:22:20 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:22:26 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:22:35 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:22:44 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:22:53 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:23:03 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:23:12 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:23:19 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:23:29 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:23:40 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:23:46 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:23:53 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:24:01 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:24:07 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:24:16 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:24:24 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:24:32 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:24:39 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:24:50 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:24:57 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:25:03 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:25:09 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:25:15 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:25:21 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:25:27 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:25:32 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:25:38 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:25:44 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:25:50 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:25:56 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:26:02 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:26:09 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:26:18 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:26:26 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:26:32 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:26:41 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:26:50 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:26:59 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:27:07 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:27:15 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:27:24 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:27:32 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:27:39 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:27:49 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:27:56 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:28:04 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:28:13 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:28:19 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:28:27 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:28:36 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:28:45 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:28:52 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:29:01 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:29:07 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:29:13 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:29:19 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:29:25 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:29:31 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:29:37 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:29:43 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:29:49 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:29:55 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:30:01 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:30:07 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:30:13 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:30:19 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:30:26 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:30:35 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:30:43 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:30:51 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:31:00 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:31:07 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:31:12 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:31:18 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:31:23 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:31:29 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:31:35 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:31:41 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:31:47 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:31:53 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:31:59 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:32:05 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:32:12 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:32:19 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:32:29 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:32:36 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:32:47 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:32:54 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:33:02 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:33:11 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:33:20 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:33:29 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:33:38 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:33:48 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:33:57 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:34:05 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:34:14 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:34:20 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:34:30 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:34:38 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:34:47 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:34:56 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:35:03 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:35:10 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:35:19 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:35:28 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:35:36 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:35:45 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:35:53 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:36:00 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:36:09 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:36:18 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:36:25 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:36:34 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:36:43 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:36:53 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:37:02 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:37:10 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:37:17 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:37:25 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:37:34 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:37:44 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:37:54 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:38:02 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:38:11 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:38:19 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:38:29 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:38:38 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:38:45 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:38:52 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:38:59 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:39:08 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:39:14 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:39:20 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:39:26 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:39:32 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:39:38 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:39:44 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:39:50 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:39:56 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:40:02 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:40:08 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:40:14 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:40:23 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:40:30 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:40:39 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:40:49 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:40:55 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:41:03 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:41:12 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:41:22 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:41:30 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:41:40 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:41:50 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:41:58 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:42:07 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:42:14 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:42:22 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:42:30 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:42:37 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:42:44 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:42:52 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:42:59 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:43:08 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:43:14 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:43:20 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:43:26 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:43:32 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:43:38 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:43:44 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:43:50 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:43:56 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:44:02 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:44:08 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:44:14 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:44:22 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:44:30 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:44:38 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:44:49 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:44:58 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:45:06 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:45:12 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:45:18 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:45:24 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:45:30 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:45:35 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:45:41 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:45:47 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:45:53 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:45:59 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:46:05 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:46:11 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:46:17 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:46:25 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:46:31 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:46:41 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:46:49 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:46:57 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:47:04 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:47:13 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:47:20 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:47:30 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:47:38 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:47:45 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:47:55 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:48:03 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:48:11 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:48:20 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:48:27 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:48:34 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:48:43 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:48:52 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:48:59 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:49:10 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:49:15 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:49:21 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:49:27 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:49:33 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:49:39 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:49:45 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:49:51 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:49:57 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:50:03 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:50:09 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:50:15 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:50:21 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:50:27 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:50:34 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:50:41 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:50:49 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:50:58 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:51:05 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:51:13 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:51:19 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:51:25 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:51:30 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:51:36 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:51:42 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:51:48 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:51:54 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:52:00 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:52:06 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:52:12 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:52:18 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:52:25 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:52:34 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:52:44 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:52:51 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:52:59 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:53:10 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:53:16 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:53:22 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:53:27 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:53:33 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:53:39 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:53:45 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:53:51 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:53:57 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:54:03 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:54:09 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:54:16 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:54:23 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:54:31 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:54:41 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:54:50 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:54:58 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:55:06 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:55:17 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:55:25 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:55:35 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:55:42 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:55:52 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:55:59 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:56:08 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:56:14 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:56:24 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:56:34 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:56:44 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:56:52 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m1:57:02 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:18:40 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+[2m2:18:41 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:18:43 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:18:47 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:18:53 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:18:59 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:19:05 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:23:41 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+[2m2:23:43 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:23:47 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:23:51 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:23:57 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:29:16 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+[2m2:29:18 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:29:21 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:29:27 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:29:38 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+[2m2:29:44 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:29:48 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:29:53 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:30:15 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+[2m2:30:15 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/App.tsx[22m
+[2m2:30:21 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:30:23 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:30:28 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:30:28 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/pages/update[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:30:31 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:30:33 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:30:34 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/App.tsx[22m
+[2m2:30:35 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/App.tsx[22m
+[2m2:30:38 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:30:39 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/App.tsx[22m
+[2m2:30:46 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:30:48 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/App.tsx[22m
+[2m2:33:59 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+[2m2:34:12 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:34:16 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:34:20 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:34:25 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:39:01 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+[2m2:39:03 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:39:06 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:39:10 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:39:16 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:39:22 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:39:28 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m2:41:58 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/space/components/sidebar/space-sidebar.tsx[22m
+[2m2:41:58 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/space/components/sidebar/space-sidebar.tsx[22m
+[2m2:48:00 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/pages/sheets.tsx[22m
+[2m2:48:22 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/space/components/sidebar/space-sidebar.tsx[22m
+[2m2:49:28 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/space/components/sidebar/space-sidebar.tsx[22m
+[2m2:53:37 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/space/components/sidebar/space-sidebar.tsx[22m
+[2m2:53:37 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\apps\client\src\features\space\components\sidebar\space-sidebar.tsx: Unterminated JSX contents. (205:7)
+
+[0m [90m 203 |[31m         spaceId[33m=[31m{space[33m?[31m[33m.[31mslug}
+ [90m 204 |[31m       [33m/[31m[33m>[31m
+[31m[1m>[22m[31m[90m 205 |[31m     [33m<[31m[33m/[31m[33m>[31m
+ [90m     |[31m        [31m[1m^[22m[31m
+ [90m 206 |[31m   )[33m;[31m
+ [90m 207 |[31m }[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/space/components/sidebar/space-sidebar.tsx[39m:205:7
+      at constructor (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:6599:19)
+      at TypeScriptParserMixin.jsxReadToken (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4448:20)
+      at TypeScriptParserMixin.getTokenFromCode (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4774:12)
+      at TypeScriptParserMixin.getTokenFromCode (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9987:11)
+      at TypeScriptParserMixin.nextToken (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:5782:10)
+      at TypeScriptParserMixin.next (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:5692:10)
+      at TypeScriptParserMixin.eat (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:5696:12)
+      at TypeScriptParserMixin.jsxParseClosingElementAt (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4676:14)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4695:37)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4698:32)
+      at TypeScriptParserMixin.jsxParseElement (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4749:17)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4759:19)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10904:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10831:21)
+      at C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9775:39
+      at TypeScriptParserMixin.tryParse (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:6907:20)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9775:18)
+      at C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10800:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:12426:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10800:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:12493:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11675:28)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11331:23)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4764:20)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10904:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10831:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9786:20)
+      at TypeScriptParserMixin.parseExpressionBase (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10784:23)
+      at C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10780:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:12421:16)
+      at TypeScriptParserMixin.parseExpression (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10780:17)
+      at TypeScriptParserMixin.parseReturnStatement (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:13142:28)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:12798:21)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9508:18)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:12767:17)
+      at TypeScriptParserMixin.parseStatementListItem (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:12747:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:13316:61)
+[2m2:53:38 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\apps\client\src\features\space\components\sidebar\space-sidebar.tsx: Unterminated JSX contents. (205:7)
+
+[0m [90m 203 |[39m         spaceId[33m=[39m{space[33m?[39m[33m.[39mslug}
+ [90m 204 |[39m       [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 205 |[39m     [33m<[39m[33m/[39m[33m>[39m
+ [90m     |[39m        [31m[1m^[22m[39m
+ [90m 206 |[39m   )[33m;[39m
+ [90m 207 |[39m }[0m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/space/components/sidebar/space-sidebar.tsx[39m:205:7
+[2m2:53:39 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\apps\client\src\features\space\components\sidebar\space-sidebar.tsx: Unterminated JSX contents. (205:7)
+
+[0m [90m 203 |[31m         spaceId[33m=[31m{space[33m?[31m[33m.[31mslug}
+ [90m 204 |[31m       [33m/[31m[33m>[31m
+[31m[1m>[22m[31m[90m 205 |[31m     [33m<[31m[33m/[31m[33m>[31m
+ [90m     |[31m        [31m[1m^[22m[31m
+ [90m 206 |[31m   )[33m;[31m
+ [90m 207 |[31m }[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/space/components/sidebar/space-sidebar.tsx[39m:205:7
+      at constructor (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:6599:19)
+      at TypeScriptParserMixin.jsxReadToken (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4448:20)
+      at TypeScriptParserMixin.getTokenFromCode (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4774:12)
+      at TypeScriptParserMixin.getTokenFromCode (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9987:11)
+      at TypeScriptParserMixin.nextToken (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:5782:10)
+      at TypeScriptParserMixin.next (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:5692:10)
+      at TypeScriptParserMixin.eat (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:5696:12)
+      at TypeScriptParserMixin.jsxParseClosingElementAt (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4676:14)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4695:37)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4698:32)
+      at TypeScriptParserMixin.jsxParseElement (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4749:17)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4759:19)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10904:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10831:21)
+      at C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9775:39
+      at TypeScriptParserMixin.tryParse (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:6907:20)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9775:18)
+      at C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10800:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:12426:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10800:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:12493:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11675:28)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11331:23)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4764:20)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10904:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10831:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9786:20)
+      at TypeScriptParserMixin.parseExpressionBase (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10784:23)
+      at C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10780:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:12421:16)
+      at TypeScriptParserMixin.parseExpression (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10780:17)
+      at TypeScriptParserMixin.parseReturnStatement (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:13142:28)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:12798:21)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9508:18)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:12767:17)
+      at TypeScriptParserMixin.parseStatementListItem (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:12747:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:13316:61)
+[2m2:55:20 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/space/components/sidebar/space-sidebar.tsx[22m
+[2m2:55:21 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/components/layouts/global/global-app-shell.tsx[22m
+[2m2:56:52 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/space/components/sidebar/space-sidebar.tsx[22m
+[2m2:56:52 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\apps\client\src\features\space\components\sidebar\space-sidebar.tsx: Expected corresponding JSX closing tag for <Group>. (181:4)
+
+[0m [90m 179 |[31m         spaceId[33m=[31m{space[33m?[31m[33m.[31mslug}
+ [90m 180 |[31m       [33m/[31m[33m>[31m
+[31m[1m>[22m[31m[90m 181 |[31m     [33m<[31m[33m/[31m[33m>[31m
+ [90m     |[31m     [31m[1m^[22m[31m
+ [90m 182 |[31m   )[33m;[31m
+ [90m 183 |[31m }[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/space/components/sidebar/space-sidebar.tsx[39m:181:4
+      at constructor (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:6599:19)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4722:14)
+      at TypeScriptParserMixin.jsxParseElement (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4749:17)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4759:19)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10904:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10831:21)
+      at C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9775:39
+      at TypeScriptParserMixin.tryParse (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:6907:20)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9775:18)
+      at C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10800:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:12426:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10800:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:12493:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11675:28)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11331:23)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4764:20)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOpBaseRightExpr (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10986:34)
+      at TypeScriptParserMixin.parseExprOpRightExpr (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10981:21)
+      at TypeScriptParserMixin.parseExprOp (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10947:27)
+      at TypeScriptParserMixin.parseExprOp (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9306:18)
+      at TypeScriptParserMixin.parseExprOp (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10953:21)
+      at TypeScriptParserMixin.parseExprOp (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9306:18)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10908:17)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10831:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9786:20)
+      at TypeScriptParserMixin.parseExpressionBase (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10784:23)
+      at C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10780:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:12426:12)
+      at TypeScriptParserMixin.parseExpression (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10780:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4632:31)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4711:36)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4698:32)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4698:32)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4698:32)
+      at TypeScriptParserMixin.jsxParseElement (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4749:17)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4759:19)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11081:23)
+[2m2:56:53 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\apps\client\src\features\space\components\sidebar\space-sidebar.tsx: Expected corresponding JSX closing tag for <Group>. (181:4)
+
+[0m [90m 179 |[39m         spaceId[33m=[39m{space[33m?[39m[33m.[39mslug}
+ [90m 180 |[39m       [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 181 |[39m     [33m<[39m[33m/[39m[33m>[39m
+ [90m     |[39m     [31m[1m^[22m[39m
+ [90m 182 |[39m   )[33m;[39m
+ [90m 183 |[39m }[0m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/space/components/sidebar/space-sidebar.tsx[39m:181:4
+[2m2:56:53 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\apps\client\src\features\space\components\sidebar\space-sidebar.tsx: Expected corresponding JSX closing tag for <Group>. (181:4)
+
+[0m [90m 179 |[31m         spaceId[33m=[31m{space[33m?[31m[33m.[31mslug}
+ [90m 180 |[31m       [33m/[31m[33m>[31m
+[31m[1m>[22m[31m[90m 181 |[31m     [33m<[31m[33m/[31m[33m>[31m
+ [90m     |[31m     [31m[1m^[22m[31m
+ [90m 182 |[31m   )[33m;[31m
+ [90m 183 |[31m }[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/space/components/sidebar/space-sidebar.tsx[39m:181:4
+      at constructor (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:6599:19)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4722:14)
+      at TypeScriptParserMixin.jsxParseElement (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4749:17)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4759:19)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10904:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10831:21)
+      at C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9775:39
+      at TypeScriptParserMixin.tryParse (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:6907:20)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9775:18)
+      at C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10800:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:12426:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10800:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:12493:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11675:28)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11331:23)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4764:20)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOpBaseRightExpr (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10986:34)
+      at TypeScriptParserMixin.parseExprOpRightExpr (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10981:21)
+      at TypeScriptParserMixin.parseExprOp (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10947:27)
+      at TypeScriptParserMixin.parseExprOp (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9306:18)
+      at TypeScriptParserMixin.parseExprOp (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10953:21)
+      at TypeScriptParserMixin.parseExprOp (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9306:18)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10908:17)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10831:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9786:20)
+      at TypeScriptParserMixin.parseExpressionBase (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10784:23)
+      at C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10780:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:12426:12)
+      at TypeScriptParserMixin.parseExpression (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10780:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4632:31)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4711:36)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4698:32)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4698:32)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4698:32)
+      at TypeScriptParserMixin.jsxParseElement (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4749:17)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4759:19)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11081:23)
+[2m2:57:01 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/space/components/sidebar/space-sidebar.tsx[22m
+[2m2:57:01 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\apps\client\src\features\space\components\sidebar\space-sidebar.tsx: Expected corresponding JSX closing tag for <Group>. (219:4)
+
+[0m [90m 217 |[39m         spaceId[33m=[39m{space[33m?[39m[33m.[39mslug}
+ [90m 218 |[39m       [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 219 |[39m     [33m<[39m[33m/[39m[33m>[39m
+ [90m     |[39m     [31m[1m^[22m[39m
+ [90m 220 |[39m   )[33m;[39m
+ [90m 221 |[39m }[0m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/space/components/sidebar/space-sidebar.tsx[39m:219:4
+[2m2:57:02 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\apps\client\src\features\space\components\sidebar\space-sidebar.tsx: Expected corresponding JSX closing tag for <Group>. (219:4)
+
+[0m [90m 217 |[31m         spaceId[33m=[31m{space[33m?[31m[33m.[31mslug}
+ [90m 218 |[31m       [33m/[31m[33m>[31m
+[31m[1m>[22m[31m[90m 219 |[31m     [33m<[31m[33m/[31m[33m>[31m
+ [90m     |[31m     [31m[1m^[22m[31m
+ [90m 220 |[31m   )[33m;[31m
+ [90m 221 |[31m }[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/space/components/sidebar/space-sidebar.tsx[39m:219:4
+      at constructor (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:6599:19)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4722:14)
+      at TypeScriptParserMixin.jsxParseElement (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4749:17)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4759:19)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10904:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10831:21)
+      at C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9775:39
+      at TypeScriptParserMixin.tryParse (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:6907:20)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9775:18)
+      at C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10800:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:12426:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10800:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:12493:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11675:28)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11331:23)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4764:20)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOpBaseRightExpr (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10986:34)
+      at TypeScriptParserMixin.parseExprOpRightExpr (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10981:21)
+      at TypeScriptParserMixin.parseExprOp (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10947:27)
+      at TypeScriptParserMixin.parseExprOp (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9306:18)
+      at TypeScriptParserMixin.parseExprOp (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10953:21)
+      at TypeScriptParserMixin.parseExprOp (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9306:18)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10908:17)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10831:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9786:20)
+      at TypeScriptParserMixin.parseExpressionBase (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10784:23)
+      at C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10780:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:12426:12)
+      at TypeScriptParserMixin.parseExpression (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10780:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4632:31)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4711:36)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4698:32)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4698:32)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4698:32)
+      at TypeScriptParserMixin.jsxParseElement (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4749:17)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4759:19)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11081:23)
+[2m2:58:31 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/features/space/components/sidebar/space-sidebar.tsx[22m
+[2m2:58:33 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/components/layouts/global/global-app-shell.tsx[22m
+[2m3:00:23 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/components/layouts/global/global-app-shell.tsx[22m
+[2m3:03:06 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/components/layouts/global/global-app-shell.tsx[22m
+[2m3:09:54 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/pages/sheets.tsx[22m
+[2m3:10:07 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/pages/sheets.tsx[22m
+[2m3:10:27 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/pages/sheets.tsx[22m
+[2m3:10:38 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/pages/sheets.tsx[22m
+[2m3:10:53 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/pages/sheets.tsx[22m
+[2m3:10:58 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/pages/sheets.tsx[22m
+[2m3:11:04 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/pages/sheets.tsx[22m
+[2m3:11:32 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/pages/sheets.tsx[22m
+[2m3:14:50 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/pages/sheets.tsx[22m
+[2m3:14:51 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\apps\client\src\pages\sheets.tsx: Unterminated string constant. (6:16)
+
+[0m [90m 4 |[31m       style[33m=[31m{{
+ [90m 5 |[31m         width[33m:[31m [32m"100%"[31m[33m,[31m
+[31m[1m>[22m[31m[90m 6 |[31m         height[33m:[31m [32m"calc(110[31m
+ [90m   |[31m                 [31m[1m^[22m[31m
+ [90m 7 |[31m         
+ [90m 8 |[31m         vh [33m-[31m [35m60[31mpx)[32m", // ✅ IMPORTANT FIX[31m
+ [90m 9 |[31m         overflow[33m:[31m [32m"hidden"[31m[33m,[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/pages/sheets.tsx[39m:6:16
+[33m  4  |        style={{
+  5  |          width: "100%",
+  6  |          height: "calc(110
+     |                       ^
+  7  |          
+  8  |          vh - 60px)", // ✅ IMPORTANT FIX[39m
+      at constructor (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:6599:19)
+      at Object.unterminated (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:5664:20)
+      at readStringContents (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:5406:16)
+      at TypeScriptParserMixin.readString (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:6498:9)
+      at TypeScriptParserMixin.getTokenFromCode (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:6258:14)
+      at TypeScriptParserMixin.getTokenFromCode (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4797:11)
+      at TypeScriptParserMixin.getTokenFromCode (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9987:11)
+      at TypeScriptParserMixin.nextToken (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:5782:10)
+      at TypeScriptParserMixin.next (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:5692:10)
+      at TypeScriptParserMixin.eat (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:5696:12)
+      at TypeScriptParserMixin.parseObjectProperty (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11949:14)
+      at TypeScriptParserMixin.parseObjPropValue (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11978:100)
+      at TypeScriptParserMixin.parseObjPropValue (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9744:18)
+      at TypeScriptParserMixin.parsePropertyDefinition (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11915:17)
+      at TypeScriptParserMixin.parseObjectLike (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11832:21)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11339:23)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4764:20)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10904:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10831:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9786:20)
+      at TypeScriptParserMixin.parseExpressionBase (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10784:23)
+      at C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10780:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:12426:12)
+      at TypeScriptParserMixin.parseExpression (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10780:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4632:31)
+      at TypeScriptParserMixin.jsxParseAttributeValue (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4604:21)
+      at TypeScriptParserMixin.jsxParseAttribute (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4653:38)
+      at TypeScriptParserMixin.jsxParseOpeningElementAfterName (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4667:28)
+      at TypeScriptParserMixin.jsxParseOpeningElementAfterName (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10043:18)
+      at TypeScriptParserMixin.jsxParseOpeningElementAt (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4662:17)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4686:33)
+      at TypeScriptParserMixin.jsxParseElement (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4749:17)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:4759:19)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10904:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:10831:21)
+      at C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:9775:39
+      at TypeScriptParserMixin.tryParse (C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\node_modules\.pnpm\@babel+parser@7.29.2\node_modules\@babel\parser\lib\index.js:6907:20)
+[2m3:14:54 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/pages/sheets.tsx[22m
+[2m3:15:09 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/Ashok Kumar/Desktop/Docy customize/Docmost-customize/apps/client/src/pages/sheets.tsx[22m
+[2m3:45:02 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:218:20)
+[2m3:45:05 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m3:45:09 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m3:45:15 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m3:45:21 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+[2m3:45:27 pm[22m [31m[1m[vite][22m[39m [31mws proxy error:[39m
+Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)
+^C[41m[30m ELIFECYCLE [39m[49m [31mCommand failed with exit code 3221225786.[39m

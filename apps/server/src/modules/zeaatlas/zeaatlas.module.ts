@@ -1,11 +1,9 @@
 import { Module } from '@nestjs/common';
 import { ZeaAtlasController } from './zeaatlas.controller';
 import { ZeaAtlasService } from './zeaatlas.service';
-import { DatabaseModule } from '../../database/database.module';
 
 @Module({
-  imports: [DatabaseModule],
-  controllers: [ZeaAtlasController], 
+  controllers: [ZeaAtlasController], // ✅ MUST BE HERE
   providers: [ZeaAtlasService],
 })
 export class ZeaAtlasModule {}

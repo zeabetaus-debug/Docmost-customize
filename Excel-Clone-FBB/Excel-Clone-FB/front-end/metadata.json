@@ -1,0 +1,5 @@
+{
+  "name": "Excel Clone Pro",
+  "description": "A high-performance Microsoft Excel clone featuring virtualization, formula engine, rich formatting, and responsive ribbon interface.",
+  "requestFramePermissions": []
+}
