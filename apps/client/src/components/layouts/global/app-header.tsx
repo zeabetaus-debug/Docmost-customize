@@ -12,15 +12,14 @@ import {
 import { useToggleSidebar } from "@/components/layouts/global/hooks/hooks/use-toggle-sidebar.ts";
 import SidebarToggle from "@/components/ui/sidebar-toggle-button.tsx";
 import { useTranslation } from "react-i18next";
+import { currentUserAtom } from "@/features/user/atoms/current-user-atom.ts";
 
 import {
   SearchControl,
-  SearchMobileControl,
 } from "@/features/search/components/search-control.tsx";
 
 import { searchSpotlight } from "@/features/search/constants.ts";
 import { NotificationPopover } from "@/features/notification/components/notification-popover.tsx";
-import usePermission from "@/hooks/use-permission";
 
 const links = [{ link: APP_ROUTE.HOME, label: "Home" }];
 
@@ -28,8 +27,11 @@ export function AppHeader() {
   const { t } = useTranslation();
   const location = useLocation();
 
-  // permissions (must be called at top-level of component)
-  const permission = usePermission();
+  // ✅ CORRECT CLIENT MODE SOURCE (JOTAI STATE)
+  const [currentUser] = useAtom(currentUserAtom);
+  const isClientMode = currentUser?.user?.clientMode === true;
+
+  console.log("CLIENT MODE:", isClientMode);
 
   const [mobileOpened] = useAtom(mobileSidebarAtom);
   const toggleMobile = useToggleSidebar(mobileSidebarAtom);
@@ -39,7 +41,9 @@ export function AppHeader() {
 
   const isHomeRoute = location.pathname.startsWith("/home");
   const isSpacesRoute = location.pathname === "/spaces";
-  const hideSidebar = isHomeRoute || isSpacesRoute;
+  const isSheetsRoute =
+    location.pathname.startsWith("/sheets") || location.pathname.startsWith("/excel");
+  const hideSidebar = isHomeRoute || isSpacesRoute || isSheetsRoute;
 
   const items = links.map((link) => (
     <Link key={link.label} to={link.link} className={classes.link}>
@@ -74,7 +78,7 @@ export function AppHeader() {
           </>
         )}
 
-        {/* ✅ BRAND */}
+        {/* BRAND */}
         <Text
           size="lg"
           fw={700}
@@ -91,23 +95,29 @@ export function AppHeader() {
         </Group>
       </Group>
 
-      {/* CENTER (FIXED WIDTH SEARCH) */}
+      {/* CENTER */}
       <Group style={{ width: 320, maxWidth: "40%" }} justify="center">
         <SearchControl onClick={searchSpotlight.open} />
       </Group>
 
       {/* RIGHT SIDE */}
       <Group gap="md" wrap="nowrap">
-        <NotificationPopover />
-        {/* Read only badge for client users */}
-        {permission.isClient && (
+        
+        {/* 🔥 HIDE NOTIFICATIONS IN CLIENT MODE */}
+        {!isClientMode && <NotificationPopover />}
+
+        {/* ✅ CLIENT MODE BADGE */}
+        {isClientMode && (
           <div className={`${classes.clientBadge} client-mode-global-badge`}>
-            <Text size="xs" color="dimmed" fw={700}>
-              Read Only Access
+            <Text size="xs" color="red" fw={700}>
+              CLIENT MODE
             </Text>
           </div>
         )}
-        <TopMenu />
+
+        {/* 🔥 TOP MENU */}
+        <TopMenu isClientMode={isClientMode} />
+
       </Group>
     </Group>
   );

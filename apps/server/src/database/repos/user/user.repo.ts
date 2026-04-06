@@ -47,14 +47,23 @@ export class UserRepo {
     },
   ): Promise<User> {
     const db = dbOrTx(this.db, opts?.trx);
-    return db
+    const row: any = await db
       .selectFrom('users')
       .select(this.baseFields)
       .$if(opts?.includePassword, (qb) => qb.select('password'))
       .$if(opts?.includeUserMfa, (qb) => qb.select(this.withUserMfa))
+      .select(sql`users.client_mode`.as('client_mode'))
       .where('id', '=', userId)
       .where('workspaceId', '=', workspaceId)
       .executeTakeFirst();
+
+    if (!row) return null as any;
+
+    // map DB client_mode to camelCase clientMode for API consumers
+    return {
+      ...(row as any),
+      clientMode: row.client_mode ?? false,
+    } as any;
   }
 
   async findByEmail(
@@ -67,14 +76,22 @@ export class UserRepo {
     },
   ): Promise<User> {
     const db = dbOrTx(this.db, opts?.trx);
-    return db
+    const row: any = await db
       .selectFrom('users')
       .select(this.baseFields)
       .$if(opts?.includePassword, (qb) => qb.select('password'))
       .$if(opts?.includeUserMfa, (qb) => qb.select(this.withUserMfa))
+      .select(sql`users.client_mode`.as('client_mode'))
       .where(sql`LOWER(email)`, '=', sql`LOWER(${email})`)
       .where('workspaceId', '=', workspaceId)
       .executeTakeFirst();
+
+    if (!row) return null as any;
+
+    return {
+      ...(row as any),
+      clientMode: row.client_mode ?? false,
+    } as any;
   }
 
   async updateUser(
@@ -85,12 +102,55 @@ export class UserRepo {
   ) {
     const db = dbOrTx(this.db, trx);
 
-    return await db
+    // Fetch existing user settings and client_mode
+    const existing: any = await db
+      .selectFrom('users')
+      .select(this.baseFields)
+      .select(sql`users.client_mode`.as('client_mode'))
+      .where('id', '=', userId)
+      .where('workspaceId', '=', workspaceId)
+      .executeTakeFirst();
+
+    const existingSettings = (existing?.settings as any) || {};
+    const incomingSettings = ((updatableUser as any)?.settings as any) || {};
+    const updatedSettings = {
+      ...existingSettings,
+      ...incomingSettings,
+    };
+
+    const updatedClientMode =
+      typeof (updatableUser as any)?.clientMode !== 'undefined'
+        ? (updatableUser as any).clientMode
+        : existing?.client_mode ?? false;
+
+    // Avoid spreading clientMode into the generic update object
+    const { clientMode, ...rest } = (updatableUser as any) || {};
+
+    await db
       .updateTable('users')
-      .set({ ...updatableUser, updatedAt: new Date() })
+      .set({
+        ...rest,
+        settings: updatedSettings,
+        client_mode: updatedClientMode,
+        updatedAt: new Date(),
+      } as any)
       .where('id', '=', userId)
       .where('workspaceId', '=', workspaceId)
       .execute();
+
+    // Return updated user with clientMode field
+    const row: any = await db
+      .selectFrom('users')
+      .select(this.baseFields)
+      .select(sql`users.client_mode`.as('client_mode'))
+      .where('id', '=', userId)
+      .where('workspaceId', '=', workspaceId)
+      .executeTakeFirst();
+
+    return {
+      ...(row as any),
+      clientMode: row?.client_mode ?? false,
+    } as any;
   }
 
   async updateLastLogin(userId: string, workspaceId: string) {

@@ -36,7 +36,7 @@ import {
   htmlToJson,
   jsonToNode,
   jsonToText,
-} from 'src/collaboration/collaboration.util';
+} from '../../../collaboration/collaboration.util';
 import {
   CopyPageMapEntry,
   ICopyPageAttachment,

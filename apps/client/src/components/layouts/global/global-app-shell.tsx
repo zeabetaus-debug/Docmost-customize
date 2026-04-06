@@ -18,9 +18,13 @@ import {
 import { useToggleSidebar } from "@/components/layouts/global/hooks/hooks/use-toggle-sidebar.ts";
 
 // ✅ CLIENT MODE
-import { clientModeAtom } from "@/store/client-store";
+import { clientModeAtom, setClientModeAtom } from "@/store/client-store";
+import { currentUserAtom } from "@/features/user/atoms/current-user-atom";
+import { updateUser } from "@/features/user/services/user-service";
+import { useSetAtom } from "jotai";
 
 import classes from "./app-shell.module.css";
+
 
 export default function GlobalAppShell({
   children,
@@ -37,6 +41,8 @@ export default function GlobalAppShell({
 
   const [sidebarWidth, setSidebarWidth] = useAtom(sidebarWidthAtom);
   const [clientMode] = useAtom(clientModeAtom);
+  const [, setCurrentUser] = useAtom(currentUserAtom as any);
+  const setClientMode = useSetAtom(setClientModeAtom as any);
 
   const [isResizing, setIsResizing] = useState(false);
   const sidebarRef = useRef<HTMLDivElement | null>(null);
@@ -82,8 +88,10 @@ export default function GlobalAppShell({
   const isSpaceRoute = location.pathname.startsWith("/s/");
   const isHomeRoute = location.pathname.startsWith("/home");
   const isSpacesRoute = location.pathname === "/spaces";
+  const isSheetsRoute =
+    location.pathname.startsWith("/sheets") || location.pathname.startsWith("/excel");
   const isPageRoute = location.pathname.includes("/p/");
-  const hideSidebar = isHomeRoute || isSpacesRoute;
+  const hideSidebar = isHomeRoute || isSpacesRoute || isSheetsRoute;
 
   return (
     <AppShell
@@ -133,28 +141,69 @@ export default function GlobalAppShell({
       <AppShell.Main>
 
         {/* ✅ IMPROVED CLIENT MODE BANNER */}
-       {clientMode && (
-    <div
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: 28,
-        background: "#1f2937",
-        color: "#fff",
-        fontSize: 12,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        zIndex: 9999,
-        letterSpacing: 1,
-        fontWeight: 600,
-      }}
-    >
-      🔴 CLIENT MODE
-    </div>
-  )}
+        {clientMode && (
+          <>
+            <div
+              style={{
+                position: "fixed",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: 45,
+                background: "#1f2937",
+                color: "#fff",
+                fontSize: 12,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                zIndex: 9999,
+                letterSpacing: 1,
+                fontWeight: 600,
+              }}
+            >
+              🔴 CLIENT MODE
+            </div>
+
+            {/* Floating exit control - always visible and outside dropdowns */}
+            <div
+              style={{
+                position: "fixed",
+                right: 16,
+                bottom: 16,
+                zIndex: 10000,
+              }}
+            >
+              <button
+                style={{
+                  background: "#ef4444",
+                  color: "#fff",
+                  border: "none",
+                  padding: "8px 12px",
+                  borderRadius: 6,
+                  cursor: "pointer",
+                  boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
+                  fontWeight: 700,
+                }}
+                onClick={async () => {
+                  try {
+                    console.log('Client Mode: exit clicked');
+                    const updated = await updateUser({ clientMode: false } as any);
+                    console.log('Client Mode API response', updated);
+                    // update current user atom
+                    setCurrentUser((prev: any) =>
+                      prev ? { ...prev, user: { ...prev.user, ...updated } } : prev,
+                    );
+                    setClientMode(false);
+                  } catch (err) {
+                    console.error('Failed to exit Client Mode', err);
+                  }
+                }}
+              >
+                Turn OFF
+              </button>
+            </div>
+          </>
+        )}
 
         {isSettingsRoute ? (
           <Container size={850}>{children}</Container>

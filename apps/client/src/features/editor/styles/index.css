@@ -15,3 +15,13 @@
 @import "./highlight.css";
 @import "./columns.css";
 @import "./status.css";
+/* 🔒 CLIENT MODE - FULL READ ONLY */
+.client-mode .ProseMirror {
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Optional: remove cursor */
+.client-mode .ProseMirror * {
+  cursor: default !important;
+}

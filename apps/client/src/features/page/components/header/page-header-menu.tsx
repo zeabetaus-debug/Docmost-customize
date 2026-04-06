@@ -42,6 +42,8 @@ import MovePageModal from "@/features/page/components/move-page-modal.tsx";
 import { useTimeAgo } from "@/hooks/use-time-ago.tsx";
 import { useClientGuard } from "@/features/zeaatlas/client-mode/use-client-guard";
 
+import { currentUserAtom } from "@/features/user/atoms/current-user-atom.ts";
+
 
 interface PageHeaderMenuProps {
   readOnly?: boolean;
@@ -51,6 +53,10 @@ export default function PageHeaderMenu({ readOnly }: PageHeaderMenuProps) {
   const toggleAside = useToggleAside();
   const { guardClientAction } = useClientGuard();
 
+  const [currentUser] = useAtom(currentUserAtom);
+  const isClientMode = currentUser?.user?.clientMode === true;
+
+  // ✅ HOOK MUST BE CALLED BEFORE CONDITION
   useHotkeys(
     [
       [
@@ -71,6 +77,11 @@ export default function PageHeaderMenu({ readOnly }: PageHeaderMenuProps) {
     ],
     [],
   );
+
+  // ✅ AFTER HOOK → SAFE RETURN
+  if (isClientMode) {
+    return null;
+  }
 
   return (
     <>
@@ -106,6 +117,7 @@ export default function PageHeaderMenu({ readOnly }: PageHeaderMenuProps) {
     </>
   );
 }
+
 
 interface PageActionMenuProps {
   readOnly?: boolean;

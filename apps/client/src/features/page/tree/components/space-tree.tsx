@@ -69,6 +69,7 @@ import { mobileSidebarAtom } from "@/components/layouts/global/hooks/atoms/sideb
 import { useToggleSidebar } from "@/components/layouts/global/hooks/hooks/use-toggle-sidebar.ts";
 import CopyPageModal from "../../components/copy-page-modal.tsx";
 import { duplicatePage } from "../../services/page-service.ts";
+import { currentUserAtom } from "@/features/user/atoms/current-user-atom.ts";
 
 interface SpaceTreeProps {
   spaceId: string;
@@ -496,16 +497,28 @@ function NodeMenu({ node, treeApi, spaceId }: NodeMenuProps) {
   const { openDeleteModal } = useDeletePageModal();
   const [data, setData] = useAtom(treeDataAtom);
   const emit = useQueryEmit();
+
+  // ✅ CLIENT MODE
+  const [currentUser] = useAtom(currentUserAtom);
+  const isClientMode = currentUser?.user?.clientMode === true;
+
   const [exportOpened, { open: openExportModal, close: closeExportModal }] =
     useDisclosure(false);
+
   const [
     movePageModalOpened,
     { open: openMovePageModal, close: closeMoveSpaceModal },
   ] = useDisclosure(false);
+
   const [
     copyPageModalOpened,
     { open: openCopyPageModal, close: closeCopySpaceModal },
   ] = useDisclosure(false);
+
+  // 🚨 MAIN FIX
+  if (isClientMode) {
+    return null;
+  }
 
   const handleCopyLink = () => {
     const pageUrl =
@@ -520,17 +533,17 @@ function NodeMenu({ node, treeApi, spaceId }: NodeMenuProps) {
         pageId: node.id,
       });
 
-      // Find the index of the current node
       const parentId =
         node.parent?.id === "__REACT_ARBORIST_INTERNAL_ROOT__"
           ? null
           : node.parent?.id;
+
       const siblings = parentId ? node.parent.children : treeApi?.props.data;
       const currentIndex =
         siblings?.findIndex((sibling) => sibling.id === node.id) || 0;
+
       const newIndex = currentIndex + 1;
 
-      // Add the duplicated page to the tree
       const treeNodeData: SpaceTreeNode = {
         id: duplicatedPage.id,
         slugId: duplicatedPage.slugId,
@@ -544,16 +557,16 @@ function NodeMenu({ node, treeApi, spaceId }: NodeMenuProps) {
         children: [],
       };
 
-      // Update local tree
       const simpleTree = new SimpleTree(data);
+
       simpleTree.create({
         parentId,
         index: newIndex,
         data: treeNodeData,
       });
+
       setData(simpleTree.data);
 
-      // Emit socket event
       setTimeout(() => {
         emit({
           operation: "addTreeNode",
@@ -569,9 +582,9 @@ function NodeMenu({ node, treeApi, spaceId }: NodeMenuProps) {
       notifications.show({
         message: t("Page duplicated successfully"),
       });
-    } catch (err) {
+    } catch (err: any) {
       notifications.show({
-        message: err.response?.data.message || "An error occurred",
+        message: err?.response?.data?.message || "An error occurred",
         color: "red",
       });
     }
@@ -589,10 +602,7 @@ function NodeMenu({ node, treeApi, spaceId }: NodeMenuProps) {
               e.stopPropagation();
             }}
           >
-            <IconDotsVertical
-              style={{ width: rem(20), height: rem(20) }}
-              stroke={2}
-            />
+            <IconDotsVertical size={20} stroke={2} />
           </ActionIcon>
         </Menu.Target>
 
@@ -656,13 +666,16 @@ function NodeMenu({ node, treeApi, spaceId }: NodeMenuProps) {
                 </Menu.Item>
 
                 <Menu.Divider />
+
                 <Menu.Item
                   c="red"
                   leftSection={<IconTrash size={16} />}
                   onClick={(e) => {
                     e.preventDefault();
                     e.stopPropagation();
-                    openDeleteModal({ onConfirm: () => treeApi?.delete(node) });
+                    openDeleteModal({
+                      onConfirm: () => treeApi?.delete(node),
+                    });
                   }}
                 >
                   {t("Move to trash")}

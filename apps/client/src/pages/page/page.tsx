@@ -15,6 +15,8 @@ import { Link } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 import { useChangeRequestsState } from "@/features/zeaatlas/change-request/use-change-requests-state";
 import usePermission from "@/hooks/use-permission";
+import { useAtomValue } from "jotai";
+import { clientModeAtom } from "@/store/client-store";
 
 const MemoizedFullEditor = React.memo(FullEditor);
 const MemoizedPageHeader = React.memo(PageHeader);
@@ -25,6 +27,7 @@ type StatusType = "draft" | "review" | "approved" | "archived";
 export default function Page() {
   const { t } = useTranslation();
   const { pageSlug } = useParams();
+  const isClientMode = useAtomValue(clientModeAtom);
 
   return (
     <ErrorBoundary
@@ -41,12 +44,18 @@ export default function Page() {
         />
       )}
     >
-      <PageContent pageSlug={pageSlug} />
+      <PageContent pageSlug={pageSlug} isClientMode={isClientMode} />
     </ErrorBoundary>
   );
 }
 
-function PageContent({ pageSlug }: { pageSlug: string | undefined }) {
+function PageContent({
+  pageSlug,
+  isClientMode,
+}: {
+  pageSlug: string | undefined;
+  isClientMode: boolean;
+}) {
   const { t } = useTranslation();
   const permission = usePermission();
 
@@ -101,7 +110,12 @@ function PageContent({ pageSlug }: { pageSlug: string | undefined }) {
       </Helmet>
 
       <MemoizedPageHeader
-        readOnly={!canEdit || status === "approved" || permission.isReadOnly}
+        readOnly={
+          !canEdit ||
+          status === "approved" ||
+          permission.isReadOnly ||
+          isClientMode // 🔥 ADD HERE ALSO (extra safety)
+        }
         page={page}
         status={status}
         setStatus={setStatus}
@@ -116,7 +130,12 @@ function PageContent({ pageSlug }: { pageSlug: string | undefined }) {
         content={page.content}
         slugId={page.slugId}
         spaceSlug={page.space?.slug}
-        editable={canEdit && status !== "approved" && !permission.isReadOnly}
+        editable={
+          canEdit &&
+          status !== "approved" &&
+          !permission.isReadOnly &&
+          !isClientMode // 🔥 MAIN FIX
+        }
       />
 
       <MemoizedHistoryModal pageId={page.id} />

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ashok Kumar\\Desktop\\Docy customize\\Docmost-customize\\Excel-Clone-FBB\\Excel-Clone-FB\\ExcelClone.Api\\ExcelClone.Api.csproj": {}
+    "C:\\Users\\Ashok Kumar\\Desktop\\Docy customize\\docmost-customize\\Excel-Clone-FBB\\Excel-Clone-FB\\ExcelClone.Api\\ExcelClone.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ashok Kumar\\Desktop\\Docy customize\\Docmost-customize\\Excel-Clone-FBB\\Excel-Clone-FB\\ExcelClone.Api\\ExcelClone.Api.csproj": {
+    "C:\\Users\\Ashok Kumar\\Desktop\\Docy customize\\docmost-customize\\Excel-Clone-FBB\\Excel-Clone-FB\\ExcelClone.Api\\ExcelClone.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ashok Kumar\\Desktop\\Docy customize\\Docmost-customize\\Excel-Clone-FBB\\Excel-Clone-FB\\ExcelClone.Api\\ExcelClone.Api.csproj",
+        "projectUniqueName": "C:\\Users\\Ashok Kumar\\Desktop\\Docy customize\\docmost-customize\\Excel-Clone-FBB\\Excel-Clone-FB\\ExcelClone.Api\\ExcelClone.Api.csproj",
         "projectName": "ExcelClone.Api",
-        "projectPath": "C:\\Users\\Ashok Kumar\\Desktop\\Docy customize\\Docmost-customize\\Excel-Clone-FBB\\Excel-Clone-FB\\ExcelClone.Api\\ExcelClone.Api.csproj",
+        "projectPath": "C:\\Users\\Ashok Kumar\\Desktop\\Docy customize\\docmost-customize\\Excel-Clone-FBB\\Excel-Clone-FB\\ExcelClone.Api\\ExcelClone.Api.csproj",
         "packagesPath": "C:\\Users\\Ashok Kumar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ashok Kumar\\Desktop\\Docy customize\\Docmost-customize\\Excel-Clone-FBB\\Excel-Clone-FB\\ExcelClone.Api\\obj\\",
+        "outputPath": "C:\\Users\\Ashok Kumar\\Desktop\\Docy customize\\docmost-customize\\Excel-Clone-FBB\\Excel-Clone-FB\\ExcelClone.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ashok Kumar\\AppData\\Roaming\\NuGet\\NuGet.Config"

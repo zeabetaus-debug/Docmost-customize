@@ -68,6 +68,7 @@ async function bootstrap() {
         '/api/workspace/create',
         '/api/workspace/joined',
         '/api/workspace/find-by-email',
+        '/api/zeaatlas/pages',
       ];
 
       if (
@@ -91,7 +92,10 @@ async function bootstrap() {
     }),
   );
 
-  app.enableCors();
+  app.enableCors({
+  origin: "http://localhost:5175", // 🔥 your frontend port
+  credentials: true,
+});
   app.useGlobalInterceptors(new TransformHttpResponseInterceptor(reflector));
   app.enableShutdownHooks();
 

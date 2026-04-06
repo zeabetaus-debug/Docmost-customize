@@ -22,6 +22,7 @@ builder.Services.AddDbContextPool<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("Default")));
 
 builder.Services.AddScoped<JwtTokenService>();
+builder.Services.AddHttpClient();
 
 // ✅ JWT (keep it, but we won’t force it)
 var jwtSection = builder.Configuration.GetSection("Jwt");

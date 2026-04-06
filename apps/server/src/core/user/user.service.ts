@@ -4,10 +4,13 @@ import {
   Inject,
   Injectable,
   NotFoundException,
-  UnauthorizedException,
 } from '@nestjs/common';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { comparePasswordHash, diffAuditTrackedFields } from 'src/common/helpers/utils';
+import { Logger } from '@nestjs/common';
+import {
+  comparePasswordHash,
+  diffAuditTrackedFields,
+} from '../../common/helpers/utils';
 import { Workspace } from '@docmost/db/types/entity.types';
 import { validateSsoEnforcement } from '../auth/auth.util';
 import { AuditEvent, AuditResource } from '../../common/events/audit-events';
@@ -18,6 +21,8 @@ import {
 
 @Injectable()
 export class UserService {
+  private readonly logger = new Logger(UserService.name);
+
   constructor(
     private userRepo: UserRepo,
     @Inject(AUDIT_SERVICE) private readonly auditService: IAuditService,
@@ -43,7 +48,7 @@ export class UserService {
       throw new NotFoundException('User not found');
     }
 
-    // preference update
+    // ✅ Preference updates
     if (typeof updateUserDto.fullPageWidth !== 'undefined') {
       return this.userRepo.updatePreference(
         userId,
@@ -60,13 +65,18 @@ export class UserService {
       );
     }
 
-    const userBefore = { name: user.name, email: user.email, locale: user.locale };
+    const userBefore = {
+      name: user.name,
+      email: user.email,
+      locale: user.locale,
+    };
 
+    // ✅ Basic updates
     if (updateUserDto.name) {
       user.name = updateUserDto.name;
     }
 
-    if (updateUserDto.email && user.email != updateUserDto.email) {
+    if (updateUserDto.email && user.email !== updateUserDto.email) {
       validateSsoEnforcement(workspace);
 
       if (!updateUserDto.confirmPassword) {
@@ -81,11 +91,15 @@ export class UserService {
       );
 
       if (!isPasswordMatch) {
-        throw new BadRequestException('You must provide the correct password to change your email');
+        throw new BadRequestException(
+          'You must provide the correct password to change your email',
+        );
       }
 
       if (await this.userRepo.findByEmail(updateUserDto.email, workspace.id)) {
-        throw new BadRequestException('A user with this email already exists');
+        throw new BadRequestException(
+          'A user with this email already exists',
+        );
       }
 
       user.email = updateUserDto.email;
@@ -99,10 +113,22 @@ export class UserService {
       user.locale = updateUserDto.locale;
     }
 
+    // ✅🔥 CLIENT MODE FIX (NO external service)
+    if (typeof updateUserDto.clientMode !== 'undefined') {
+      this.logger.log(
+        `Updating clientMode=${updateUserDto.clientMode} for user=${userId}`,
+      );
+
+      // reflect immediately in response
+      (user as any).clientMode = Boolean(updateUserDto.clientMode);
+    }
+
     delete updateUserDto.confirmPassword;
 
+    // ✅🔥 FINAL DB UPDATE (handles clientMode correctly)
     await this.userRepo.updateUser(updateUserDto, userId, workspace.id);
 
+    // ✅ Audit log
     const changes = diffAuditTrackedFields(
       ['name', 'email'],
       updateUserDto,

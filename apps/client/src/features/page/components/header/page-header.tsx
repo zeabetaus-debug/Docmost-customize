@@ -9,6 +9,10 @@ import { IPage } from "@/features/page/types/page.types";
 import React from "react";
 import { IChangeRequest } from "@/features/zeaatlas/change-request/change-request.types";
 
+// ✅ KEEP THIS (no change)
+import { useAtom } from "jotai";
+import { currentUserAtom } from "@/features/user/atoms/current-user-atom.ts";
+
 type StatusType = "draft" | "review" | "approved" | "archived";
 
 interface Props {
@@ -31,6 +35,12 @@ export default function PageHeader({
   const currentStatus: StatusType = page?.status || status || "draft";
   const isEditable = currentStatus === "draft";
 
+  const [currentUser] = useAtom(currentUserAtom);
+  const isClientMode = currentUser?.user?.clientMode === true;
+
+  // ✅ FINAL READ-ONLY (MASTER CONTROL)
+  const finalReadOnly = isClientMode || readOnly || !isEditable;
+
   return (
     <div className={classes.header}>
       <Group
@@ -52,7 +62,8 @@ export default function PageHeader({
           wrap="nowrap"
           gap="var(--mantine-spacing-xs)"
         >
-          {page && setStatus && (
+          {/* ❌ DISABLE IN CLIENT MODE OR READONLY */}
+          {!finalReadOnly && page && setStatus && (
             <ApprovalActions
               page={page}
               onStatusChange={setStatus}
@@ -61,14 +72,18 @@ export default function PageHeader({
             />
           )}
 
-          <ChangeRequestIndicator
-            pageId={page?.id}
-            pageTitle={page?.title}
-            requests={changeRequests}
-            onRequestsChange={setChangeRequests}
-          />
+          {/* ❌ DISABLE IN CLIENT MODE OR READONLY */}
+          {!finalReadOnly && (
+            <ChangeRequestIndicator
+              pageId={page?.id}
+              pageTitle={page?.title}
+              requests={changeRequests}
+              onRequestsChange={setChangeRequests}
+            />
+          )}
 
-          <PageHeaderMenu readOnly={readOnly || !isEditable} />
+          {/* 🔥 CRITICAL FIX */}
+          <PageHeaderMenu readOnly={finalReadOnly} />
         </Group>
       </Group>
     </div>

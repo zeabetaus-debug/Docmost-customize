@@ -2097,3 +2097,10 @@ C:\Users\Ashok Kumar\Desktop\Docy customize\docmost-customize\Excel-Clone-FBB\Ex
 C:\Users\Ashok Kumar\Desktop\Docy customize\docmost-customize\Excel-Clone-FBB\Excel-Clone-FB\ExcelClone.Api\obj\Debug\net10.0\ExcelClone.Api.pdb
 C:\Users\Ashok Kumar\Desktop\Docy customize\docmost-customize\Excel-Clone-FBB\Excel-Clone-FB\ExcelClone.Api\obj\Debug\net10.0\ExcelClone.Api.genruntimeconfig.cache
 C:\Users\Ashok Kumar\Desktop\Docy customize\docmost-customize\Excel-Clone-FBB\Excel-Clone-FB\ExcelClone.Api\obj\Debug\net10.0\ref\ExcelClone.Api.dll
+C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\Excel-Clone-FBB\tmp-api-build-verify\appsettings.Development.json
+C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\Excel-Clone-FBB\tmp-api-build-verify\appsettings.json
+C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\Excel-Clone-FBB\tmp-api-build-verify\ExcelClone.Api.staticwebassets.endpoints.json
+C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\Excel-Clone-FBB\tmp-api-build-verify\ExcelClone.Api.deps.json
+C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\Excel-Clone-FBB\tmp-api-build-verify\ExcelClone.Api.runtimeconfig.json
+C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\Excel-Clone-FBB\tmp-api-build-verify\ExcelClone.Api.dll
+C:\Users\Ashok Kumar\Desktop\Docy customize\Docmost-customize\Excel-Clone-FBB\tmp-api-build-verify\ExcelClone.Api.pdb

@@ -1,79 +1,105 @@
-import { useAtom, useSetAtom } from "jotai";
-import { currentUserAtom } from "@/features/user/atoms/current-user-atom";
 import React, { useEffect } from "react";
+import { useAtom, useSetAtom } from "jotai";
+import { io, Socket } from "socket.io-client";
+
+import { currentUserAtom } from "@/features/user/atoms/current-user-atom";
+import { setClientModeAtom } from "@/store/client-store";
 import useCurrentUser from "@/features/user/hooks/use-current-user";
 import { useTranslation } from "react-i18next";
-import { socketAtom } from "@/features/websocket/atoms/socket-atom.ts";
-import { io } from "socket.io-client";
+import { socketAtom } from "@/features/websocket/atoms/socket-atom";
 import { SOCKET_URL } from "@/features/websocket/types";
-import { useQuerySubscription } from "@/features/websocket/use-query-subscription.ts";
-import { useTreeSocket } from "@/features/websocket/use-tree-socket.ts";
-import { useNotificationSocket } from "@/features/notification/hooks/use-notification-socket.ts";
-import { useCollabToken } from "@/features/auth/queries/auth-query.tsx";
-import { Error404 } from "@/components/ui/error-404.tsx";
 
+import { useQuerySubscription } from "@/features/websocket/use-query-subscription";
+import { useTreeSocket } from "@/features/websocket/use-tree-socket";
+import { useNotificationSocket } from "@/features/notification/hooks/use-notification-socket";
+
+import { Error404 } from "@/components/ui/error-404";
 
 export function UserProvider({ children }: React.PropsWithChildren) {
   const [, setCurrentUser] = useAtom(currentUserAtom);
-  const setEntitlements = useSetAtom(entitlementAtom);
-  const { data, isLoading, error, isError } = useCurrentUser();
-  const { data: entitlements } = useEntitlements();
-  const { i18n } = useTranslation();
+  const setClientMode = useSetAtom(setClientModeAtom);
+
+  // ✅ socket state
   const [, setSocket] = useAtom(socketAtom);
-  // fetch collab token on load
-  const { data: collab } = useCollabToken();
 
+  const { data, isLoading, error, isError } = useCurrentUser();
+  const { i18n } = useTranslation();
+
+  // 🔥 SOCKET CONNECTION
   useEffect(() => {
-    if (isLoading || isError) {
-      return;
-    }
+    if (isLoading || isError) return;
 
-    const newSocket = io(SOCKET_URL, {
+    const socket: Socket = io(SOCKET_URL, {
       transports: ["websocket"],
       withCredentials: true,
     });
 
-    // @ts-ignore
-    setSocket(newSocket);
+    setSocket(socket);
 
-    newSocket.on("connect", () => {
-      console.log("ws connected");
+    socket.on("connect", () => {
+      console.log("✅ ws connected");
+    });
+
+    socket.on("disconnect", () => {
+      console.log("❌ ws disconnected");
     });
 
     return () => {
-      console.log("ws disconnected");
-      newSocket.disconnect();
+      socket.disconnect();
+      setSocket(null);
     };
-  }, [isError, isLoading]);
+  }, [isLoading, isError, setSocket]);
 
+  // 🔥 SOCKET FEATURES
   useQuerySubscription();
   useTreeSocket();
   useNotificationSocket();
 
+  // 🔥 USER DATA SYNC (NO CLIENT MODE OVERRIDE)
   useEffect(() => {
-    if (data && data.user && data.workspace) {
-      setCurrentUser(data);
-      i18n.changeLanguage(
-        data.user.locale === "en" ? "en-US" : data.user.locale,
-      );
-    }
-  }, [data, isLoading]);
+    if (!data?.user || !data?.workspace) return;
 
-  useEffect(() => {
-    if (entitlements) {
-      setEntitlements(entitlements);
-    }
-  }, [entitlements]);
+    setCurrentUser((prev) => {
+      const safePrev = prev ?? {
+        user: null,
+        workspace: null,
+      };
 
-  if (isLoading) return <></>;
+      return {
+        ...safePrev,
+        ...data,
+        user: {
+          ...safePrev.user,
+          ...data.user,
 
+          // ✅ DO NOT override client mode from backend
+          clientMode:
+            safePrev.user?.clientMode ??
+            data.user.clientMode ??
+            false,
+        },
+      };
+    });
+
+    // ❌ DO NOT DO THIS (REMOVED)
+    // setClientMode(data.user.clientMode)
+
+    // 🌐 Language sync
+    i18n.changeLanguage(
+      data.user.locale === "en" ? "en-US" : data.user.locale
+    );
+  }, [data, setCurrentUser, i18n]);
+
+  // ⏳ LOADING
+  if (isLoading) return null;
+
+  // ❌ 404
   if (isError && error?.["response"]?.status === 404) {
     return <Error404 />;
   }
 
-  if (error) {
-    return <></>;
-  }
+  // ❌ OTHER ERRORS
+  if (error) return null;
 
   return <>{children}</>;
 }

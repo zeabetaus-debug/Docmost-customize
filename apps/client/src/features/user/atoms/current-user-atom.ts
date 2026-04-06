@@ -5,7 +5,7 @@ import { IWorkspace } from "@/features/workspace/types/workspace.types";
 
 export const currentUserAtom = atomWithStorage<ICurrentUser | null>(
   "currentUser",
-  null,
+  null
 );
 
 export const userAtom = atom(

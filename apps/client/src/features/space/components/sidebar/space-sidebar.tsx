@@ -14,13 +14,14 @@ import {
   IconPlus,
   IconSearch,
   IconSettings,
+  IconTable,
   IconTrash,
 } from "@tabler/icons-react";
 import classes from "./space-sidebar.module.css";
 import React from "react";
 import { useAtom } from "jotai";
 import { treeApiAtom } from "@/features/page/tree/atoms/tree-api-atom.ts";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import clsx from "clsx";
 import { useDisclosure } from "@mantine/hooks";
 import SpaceSettingsModal from "@/features/space/components/settings-modal.tsx";
@@ -40,7 +41,6 @@ import { mobileSidebarAtom } from "@/components/layouts/global/hooks/atoms/sideb
 import { useToggleSidebar } from "@/components/layouts/global/hooks/hooks/use-toggle-sidebar.ts";
 import { searchSpotlight } from "@/features/search/constants";
 import { useClientGuard } from "@/features/zeaatlas/client-mode/use-client-guard";
-import { useNavigate } from "react-router-dom";
 import { clientModeAtom } from "@/store/client-store";
 
 export function SpaceSidebar() {
@@ -120,6 +120,32 @@ const isClient = clientMode; // 🔥 MAIN CHANGE
                   stroke={2}
                 />
                 <span>{t("Search")}</span>
+              </div>
+            </UnstyledButton>
+
+            <UnstyledButton
+              component={Link}
+              to={`/excel?spaceId=${space.id}`}
+              onClick={() => {
+                if (mobileSidebarOpened) {
+                  toggleMobileSidebar();
+                }
+              }}
+              className={clsx(
+                classes.menu,
+                location.pathname.toLowerCase().startsWith("/excel") ||
+                  location.pathname.toLowerCase().startsWith("/sheets")
+                  ? classes.activeButton
+                  : "",
+              )}
+            >
+              <div className={classes.menuItemInner}>
+                <IconTable
+                  size={18}
+                  className={classes.menuItemIcon}
+                  stroke={2}
+                />
+                <span>{t("Sheets")}</span>
               </div>
             </UnstyledButton>
 

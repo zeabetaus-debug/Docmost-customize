@@ -328,6 +328,7 @@ export interface Users {
   timezone: string | null;
   updatedAt: Generated<Timestamp>;
   workspaceId: string | null;
+  clientMode?: boolean;
 }
 
 export interface UserTokens {

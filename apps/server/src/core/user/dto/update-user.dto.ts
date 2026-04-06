@@ -31,6 +31,10 @@ export class UpdateUserDto extends PartialType(
   locale: string;
 
   @IsOptional()
+  @IsBoolean()
+  clientMode: boolean;
+
+  @IsOptional()
   @MinLength(8)
   @MaxLength(70)
   @IsString()

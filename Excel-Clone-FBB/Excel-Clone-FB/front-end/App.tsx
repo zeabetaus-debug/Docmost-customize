@@ -193,12 +193,31 @@ const structuralPersistenceActionTypes = new Set<SheetAction['type']>([
 const LIVE_SYNC_DEBOUNCE_MS = 2500;
 const LIVE_REFRESH_INTERVAL_MS = 8000;
 const WORKSHEET_WINDOW_PADDING = 100;
+const DOCMOST_PAGE_MAP_STORAGE_KEY = 'excel-clone-docmost-page-map';
 
 const getCellPersistenceSignature = (cell?: CellData) =>
   JSON.stringify({
     value: cell?.value ?? '',
     style: cell?.style ?? null,
   });
+
+const readDocmostPageMap = (): Record<string, string> => {
+  if (typeof window === 'undefined') {
+    return {};
+  }
+
+  try {
+    const raw = window.localStorage.getItem(DOCMOST_PAGE_MAP_STORAGE_KEY);
+    if (!raw) {
+      return {};
+    }
+
+    const parsed = JSON.parse(raw) as Record<string, string>;
+    return parsed && typeof parsed === 'object' ? parsed : {};
+  } catch {
+    return {};
+  }
+};
 
 const buildPersistedCellPayload = (cellId: CellId, cell?: CellData): PersistedCellPayload => {
   const { col, row } = cellIdToCoords(cellId);
@@ -1023,7 +1042,16 @@ interface AppProps {
 }
 
 const App: React.FC<AppProps> = ({ currentUser, onLogout, onSessionUpdate }) => {
-  const API_BASE = (import.meta as any).env?.VITE_API_URL || 'http://localhost:5278/api';
+  const configuredApiBase =
+    (import.meta as any).env?.VITE_API_URL ||
+    (import.meta as any).env?.VITE_DOTNET_API_URL ||
+    'http://localhost:5278/api';
+  const API_BASE_CANDIDATES = Array.from(
+    new Set([configuredApiBase, 'http://localhost:5278/api', 'http://localhost:5000/api']),
+  );
+  const API_BASE = API_BASE_CANDIDATES[0];
+  const DOCMOST_API_BASE = (import.meta as any).env?.VITE_DOCMOST_API_URL || 'http://localhost:3000/api';
+
   const [state, dispatch] = useReducer(workbookReducer, initialWorkbookState);
   const [activeTool, setTool] = useState<'none' | 'draw_border' | 'draw_grid' | 'eraser'>('none');
   const [activeLineColor, setLineColor] = useState<string>('#000000');
@@ -1071,6 +1099,13 @@ const App: React.FC<AppProps> = ({ currentUser, onLogout, onSessionUpdate }) => 
   const [visibleRowWindow, setVisibleRowWindow] = useState<VisibleRowWindow>({ startRow: 0, endRow: 200 });
   const [sheetFilters, setSheetFilters] = useState<Record<string, SheetFilterState>>({});
   const [showFilterError, setShowFilterError] = useState(false);
+  const [docmostPageMap, setDocmostPageMap] = useState<Record<string, string>>(() => readDocmostPageMap());
+  const [docmostPageId, setDocmostPageId] = useState<string | null>(null);
+  const [currentSpaceId] = useState<string | null>(() => {
+    if (typeof window === 'undefined') return null;
+    const params = new URLSearchParams(window.location.search);
+    return params.get('spaceId');
+  });
 
   const activeSheet = state.sheets[state.activeSheetId];
   const filterCacheKey = `${state.workbookId || 'local'}_${state.activeSheetId}`;
@@ -1080,6 +1115,32 @@ const App: React.FC<AppProps> = ({ currentUser, onLogout, onSessionUpdate }) => 
     columns: {},
     sort: null,
   };
+
+  useEffect(() => {
+    if (!state.workbookId) {
+      setDocmostPageId(null);
+      return;
+    }
+
+    setDocmostPageId(docmostPageMap[state.workbookId] || null);
+  }, [state.workbookId, docmostPageMap]);
+
+  useEffect(() => {
+    console.log('SPACE ID:', currentSpaceId);
+  }, [currentSpaceId]);
+
+  const persistDocmostPageId = useCallback((workbookId: string, pageId: string) => {
+    setDocmostPageMap((currentMap) => {
+      const nextMap = { ...currentMap, [workbookId]: pageId };
+      try {
+        window.localStorage.setItem(DOCMOST_PAGE_MAP_STORAGE_KEY, JSON.stringify(nextMap));
+      } catch {
+        // ignore localStorage write issues
+      }
+      return nextMap;
+    });
+    setDocmostPageId(pageId);
+  }, []);
 
   const selectionStats = useMemo(() => {
     if (activeView !== 'workbook' || !activeSheet.selection.start || !activeSheet.selection.end) {
@@ -1767,19 +1828,29 @@ const App: React.FC<AppProps> = ({ currentUser, onLogout, onSessionUpdate }) => 
       }))
       .filter((worksheet) => worksheet.cells.length > 0);
 
-  const fetchAllFiles = async () => {
-    try {
-      const res = await fetch(`${API_BASE}/workbooks`, {
-        headers: getAuthorizedHeaders(),
-      });
-      if (res.ok) {
-        const data: WorkbookListItem[] = await res.json();
-        setFiles(data);
-      }
-    } catch (e) {
-      console.error('Failed to fetch files', e);
+const fetchAllFiles = async () => {
+  try {
+    console.log("Fetching Docmost pages...");
+
+    const res = await fetch(`/api/zeaatlas/pages`, {
+      method: "GET",
+      credentials: "include",
+    });
+
+    const data = await res.json();
+
+    console.log("Pages:", data);
+
+    if (res.ok && data.success) {
+      setFiles(data.data); // 👈 sidebar list
+    } else {
+      console.error("Failed to fetch pages");
     }
-  };
+
+  } catch (e) {
+    console.error("Fetch error:", e);
+  }
+};
 
   const fetchManagedUsers = async () => {
     setIsUserListLoading(true);
@@ -2094,6 +2165,75 @@ setMyProfile(profile);
     }),
   });
 
+  const syncSheetToDocmostPage = async (
+    titleOverride?: string,
+  ): Promise<{ ok: true } | { ok: false; error: string }> => {
+    try {
+      const payload = {
+        title: titleOverride || currentFileName || 'Sheet Auto Saved',
+        content: JSON.stringify(convertStateToDto(titleOverride || currentFileName || 'Sheet Auto Saved')),
+        spaceId: currentSpaceId,
+        userId: currentUser.id,
+        createdBy: currentUser.id,
+      };
+      console.log("Saving started...");
+
+const response = await fetch(`/api/zeaatlas/pages`, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  credentials: "include", // 🔥 VERY IMPORTANT
+  body: JSON.stringify(payload),
+});
+
+      const rawResponse = await response.text();
+      let data: any = null;
+      if (rawResponse) {
+        try {
+          data = JSON.parse(rawResponse);
+        } catch {
+          // keep as plain text response
+        }
+      }
+
+      console.log('API RESPONSE:', data ?? rawResponse);
+
+      if (!(response.ok && data?.success === true)) {
+        const message =
+          data?.message ||
+          data?.error ||
+          data?.title ||
+          rawResponse ||
+          'Save failed';
+        return { ok: false, error: message };
+      }
+
+      const result = data?.data || data;
+      if (state.workbookId && result?.id) {
+        persistDocmostPageId(state.workbookId, result.id);
+      } else if (result?.id) {
+        setDocmostPageId(result.id);
+      }
+
+      window.parent?.postMessage(
+        {
+          type: 'excel-sheet-saved',
+          pageSlugId: result?.slugId || result?.docmostPage?.slugId,
+          pageId: result?.id || result?.docmostPage?.id,
+        },
+        '*',
+      );
+      return { ok: true };
+    } catch (error) {
+      console.error('Docmost sync error:', error);
+      return {
+        ok: false,
+        error: error instanceof Error ? error.message : 'Network error',
+      };
+    }
+  };
+
   const patchWorkbookCells = async (): Promise<boolean> => {
     if (!state.workbookId) {
       return false;
@@ -2126,36 +2266,18 @@ setMyProfile(profile);
 
   const saveCurrentWorkbook = async (): Promise<boolean> => {
     try {
-      if (!requiresFullWorkbookSave) {
-        const patched = await patchWorkbookCells();
-        if (patched) {
-          showSuccessToast('Saved successfully');
-          return true;
-        }
+      const syncResult = await syncSheetToDocmostPage();
+      if (!syncResult.ok) {
+        showErrorToast(syncResult.error);
+        return false;
       }
 
-      if (state.workbookId && currentFileName) {
-        const res = await fetch(`${API_BASE}/Workbooks/${state.workbookId}`, {
-          method: 'PUT',
-          headers: getAuthorizedHeaders(true),
-          body: JSON.stringify(convertStateToDto()),
-        });
-
-        if (!res.ok) {
-          showErrorToast('Failed to save');
-          return false;
-        }
-
-        const payload = await res.json();
-        resetPendingWorkbookPersistence();
-        setIsDirty(false);
-        setLastLocalEditAt(Date.now());
-        setLoadedWorkbookUpdatedAt((payload.updatedAt as string) || new Date().toISOString());
-        showSuccessToast('Saved successfully');
-        return true;
-      }
-
-      return false;
+      resetPendingWorkbookPersistence();
+      setRequiresFullWorkbookSave(false);
+      setIsDirty(false);
+      setLastLocalEditAt(Date.now());
+      showSuccessToast('Saved successfully');
+      return true;
     } catch (e) {
       console.error('Save error:', e);
       showErrorToast('Connection error');
@@ -2294,40 +2416,18 @@ setMyProfile(profile);
 
   const handleConfirmSaveAs = async (baseName: string) => {
     const name = baseName.trim() || 'Untitled';
-    const savePayload = convertStateToDto(name);
-    console.log('Saving:', savePayload);
+    console.log('Saving:', convertStateToDto(name));
 
     try {
-     const res = await fetch(`${API_BASE}/workbooks`, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify(savePayload),
-});
-
-      if (!res.ok) {
-        const errorText = await res.text();
-        if (res.status === 400 && errorText.includes('File already exists')) {
-          showErrorToast('The file name already exists. Please choose a different name.');
-        } else {
-          throw new Error('Save failed');
-        }
-        return; // Keep modal open so user can try again
+      setCurrentFileName(name);
+      const syncResult = await syncSheetToDocmostPage(name);
+      if (!syncResult.ok) {
+        showErrorToast(syncResult.error);
+        return;
       }
 
-      const id = await res.text().then(text => text.replace(/"/g, ''));
-
-      dispatch({
-        type: 'LOAD_WORKBOOK',
-        payload: {
-          ...state,
-          workbookId: id,
-        },
-      });
-
       resetPendingWorkbookPersistence();
-      resetLoadedWorksheetWindows();
+      setRequiresFullWorkbookSave(false);
       setCurrentFileName(name);
       setIsDirty(false);
       setIsSaveModalOpen(false);
@@ -2338,10 +2438,9 @@ setMyProfile(profile);
       }
 
       showSuccessToast(`Saved as ${name}`);
-      fetchAllFiles();
     } catch (err) {
       console.error(err);
-      showErrorToast('Error saving file');
+      showErrorToast(err instanceof Error ? err.message : 'Error saving file');
     }
   };
 
@@ -2706,6 +2805,27 @@ setMyProfile(profile);
     showSuccessToast(file.isOwner ? 'Workbook deleted successfully' : 'Workbook access removed successfully');
   };
 
+  const downloadDocmostPage = async (pageId: string) => {
+    const response = await fetch(`${DOCMOST_API_BASE}/zeaatlas/pages/${pageId}/download`, {
+      credentials: 'include',
+    });
+
+    if (!response.ok) {
+      const message = await response.text();
+      throw new Error(message || 'Failed to download sheet content.');
+    }
+
+    const blob = await response.blob();
+    const objectUrl = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = objectUrl;
+    link.download = 'sheet.json';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    window.URL.revokeObjectURL(objectUrl);
+  };
+
   const downloadWorkbook = async (file: WorkbookListItem) => {
     try {
       const response = await fetch(`${API_BASE}/Workbooks/${file.id}/download`, {
@@ -2733,6 +2853,17 @@ setMyProfile(profile);
 
       showSuccessToast('Workbook download started');
     } catch (error) {
+      const mappedPageId = docmostPageMap[file.id];
+      if (mappedPageId) {
+        try {
+          await downloadDocmostPage(mappedPageId);
+          showSuccessToast('Sheet download started');
+          return;
+        } catch (downloadPageError) {
+          console.error('Docmost page download error:', downloadPageError);
+        }
+      }
+
       console.error('Download error:', error);
       showErrorToast('Failed to download workbook');
     }
@@ -3044,6 +3175,3 @@ setMyProfile(profile);
 };
 
 export default App;
-
-
-

@@ -30,6 +30,7 @@ import { useTrackOrigin } from "@/hooks/use-track-origin";
 import SpacesPage from "@/pages/spaces/spaces.tsx";
 import SpaceTrash from "@/pages/space/space-trash.tsx";
 import React, { Suspense } from "react";
+import ExcelDashboard from "@/pages/excel.tsx";
 
 const WebhookSettingsPage = React.lazy(
   () => import("@/features/zeaatlas/webhooks/pages/webhook-settings-page"),
@@ -96,6 +97,8 @@ export default function App() {
         {/* HOME */}
         <Route path="/home" element={<Home />} />
         <Route path="/spaces" element={<SpacesPage />} />
+        <Route path="/sheets" element={<Navigate to="/excel" replace />} />
+        <Route path="/excel" element={<ExcelDashboard />} />
         <Route
           path="/templates/create"
           element={

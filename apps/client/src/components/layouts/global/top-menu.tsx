@@ -28,7 +28,7 @@ import { useTranslation } from "react-i18next";
 import { AvatarIconType } from "@/features/attachments/types/attachment.types.ts";
 import ClientModeToggle from "@/components/client-mode-toggle";
 
-export default function TopMenu() {
+export default function TopMenu({ isClientMode }: { isClientMode?: boolean }) {
   const { t } = useTranslation();
   const [currentUser] = useAtom(currentUserAtom);
   const { logout } = useAuth();
@@ -62,27 +62,8 @@ export default function TopMenu() {
       </Menu.Target>
 
       <Menu.Dropdown>
-        <Menu.Label>{t("Workspace")}</Menu.Label>
 
-        <Menu.Item
-          component={Link}
-          to={APP_ROUTE.SETTINGS.WORKSPACE.GENERAL}
-          leftSection={<IconSettings size={16} />}
-        >
-          {t("Workspace settings")}
-        </Menu.Item>
-
-        <Menu.Item
-          component={Link}
-          to={APP_ROUTE.SETTINGS.WORKSPACE.MEMBERS}
-          leftSection={<IconUsers size={16} />}
-        >
-          {t("Manage members")}
-        </Menu.Item>
-
-        <Menu.Divider />
-
-        {/* ✅ CLIENT MODE TOGGLE ADDED HERE */}
+        {/* 🔥 CLIENT MODE TOGGLE ALWAYS ON TOP */}
         <Menu.Label>Client Mode</Menu.Label>
         <Menu.Item closeMenuOnClick={false}>
           <ClientModeToggle />
@@ -90,87 +71,114 @@ export default function TopMenu() {
 
         <Menu.Divider />
 
-        <Menu.Label>{t("Account")}</Menu.Label>
+        {/* 🚫 HIDE EVERYTHING IF CLIENT MODE */}
+        {!isClientMode && (
+          <>
+            <Menu.Label>{t("Workspace")}</Menu.Label>
 
-        <Menu.Item component={Link} to={APP_ROUTE.SETTINGS.ACCOUNT.PROFILE}>
-          <Group wrap={"nowrap"}>
-            <CustomAvatar
-              size={"sm"}
-              avatarUrl={user.avatarUrl}
-              name={user.name}
-            />
-            <div style={{ width: 190 }}>
-              <Text size="sm" fw={500} lineClamp={1}>
-                {user.name}
-              </Text>
-              <Text size="xs" c="dimmed" truncate="end">
-                {user.email}
-              </Text>
-            </div>
-          </Group>
-        </Menu.Item>
-
-        <Menu.Item
-          component={Link}
-          to={APP_ROUTE.SETTINGS.ACCOUNT.PROFILE}
-          leftSection={<IconUserCircle size={16} />}
-        >
-          {t("My profile")}
-        </Menu.Item>
-
-        <Menu.Item
-          component={Link}
-          to={APP_ROUTE.SETTINGS.ACCOUNT.PREFERENCES}
-          leftSection={<IconBrush size={16} />}
-        >
-          {t("My preferences")}
-        </Menu.Item>
-
-        <Menu.Sub>
-          <Menu.Sub.Target>
-            <Menu.Sub.Item leftSection={<IconBrightnessFilled size={16} />}>
-              {t("Theme")}
-            </Menu.Sub.Item>
-          </Menu.Sub.Target>
-
-          <Menu.Sub.Dropdown>
             <Menu.Item
-              onClick={() => setColorScheme("light")}
-              leftSection={<IconSun size={16} />}
-              rightSection={
-                colorScheme === "light" ? <IconCheck size={16} /> : null
-              }
+              component={Link}
+              to={APP_ROUTE.SETTINGS.WORKSPACE.GENERAL}
+              leftSection={<IconSettings size={16} />}
             >
-              {t("Light")}
+              {t("Workspace settings")}
             </Menu.Item>
 
             <Menu.Item
-              onClick={() => setColorScheme("dark")}
-              leftSection={<IconMoon size={16} />}
-              rightSection={
-                colorScheme === "dark" ? <IconCheck size={16} /> : null
-              }
+              component={Link}
+              to={APP_ROUTE.SETTINGS.WORKSPACE.MEMBERS}
+              leftSection={<IconUsers size={16} />}
             >
-              {t("Dark")}
+              {t("Manage members")}
+            </Menu.Item>
+
+            <Menu.Divider />
+
+            <Menu.Label>{t("Account")}</Menu.Label>
+
+            <Menu.Item component={Link} to={APP_ROUTE.SETTINGS.ACCOUNT.PROFILE}>
+              <Group wrap={"nowrap"}>
+                <CustomAvatar
+                  size={"sm"}
+                  avatarUrl={user.avatarUrl}
+                  name={user.name}
+                />
+                <div style={{ width: 190 }}>
+                  <Text size="sm" fw={500} lineClamp={1}>
+                    {user.name}
+                  </Text>
+                  <Text size="xs" c="dimmed" truncate="end">
+                    {user.email}
+                  </Text>
+                </div>
+              </Group>
             </Menu.Item>
 
             <Menu.Item
-              onClick={() => setColorScheme("auto")}
-              leftSection={<IconDeviceDesktop size={16} />}
-              rightSection={
-                colorScheme === "auto" ? <IconCheck size={16} /> : null
-              }
+              component={Link}
+              to={APP_ROUTE.SETTINGS.ACCOUNT.PROFILE}
+              leftSection={<IconUserCircle size={16} />}
             >
-              {t("System settings")}
+              {t("My profile")}
             </Menu.Item>
-          </Menu.Sub.Dropdown>
-        </Menu.Sub>
 
-        <Menu.Divider />
+            <Menu.Item
+              component={Link}
+              to={APP_ROUTE.SETTINGS.ACCOUNT.PREFERENCES}
+              leftSection={<IconBrush size={16} />}
+            >
+              {t("My preferences")}
+            </Menu.Item>
 
+            <Menu.Sub>
+              <Menu.Sub.Target>
+                <Menu.Sub.Item leftSection={<IconBrightnessFilled size={16} />}>
+                  {t("Theme")}
+                </Menu.Sub.Item>
+              </Menu.Sub.Target>
+
+              <Menu.Sub.Dropdown>
+                <Menu.Item
+                  onClick={() => setColorScheme("light")}
+                  leftSection={<IconSun size={16} />}
+                  rightSection={
+                    colorScheme === "light" ? <IconCheck size={16} /> : null
+                  }
+                >
+                  {t("Light")}
+                </Menu.Item>
+
+                <Menu.Item
+                  onClick={() => setColorScheme("dark")}
+                  leftSection={<IconMoon size={16} />}
+                  rightSection={
+                    colorScheme === "dark" ? <IconCheck size={16} /> : null
+                  }
+                >
+                  {t("Dark")}
+                </Menu.Item>
+
+                <Menu.Item
+                  onClick={() => setColorScheme("auto")}
+                  leftSection={<IconDeviceDesktop size={16} />}
+                  rightSection={
+                    colorScheme === "auto" ? <IconCheck size={16} /> : null
+                  }
+                >
+                  {t("System settings")}
+                </Menu.Item>
+              </Menu.Sub.Dropdown>
+            </Menu.Sub>
+
+            <Menu.Divider />
+          </>
+        )}
+
+        {/* ✅ ALWAYS AVAILABLE */}
         <Menu.Item onClick={logout} leftSection={<IconLogout size={16} />}>
           {t("Logout")}
         </Menu.Item>
+
       </Menu.Dropdown>
     </Menu>
   );

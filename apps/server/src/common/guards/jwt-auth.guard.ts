@@ -2,6 +2,7 @@ import {
   ExecutionContext,
   Injectable,
   UnauthorizedException,
+  ForbiddenException,
 } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { IS_PUBLIC_KEY } from '../decorators/public.decorator';
@@ -37,6 +38,23 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
     }
 
     this.setJoinedWorkspacesCookie(user, ctx);
+    try {
+      const req = ctx.switchToHttp().getRequest();
+
+      // If user is in client mode, block non-GET write requests
+      const isClientMode = Boolean(user?.user?.clientMode);
+      const method = (req?.method || '').toUpperCase();
+
+      const isClientModeToggleRequest =
+        (req?.url || '').includes('/client-mode') || req?.body?.clientMode === false;
+
+      if (isClientMode && method !== 'GET' && !isClientModeToggleRequest) {
+        throw new ForbiddenException('Client Mode: Read-only access');
+      }
+    } catch (e) {
+      throw e;
+    }
+
     return user;
   }
 

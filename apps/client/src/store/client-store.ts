@@ -1,24 +1,18 @@
 import { atom } from "jotai";
 
-// 🔹 Main state
-export const clientModeAtom = atom<boolean>(false);
+const KEY = "zeaatlas_client_mode";
 
-// 🔹 Derived helpers (optional but powerful)
-export const isClientModeOnAtom = atom((get) => get(clientModeAtom));
+const getInitial = () => {
+  if (typeof window === "undefined") return false;
+  return localStorage.getItem(KEY) === "true";
+};
 
-// 🔹 Toggle action (clean way)
-export const toggleClientModeAtom = atom(
-  null,
-  (get, set) => {
-    const current = get(clientModeAtom);
-    set(clientModeAtom, !current);
-  }
-);
+export const clientModeAtom = atom<boolean>(getInitial());
 
-// 🔹 Set explicitly (used for API sync)
 export const setClientModeAtom = atom(
   null,
   (_get, set, value: boolean) => {
+    localStorage.setItem(KEY, String(value));
     set(clientModeAtom, value);
   }
 );

@@ -1,65 +1,40 @@
 import { Switch, Group, Text } from "@mantine/core";
 import { useAtom } from "jotai";
-import { clientModeAtom } from "@/store/client-store";
-import { useEffect, useRef, useState } from "react";
-
-const USER_ID = "019d3dab-b64a-7204-b32e-0bf82589710b";
+import { clientModeAtom, setClientModeAtom } from "@/store/client-store";
+import { useState } from "react";
+import { currentUserAtom } from "@/features/user/atoms/current-user-atom";
+import { updateUser } from "@/features/user/services/user-service";
 
 export default function ClientModeToggle() {
-  const [enabled, setEnabled] = useAtom(clientModeAtom);
+  const [clientMode] = useAtom(clientModeAtom);
+  const [, setClientMode] = useAtom(setClientModeAtom);
+  const [currentUser, setCurrentUser] = useAtom(currentUserAtom as any);
   const [loading, setLoading] = useState(false);
 
-  const hasLoaded = useRef(false); // 🔥 prevents reset
-
-  // ✅ LOAD ONLY ONCE
-  useEffect(() => {
-    if (hasLoaded.current) return;
-
-    const load = async () => {
-      try {
-        const res = await fetch(
-          `http://localhost:3000/api/client-mode?userId=${USER_ID}`
-        );
-
-        const json = await res.json();
-
-        const value =
-          json?.data?.client_mode ??
-          json?.data?.data?.client_mode ??
-          false;
-
-        setEnabled(value);
-        hasLoaded.current = true; // ✅ STOP future override
-      } catch (err) {
-        console.error("Load error", err);
-      }
-    };
-
-    load();
-  }, [setEnabled]);
-
-  // ✅ TOGGLE HANDLER
   const handleToggle = async (value: boolean) => {
-    setEnabled(value); // instant UI
+    console.log('ClientMode toggle click', value);
+    // optimistic UI
+    setClientMode(value);
 
     try {
       setLoading(true);
+      const updated = await updateUser({ clientMode: value } as any);
+      console.log('ClientMode API response', updated);
 
-      const res = await fetch(
-        `http://localhost:3000/api/client-mode?userId=${USER_ID}`,
-        {
-          method: "PATCH",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ value }),
-        }
-      );
+      // update current user atom (merge returned fields)
+      if (currentUser && currentUser.user) {
+        setCurrentUser({
+          ...currentUser,
+          user: { ...currentUser.user, ...updated },
+        });
+      }
 
-      if (!res.ok) throw new Error("Failed");
+      setClientMode(Boolean(updated.clientMode));
+      console.log('Final rendered state', Boolean(updated.clientMode));
     } catch (err) {
-      console.error("Update failed", err);
-
+      console.error('Update failed', err);
       // rollback
-      setEnabled(!value);
+      setClientMode(!value);
     } finally {
       setLoading(false);
     }
@@ -67,12 +42,12 @@ export default function ClientModeToggle() {
 
   return (
     <Group justify="space-between" style={{ width: "100%" }}>
-      <Text size="sm" c={enabled ? "green" : "red"}>
-        {enabled ? "Client Mode ON" : "Client Mode OFF"}
+      <Text size="sm" c={clientMode ? "green" : "red"}>
+        {clientMode ? "Client Mode ON" : "Client Mode OFF"}
       </Text>
 
       <Switch
-        checked={enabled}
+        checked={clientMode}
         onChange={(e) => handleToggle(e.currentTarget.checked)}
         disabled={loading}
         color="green"
